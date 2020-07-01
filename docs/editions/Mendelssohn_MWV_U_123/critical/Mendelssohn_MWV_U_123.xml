@@ -1,0 +1,2785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.music-encoding.org/schema/4.0.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.music-encoding.org/ns/mei"
+     meiversion="4.0.1">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title>Prelude</title>
+        <title type="subordinate">MWV U 123</title>
+        <title type="subordinate">Op. 104a, No. 2</title>
+        <respStmt>
+          <persName role="composer">Felix Mendelssohn</persName>
+          <persName role="encoder">Benjamin Geer</persName>
+        </respStmt>
+      </titleStmt>
+      <pubStmt></pubStmt>
+    </fileDesc>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv>
+        <score>
+	  <scoreDef key.sig="2s" meter.count="4" meter.sym="common" meter.unit="4" >
+            <staffGrp symbol="brace" n="1" bar.thru="true">
+              <staffDef n="1" lines="5" clef.shape="G" clef.line="2" />
+              <staffDef n="2" lines="5" clef.shape="F" clef.line="4" />
+            </staffGrp>
+          </scoreDef>
+          <section>
+            <measure n="0">
+              <staff n="1">
+                <layer n="1">
+                  <rest dur="16" dots="1" />
+                </layer>
+              </staff>
+              <staff n="2">
+                <layer n="1">
+		  <beam>
+		    <note xml:id="m0-slur-start" pname="f" oct="2" dur="32" />
+		    <note pname="g" accid="s" oct="2" dur="32" />
+		    <note pname="a" accid="s" oct="2" dur="32" />
+		  </beam>
+                </layer>
+              </staff>
+	      <tempo tstamp="1" staff="1">Allegro agitato</tempo>
+	      <!--
+		  Verovio doesn't seem to support place="between"
+		  yet. If you use place="between" staff="1 2", it just
+		  renders the dynamic marking twice, once under each
+		  staff.
+	      -->
+	      <dynam tstamp="1" place="below" staff="1">f</dynam>
+            </measure>
+	    <measure n="1">
+	      <staff n="1">
+		<layer n="1">
+		  <rest dur="1" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" oct="2" accid="n" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="2" accid="n" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="g" oct="2" dur="32" />
+		    <note xml:id="m1-slur-end" pname="f" oct="2" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+     	      <slur startid="#m0-slur-start" endid="#m1-slur-end" />
+	      <hairpin form="cres" staff="2" layer="1" place="below"
+		       tstamp="1.125" tstamp2="0m+1.51" />
+	      <hairpin form="dim" staff="2" layer="1" place="below"
+		       tstamp="1.625" tstamp2="0m+2" />
+	      <hairpin form="cres" staff="2" layer="1" place="below"
+		       tstamp="3.125" tstamp2="0m+3.375" />
+	      <hairpin form="dim" staff="2" layer="1" place="below"
+		       tstamp="3.5" tstamp2="0m+3.75" />
+	    </measure>
+	    <measure n="2">
+	      <staff n="1">
+		<layer n="1">
+		  <rest dur="2" />
+		  <chord dur="4">
+		    <note pname="f" oct="4" />
+		    <note pname="f" oct="3" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="4" />
+		      <note pname="f" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="b" oct="4" />
+		      <note pname="b" oct="3" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" oct="2" dur="32" />
+		    <note pname="g" oct="2" dur="32" />
+		    <note pname="a" accid="s" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="2" dur="32" />
+		    <app>
+		      <lem source="A1 EN">
+			<note xml:id="m2-annot1-target1" pname="g" accid="s" oct="2" dur="32" />
+			<annot xml:id="m2-annot1" plist="#m2-annot1-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 3) and <rend
+			  fontweight="bold">EN</rend> have
+			  G&#x0266F;, while <rend
+			  fontweight="bold">ES1</rend> and <rend
+			  fontweight="bold">EB</rend> have G&#x0266E;
+			  (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1 EB">
+			<note pname="g" oct="2" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+    	    <measure n="3">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m3-slur-start" dur="4">
+		    <note pname="b" oct="4" />
+		    <note pname="b" oct="3" />
+		  </chord>
+		  <beam>
+		    <chord xml:id="m3-slur-end" dur="8">
+		      <note pname="a" accid="s" oct="4" />
+		      <note pname="a" accid="s" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="a" oct="4" />
+		      <note pname="a" oct="3" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="b" oct="4" />
+		      <note pname="b" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" oct="5" />
+		      <note pname="d" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" oct="5" />
+		      <note pname="d" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>		  
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>		  
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>		  
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>		  
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>		  
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" accid="n" oct="2" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m3-slur-start" endid="#m3-slur-end" />
+	    </measure>
+ 	    <measure n="4">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m4-slur-start" dur="4">
+		    <note pname="d" oct="5" />
+		    <note pname="d" oct="4" />
+		  </chord>
+		  <beam>
+		    <chord xml:id="m4-slur-end" dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="d" oct="5" />
+		      <note pname="d" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="e" oct="5" />
+		      <note pname="e" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="5" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="5" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="g" accid="s" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" accid="s" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="e" accid="n" oct="3" dur="32" />
+		    <note pname="g" accid="n" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" accid="n" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="a" accid="n" oct="2" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m4-slur-start" endid="#m4-slur-end" />
+              <dynam staff="1" layer="1" place="below" tstamp="3">cresc.</dynam>
+	    </measure>
+ 	    <measure n="5">
+	      <staff n="1">
+		<layer n="1">
+		  <chord dur="8">
+		    <note pname="f" oct="5" />
+		    <note pname="f" oct="4" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="e" oct="5" />
+		    <note pname="e" oct="4" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="d" oct="5" />
+		    <note pname="d" oct="4" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="a" accid="s" oct="4" />
+		      <note pname="a" accid="s" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="b" oct="4" />
+		      <note pname="b" oct="3" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="g" accid="n" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="d" accid="s" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" accid="n" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="2" dur="32" />
+		    <note pname="g" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="2" dur="32" />
+		    <note pname="g" accid="s" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="6">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m6-slur-start" dur="4">
+		    <note pname="b" oct="4" />
+		    <note pname="b" oct="3" />
+		  </chord>
+		  <chord xml:id="m6-slur-end" dur="8">
+		    <note pname="a" accid="s" oct="4" />
+		    <note pname="a" accid="s" oct="3" />
+		  </chord>
+		  <rest dur="8" />
+		  <space dur="2" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="f" oct="2" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="f" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <space dur="2" />
+		  <chord dur="4">
+		    <note pname="f" oct="2" />
+		    <note pname="f" oct="1" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="2" />
+		      <note pname="f" oct="1" />
+		    </chord>
+ 		    <chord dur="8">
+		      <note pname="b" oct="2" />
+		      <note pname="b" oct="1" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <dynam staff="1" layer="1" place="below" tstamp="3">p</dynam>
+	      <slur startid="#m6-slur-start" endid="#m6-slur-end" />
+	    </measure>
+	    <measure n="7">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+  		    <note pname="e" oct="3" dur="32" staff="2" />
+		    <note pname="g" oct="3" dur="32" staff="2"  />
+		    <note pname="c" oct="4" dur="32" staff="2"  />
+		    <note pname="e" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="d" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="e" oct="3" dur="32" staff="2"  />
+		    <note pname="g" oct="3" dur="32" staff="2"  />
+		    <note pname="c" oct="4" dur="32" staff="2"  />
+		    <note pname="e" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="g" oct="4" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="e" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+  		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord xml:id="m7-slur-start" dur="4" stem.dir="down">
+		    <note pname="b" oct="2" />
+		    <note pname="b" oct="1" />
+		  </chord>
+		  <beam>
+		    <chord xml:id="m7-slur-end" dur="8" stem.dir="down">
+		      <note pname="a" accid="s" oct="2" />
+		      <note pname="a" accid="s" oct="1" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="a" oct="2" />
+		      <note pname="a" oct="1" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <app>
+		      <lem source="EN EB">
+			<chord xml:id="m7-annot1-target1" dur="8" stem.dir="down">
+			  <note pname="b" oct="2" />
+			  <note pname="b" oct="1" />
+			</chord>
+			<annot xml:id="m7-annot1" plist="#m7-annot1-target1">
+			  <p><rend fontweight="bold">EN</rend> and
+			  <rend fontweight="bold">EB</rend> have B,
+			  while <rend fontweight="bold">ES1</rend> has
+			  G, which is surely an error. The passage is
+			  different in <rend
+			  fontweight="bold">A1</rend>, but the same
+			  melody occurs with B in measure 16.</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<chord dur="8" stem.dir="down">
+			  <note pname="g" oct="2" />
+			  <note pname="g" oct="1" />
+			</chord>
+		      </rdg>
+		    </app>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m7-slur-start" endid="#m7-slur-end" curvedir="below" />
+	      <dynam tstamp="4" tstamp2="1m+2" extender="true" place="below" staff="1">cresc.</dynam>
+	    </measure>
+	    <measure n="8">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+  		    <note pname="e" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		    <note pname="a" accid="s" oct="5" dur="32" />
+		    <note pname="c" oct="6" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="6" dur="32" />
+		    <note pname="d" oct="6" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="6" dur="32" />
+		    <note pname="c" oct="6" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="s" oct="6" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="n" oct="6" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord xml:id="m8-slur-start" dur="4">
+		    <note pname="d" oct="3" />
+		    <note pname="d" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord xml:id="m8-slur-end" dur="8">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="e" oct="3" />
+		      <note pname="e" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m8-slur-start" endid="#m8-slur-end" />
+	    </measure>
+	    <measure n="9">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="c" oct="6" dur="32" />
+		    <note pname="a" accid="s" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" accid="s" oct="5" dur="32" />
+		    <note pname="a" accid="n" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" accid="n" oct="5" dur="32" />
+		    <note pname="g" accid="s" oct="5" dur="32" />
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="5" dur="32" />
+		    <note pname="g" accid="n" oct="5" dur="32" />
+		    <note pname="e" accid="n" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="n" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		    <note pname="b" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="s" oct="5" dur="32" />
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		    <note pname="b" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="n" oct="5" dur="32" />
+		    <note pname="e" accid="n" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="f" oct="3" />
+		    <note pname="f" oct="2" />
+		  </chord>
+		  <chord dur="2" dots="1">
+		    <note xml:id="m9-tie1-start" pname="c" oct="3" />
+		    <note xml:id="m9-tie2-start" pname="c" oct="2" />
+		  </chord>
+		</layer>
+	      </staff>
+	      <!--
+		  The @tie attribute doesn't seem to work for ties
+		  that span more than two measures.
+	      -->
+	      <tie staff="2" layer="1" startid="#m9-tie1-start" endid="#m10-tie1-mid" />
+	      <tie staff="2" layer="1" startid="#m9-tie2-start" endid="#m10-tie2-mid" />
+	      <dynam tstamp="1" place="below" staff="1">f</dynam>
+	    </measure>
+	    <measure n="10">
+	      <staff n="1">
+		<layer n="1">
+		  <space dur="2" />
+		  <note pname="c" oct="4" dur="4" stem.dir="up" />
+		  <beam>
+		    <note pname="c" oct="4" dur="8" stem.dir="up" />
+		    <note pname="f" oct="4" dur="8" stem.dir="up" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		    <note pname="b" accid="s" oct="4" dur="32" />
+		    <note pname="a" accid="n" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" accid="s" oct="4" dur="32" />
+		    <note pname="b" accid="s" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <!--
+		      With multiple layers, we have to set stem
+		      directions manually, because Verovio can't
+		      figure them out by itself.
+		  -->
+		  <beam>
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />
+		    <note pname="a" oct="3" dur="32" stem.dir="down" />
+		    <note pname="g" accid="s" oct="3" dur="32" stem.dir="down" />
+		    <note pname="f" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />
+		    <note pname="f" oct="3" dur="32" stem.dir="down" />
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />
+		    <note pname="f" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />
+		    <note pname="a" oct="3" dur="32" stem.dir="down" />
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />
+		    <note pname="f" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />
+		    <note pname="b" accid="n" oct="3" dur="32" stem.dir="down" />
+		    <note pname="a" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="1">
+		    <note xml:id="m10-tie1-mid" pname="c" oct="3" />
+		    <note xml:id="m10-tie2-mid" pname="c" oct="2" />
+		  </chord>
+		</layer>
+	      </staff>
+	      <app>
+		<lem source="A1 EB">
+		  <tie xml:id="m10-annot1-target1" staff="2" layer="1" startid="#m10-tie1-mid" endid="#m11-tie1-end" />
+		  <annot xml:id="m10-annot1" plist="#m10-annot1-target1">
+		    <p>In <rend fontweight="bold">A1</rend> (measures
+		    19-21) and <rend fontweight="bold">EB</rend>, both
+		    the ties in measure 9 continue to the first beat
+		    of measure 11, while in <rend
+		    fontweight="bold">ES1</rend>, only the lower
+		    C&#x0266F; is tied between measures 10 and 11.</p>
+		  </annot>
+		</lem>
+		<rdg source="ES1" />
+	      </app>
+	      <tie staff="2" layer="1" startid="#m10-tie2-mid" endid="#m11-tie2-end" />
+	      <dynam tstamp="1" place="below" staff="1">dim.</dynam>
+	    </measure>
+	    <measure n="11">
+	      <staff n="1">
+		<layer n="1">
+		  <note pname="f" oct="4" dur="4" stem.dir="up" />
+		  <beam>		    
+		    <note pname="e" accid="s" oct="4" dur="8" stem.dir="up" />
+		    <note pname="e" oct="4" dur="8" stem.dir="up" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="4" dur="8" stem.dir="up" />
+		    <note pname="g" accid="s" oct="4" dur="8" stem.dir="up" />
+		    <note pname="a" oct="4" dur="8" stem.dir="up" />
+		    <note pname="a" oct="4" dur="8" stem.dir="up" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="d" accid="n" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="g" accid="s" oct="3" dur="32" stem.dir="down" />		    	
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="d" oct="4" dur="32" stem.dir="down" />		    
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="d" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />		    
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />		    
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="a" oct="3" dur="32" stem.dir="down" />		    	
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="s" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		    <note pname="a" oct="3" dur="32" stem.dir="down" />		    	
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="d" accid="s" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="b" accid="s" oct="3" dur="32" stem.dir="down" />		    	
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />		    
+		    <note pname="d" oct="4" dur="32" stem.dir="down" />		    	
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />		    	
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="4">
+		    <note xml:id="m11-tie1-end" pname="c" oct="3" />
+		    <note xml:id="m11-tie2-end" pname="c" oct="2" />
+		  </chord>
+		  <rest dur="4" />
+		  <chord dur="4">
+		    <note pname="c" oct="3" />
+		    <note pname="c" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="12">
+	      <staff n="1">
+		<layer n="1">
+		  <note pname="a" oct="4" dur="4" />
+		  <beam>
+		    <note pname="g" accid="s" oct="4" dur="8" />
+		    <note pname="g" oct="4" dur="8" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="8" />
+		    <note pname="b" oct="4" dur="8" />
+		    <note pname="c" oct="5" dur="8" />
+		    <note pname="c" oct="5" dur="8" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" accid="s" oct="4" dur="32" />
+		    <note pname="b" accid="s" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m12-annot1-target1" pname="b" accid="n" oct="3" dur="32" />
+			<annot xml:id="m12-annot1" plist="#m12-annot1-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 23) and <rend
+			  fontweight="bold">EB</rend> have B&#x0266E;,
+			  while <rend fontweight="bold">ES1</rend> has
+			  B&#x0266F; (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="b" oct="3" dur="32" />
+		      </rdg>
+		    </app>
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="f" oct="3" />
+		    <note pname="f" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="e" accid="s" oct="3" />
+		      <note pname="e" accid="s" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="e" oct="3" />
+		      <note pname="e" oct="2" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="g" accid="s" oct="3" />
+		      <note pname="f" accid="s" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="a" oct="3" />
+		      <note pname="a" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="a" oct="3" />
+		      <note pname="a" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="13">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" accid="s" oct="4" dur="8" />
+		    <note pname="f" oct="5" dur="8" />
+		    <note pname="e" accid="s" oct="5" dur="8" />
+		    <note pname="b" oct="4" dur="8" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="4" dur="8" />
+		    <note pname="e" accid="n" oct="5" dur="8" />
+		    <note pname="d" accid="s" oct="5" dur="8" />
+		    <note pname="a" oct="4" dur="8" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="b" accid="s" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="e" accid="n" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="5" dur="32" />
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m13-annot1-target1" pname="d" accid="s" oct="5" dur="32" />
+			<annot xml:id="m13-annot1" plist="#m13-annot1-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 25) and <rend
+			  fontweight="bold">EB</rend> have D&#x0266F;,
+			  while <rend fontweight="bold">ES1</rend> has
+			  D&#x0266E; (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="d" oct="5" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		    <note pname="b" accid="n" oct="4" dur="32" />
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		    <note pname="g" accid="n" oct="4" dur="32" />
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m13-annot2-target1" pname="e" accid="n" oct="4" dur="32" />
+			<annot xml:id="m13-annot2" plist="#m13-annot2-target1 #m13-annot2-target2">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 26, though slightly different) and
+			  <rend fontweight="bold">EB</rend> have
+			  E&#x0266E; twice in this beat, while <rend
+			  fontweight="bold">ES1</rend> has E&#x0266F;
+			  (also twice, with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="e" oct="4" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m13-annot2-target2" pname="e" accid="n" oct="5" dur="32" />
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="e" oct="5" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		    <note pname="b" accid="s" oct="4" dur="32" />
+		    <note pname="a" accid="n" oct="4" dur="32" />
+		    <note pname="d" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" accid="s" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="a" oct="3" />
+		    <note pname="a" oct="2" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="g" accid="s" oct="3" />
+		    <note pname="g" accid="s" oct="2" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="g" accid="n" oct="3" />
+		    <note pname="g" accid="n" oct="2" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="f" oct="3" />
+		    <note pname="f" oct="2" />
+		  </chord>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="14">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="g" accid="s" oct="4" dur="8" />
+		    <note pname="d" accid="n" oct="5" dur="8" />
+		    <note pname="c" oct="5" dur="8" />
+		    <note pname="b" accid="s" oct="4" dur="8" />
+		  </beam>
+		  <note pname="c" oct="5" dur="4" />
+		  <beam>
+		    <note pname="c" oct="5" dur="8" />
+		    <note pname="c" oct="5" dur="8" />
+		  </beam>
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" accid="n" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		    <note pname="b" accid="n" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" accid="s" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <space dur="8" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="e" accid="s" oct="3" />
+		    <note pname="e" accid="s" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>
+		  </beam>
+		  <chord dur="4" dots="1">
+		    <note pname="c" oct="3" />
+		    <note pname="c" oct="2" />
+		  </chord>
+		  <beam>
+		    <note pname="c" oct="4" dur="32" stem.dir="down" />
+		    <note pname="e" oct="4" dur="32" staff="1" stem.dir="down" />
+		    <note pname="f" oct="4" dur="32" staff="1" stem.dir="down" />
+		    <note pname="g" oct="4" dur="32" staff="1" stem.dir="down" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="15">
+	      <staff n="1">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="a" oct="5" />
+		    <note pname="f" oct="5" />
+		    <note pname="d" accid="s" oct="5" />
+		    <note pname="a" oct="4" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="g" accid="s" oct="5" />
+		    <note pname="d" accid="n" oct="5" />
+		    <note pname="b" accid="n" oct="4" />
+		    <note pname="g" accid="s" oct="4" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="g" accid="n" oct="5" />
+		    <note pname="e" oct="5" />
+		    <note pname="c" oct="5" />
+		    <note pname="g" accid="n" oct="4" />
+		  </chord>
+		  <chord dur="4">
+		    <note pname="f" accid="s" oct="5" />
+		    <note pname="c" accid="n" oct="5" />
+		    <note pname="a" accid="n" oct="4" />
+		    <note pname="f" accid="s" oct="4" />
+		  </chord>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" accid="s" oct="3" dur="32" />
+		    <note pname="d" accid="s" oct="4" dur="32" />
+		    <app>
+		      <lem source="EB">
+			<note xml:id="m15-annot1-target1" pname="e" accid="s" oct="4" dur="32" />
+			<annot xml:id="m15-annot1" plist="#m15-annot1-target1">
+			  <p><rend fontweight="bold">EB</rend> has
+			  E&#x0266F;, while <rend
+			  fontweight="bold">ES1</rend> and <rend
+			  fontweight="bold">EN</rend> have E&#x0266E;
+			  (with no accidental). The corresponding
+			  passage in <rend fontweight="bold">A1</rend>
+			  (starting in measure 29) has neither, and
+			  has a somewhat different harmonic
+			  structure.</p>
+			  
+			  <p>The reading with E&#x0266F; maintains the
+			  parallelism of the passage: each
+			  chromatically descending diminished chord
+			  can be seen as a dominant minor ninth whose
+			  root appears in the left hand, and the same
+			  sequence of four notes occurs each time. The
+			  E&#x0266E; reading does not fit this
+			  pattern.</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1 EN">
+			<note pname="e" oct="4" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="3" dur="32" />
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="b" accid="n" oct="3" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="e" accid="n" oct="4" dur="32" />
+		    <note pname="f" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m15-annot2-target1" pname="e" accid="n" oct="3" dur="32" />
+			<annot xml:id="m15-annot2" plist="#m15-annot2-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 30) and <rend
+			  fontweight="bold">EB</rend> have E&#x0266E;,
+			  while <rend fontweight="bold">ES1</rend> has
+			  E&#x0266F; (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="e" oct="3" dur="32" />
+		      </rdg>
+		    </app>
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m15-annot3-target1" pname="g" accid="n" oct="3" dur="32" />
+			<annot xml:id="m15-annot3" plist="#m15-annot3-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 30) and <rend
+			  fontweight="bold">EB</rend> have G&#x0266E;,
+			  while <rend fontweight="bold">ES1</rend> has
+			  G&#x0266F; (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="g" oct="3" dur="32" />
+		      </rdg>
+		    </app>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="s" oct="3" dur="32" />
+		    <note pname="f" accid="s" oct="3" dur="32" />
+		    <note pname="a" accid="n" oct="3" dur="32" />
+		    <note pname="b" accid="s" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="c" accid="n" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		    <note pname="e" accid="f" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="16">
+	      <staff n="1">
+		<layer n="1">
+		  <chord dur="4">
+		    <note pname="e" accid="s" oct="5" />
+		    <note pname="b" oct="4" />
+		    <choice>
+		      <corr>
+			<note xml:id="m16-annot1-target1" pname="g" accid="s" oct="4" />
+			<annot xml:id="m16-annot1" plist="#m16-annot1-target1">
+			  <p>In <rend fontweight="bold">ES1</rend> and
+			  <rend fontweight="bold">EB</rend>, the
+			  accidental is missing on the G&#x0266F; in
+			  the upper staff.</p>
+			</annot>
+		      </corr>
+		      <sic>
+			<note pname="g" oct="4" />
+		      </sic>
+		    </choice>
+		    <note pname="e" accid="s" oct="4" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="5" />
+		      <note pname="c" accid="s" oct="5" />
+		      <note pname="a" oct="4" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" oct="5" />
+		      <note pname="d" oct="4" />
+		    </chord>
+		  </beam>
+		  <chord dur="4">
+		    <note pname="c" oct="5" />
+		    <note pname="a" oct="4" />
+		    <note pname="f" oct="4" />
+		    <note pname="c" oct="4" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="f" oct="5" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="b" accid="n" oct="3" dur="32" />
+		    <note pname="c" accid="s" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" accid="n" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="17">
+	      <staff n="1">
+		<layer n="1">
+		  <!--
+		     Verovio has trouble rendering slurs with chords,
+		     and this seems to be partly dependent on stem
+		     direction.
+
+		     https://github.com/rism-ch/verovio/issues/952
+
+                     Manually changing the stem direction here helps.
+		  -->
+		  <chord xml:id="m17-slur1-start" dur="4" stem.dir="up">
+		    <note pname="f" oct="5" />
+		    <note pname="d" oct="5" />
+		    <note pname="b" oct="4" />
+		    <note pname="f" oct="4" />
+		  </chord>
+		  <chord xml:id="m17-slur1-end" dur="8">
+		    <note pname="e" accid="s" oct="5" />
+		    <note pname="e" accid="s" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="c" oct="2" dur="8" artic="stacc" />
+		  <note pname="f" oct="2" dur="8" artic="stacc" />
+		  <clef shape="G" line="2" />
+		  <chord dur="8">
+		    <note pname="c" oct="5" />
+		    <note pname="c" oct="4" />
+		  </chord>
+		  <beam>
+		    <chord xml:id="m17-slur2-start" dur="8">
+		      <note pname="a" oct="5" />
+		      <note pname="a" oct="4" />
+		    </chord>
+		    <chord xml:id="m17-slur2-end" dur="16">
+		      <note pname="g" accid="s" oct="5" />
+		      <note pname="g" accid="s" oct="4" />
+		    </chord>
+		    <chord dur="16" artic="stacc">
+		      <note pname="f" oct="5" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m17-slur1-start" endid="#m17-slur1-end" />
+	      <slur startid="#m17-slur2-start" endid="#m17-slur2-end" />
+	      <hairpin form="cres" staff="2" layer="1" place="below"
+		       tstamp="4.125" tstamp2="0m+4.5" />
+	      <hairpin form="dim" staff="2" layer="1" place="below"
+		       tstamp="4.625" tstamp2="0m+4.875" />
+	    </measure>
+	    <measure n="18">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m18-slur-start" dur="4" stem.dir="up">
+		    <note pname="f" oct="5" />
+		    <note pname="f" oct="4" />
+		  </chord>
+		  <chord xml:id="m18-slur-end" dur="8">
+		    <note pname="e" accid="s" oct="5" />
+		    <note pname="e" accid="s" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="c" oct="2" dur="8" artic="stacc" />
+		  <note pname="f" oct="2" dur="8" artic="stacc" />
+		  <clef shape="G" line="2" />
+		  <beam>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="5" />
+		      <note pname="c" oct="4" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="e" accid="n" oct="5" />
+		      <note pname="e" accid="n" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m18-slur-start" endid="#m18-slur-end" />
+	    </measure>
+	    <measure n="19">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m19-slur1-start" dur="4">
+		    <note pname="e" oct="5" />
+		    <note pname="e" oct="4" />
+		  </chord>
+		  <chord xml:id="m19-slur1-end" dur="8">
+		    <note pname="d" accid="s" oct="5" />
+		    <note pname="d" accid="s" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="b" oct="1" dur="8" artic="stacc" />
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <clef shape="G" line="2" />
+		  <note pname="b" oct="4" dur="8" />
+		  <beam>
+		    <chord xml:id="m19-slur2-start" dur="16">
+		      <note pname="b" oct="5" />
+		      <note pname="b" oct="4" />
+		    </chord>
+		    <chord xml:id="m19-slur2-end" dur="16">
+		      <note pname="g" oct="5" />
+		      <note pname="g" oct="4" />
+		    </chord>
+		    <chord dur="16" artic="stacc">
+		      <note pname="f" oct="5" />
+		      <note pname="f" oct="4" />
+		    </chord>
+		    <chord dur="16" artic="stacc">
+		      <note pname="e" oct="5" />
+		      <note pname="e" oct="4" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="c" accid="n" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" accid="n" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" accid="n" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m19-slur1-start" endid="#m19-slur1-end" />
+	      <slur startid="#m19-slur2-start" endid="#m19-slur2-end" />
+	    </measure>
+	    <measure n="20">
+	      <staff n="1">
+		<layer n="1">
+		  <chord xml:id="m20-slur-start" dur="4">
+		    <note pname="e" oct="5" />
+		    <note pname="e" oct="4" />
+		  </chord>
+		  <chord xml:id="m20-slur-end" dur="8">
+		    <note pname="d" accid="s" oct="5" />
+		    <note pname="d" accid="s" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="b" oct="1" dur="8" artic="stacc" />
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <rest dur="8" />
+		  <clef shape="G" line="2" />
+		  <chord xml:id="m20-arpeg" dur="8" artic="stacc">
+		    <note pname="e" oct="5" />
+		    <note pname="b" oct="4" />
+		    <note pname="g" oct="4" />
+		    <note pname="e" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="b" oct="1" dur="8" artic="stacc" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <slur startid="#m20-slur-start" endid="#m20-slur-end" />
+	      <arpeg plist="#m20-arpeg" />
+	      <dynam tstamp="4" place="below" staff="1">sf</dynam>
+	    </measure>
+	    <measure n="21">
+	      <staff n="1">
+		<layer n="1">
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <rest dur="8" />
+		  <clef shape="G" line="2" />
+		  <chord xml:id="m21-arpeg1" dur="8">
+		    <note pname="g" oct="5" />
+		    <note pname="e" oct="5" />
+		    <note pname="b" oct="4" />
+		    <note pname="g" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="b" oct="1" dur="8" artic="stacc" />
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <rest dur="8" />
+		  <clef shape="G" line="2" />
+		  <chord xml:id="m21-arpeg2" dur="8">
+		    <note pname="b" oct="5" />
+		    <note pname="g" oct="5" />
+		    <note pname="e" oct="5" />
+		    <note pname="b" oct="4" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="b" oct="1" dur="8" artic="stacc" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="2" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <arpeg plist="#m21-arpeg1" />
+	      <arpeg plist="#m21-arpeg2" />
+	      <dynam tstamp="2" place="below" staff="1">sf</dynam>
+	      <dynam tstamp="4" place="below" staff="1">sf</dynam>
+	    </measure>
+	    <measure n="22">
+	      <staff n="1">
+		<layer n="1">
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <rest dur="8" />
+		  <clef shape="G" line="2" />
+		  <chord xml:id="m22-arpeg" dur="8">
+		    <note pname="e" oct="6" />
+		    <note pname="b" oct="5" />
+		    <note pname="g" oct="5" />
+		    <note pname="e" oct="5" />
+		  </chord>
+		  <clef shape="F" line="4" />
+		  <note pname="e" oct="2" dur="8" artic="stacc" />
+		  <note pname="e" accid="s" oct="2" dur="8" artic="stacc" />
+		  <clef shape="G" line="2" />
+		  <beam>
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		  <note pname="e" oct="4" dur="8" />
+		  <clef shape="F" line="4" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="3" dur="32" />
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <space dur="4" />
+		  <space dur="32" />
+		  <beam>
+		    <note pname="d" oct="4" dur="32" staff="1" stem.dir="down" />
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <arpeg plist="#m22-arpeg" />
+	      <dynam tstamp="2" place="below" staff="1">sf</dynam>
+              <dynam staff="1" layer="1" place="below" tstamp="3">f</dynam>
+              <dynam staff="1" layer="1" place="below" tstamp="3.25">cresc.</dynam>
+	    </measure>
+	    <measure n="23">
+	      <staff n="1">
+		<layer n="1">
+		  <note pname="e" accid="s" oct="2" dur="8" />
+		  <clef shape="G" line="2" />
+		  <beam>
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		  <note pname="e" oct="4" dur="8" />
+		  <clef shape="F" line="4" />
+		  <note pname="e" accid="s" oct="2" dur="8" />
+		  <clef shape="G" line="2" />
+		  <beam>
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="g" accid="s" oct="5" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="d" oct="6" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="6" dur="32" />
+		    <note pname="d" oct="6" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" accid="s" oct="3" dur="32" />
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <space dur="4" />
+		  <space dur="32" />
+		  <beam>
+		    <note pname="d" oct="4" dur="32" staff="1" stem.dir="down" />
+		    <note pname="b" oct="3" dur="32" stem.dir="down" />
+		    <note pname="g" oct="3" dur="32" stem.dir="down" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <rest dur="8" />
+		  <rest dur="4" />
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="24">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" accid="s" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="4" dur="32" stem.dir="up" />
+		    <note pname="d" oct="4" dur="32" stem.dir="up" />
+		    <note pname="b" oct="3" dur="32" staff="2" stem.dir="up" />
+		    <note pname="g" accid="s" oct="3" dur="32" staff="2" stem.dir="up" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="b" oct="3" dur="32" staff="2" stem.dir="down" />
+		    <note pname="d" oct="4" dur="32" stem.dir="down" />
+		    <note pname="f" oct="4" dur="32" stem.dir="down" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="4" dur="32" stem.dir="up" />
+		    <note pname="b" oct="3" dur="32" staff="2" stem.dir="up" />
+		    <note pname="f" oct="3" dur="32" staff="2" stem.dir="up" />
+		    <note pname="d" oct="3" dur="32" staff="2" stem.dir="up" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <rest dur="2" />
+		  <chord dur="4">
+		    <note pname="f" oct="2" />
+		    <note pname="f" oct="1" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="2" />
+		      <note pname="f" oct="1" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="b" oct="2" />
+		      <note pname="b" oct="1" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <dynam tstamp="3" place="below" staff="1">ff</dynam>
+	    </measure>
+	    <measure n="25">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" oct="3" dur="32" staff="2" stem.dir="up" />
+		    <note pname="g" accid="n" oct="3" dur="32" staff="2" stem.dir="up" />
+		    <note pname="c" oct="4" dur="32" stem.dir="up" />
+		    <note pname="e" accid="n" oct="4" dur="32" stem.dir="up" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="n" oct="4" dur="32"/>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="e" accid="n" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32"/>
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="6" dur="32" />
+		    <note pname="g" oct="5" dur="32"/>
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" stem.dir="up" />
+		    <note pname="e" oct="4" dur="32" stem.dir="up" />
+		    <note pname="c" oct="4" dur="32" staff="2" stem.dir="up" />
+		    <note pname="e" oct="3" dur="32" stem.dir="up" staff="2" />
+		  </beam>
+		  <space dur="8" />
+		  <beam>
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <space dur="2" />
+		  <!--
+		      Verovio can't automatically position rests when
+		      there are multiple layers, so we have to do it
+		      manually.
+
+		      https://github.com/rism-ch/verovio/issues/617
+		  -->
+		  <rest dur="32" ploc="f" oloc="4" />
+		  <beam>
+		    <note pname="d" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <space dur="8" />
+		  <space dur="4" />
+		</layer>
+		<layer n="2">
+		  <chord dur="4" stem.dir="down">
+		    <note pname="b" oct="2" />
+		    <note pname="b" oct="1" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="a" accid="s" oct="2" />
+		      <note pname="a" accid="s" oct="1" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		  </beam>
+		  <chord dur="4">
+		    <note pname="c" oct="3" />
+		    <note pname="c" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="b" oct="2" />
+		      <note pname="b" oct="1" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <dynam tstamp="1" place="below" staff="2">sf</dynam>
+	      <dynam tstamp="3" place="below" staff="2">sf</dynam>
+	    </measure>
+	    <measure n="26">
+	      <staff n="1">
+		<layer n="1">
+		  <space dur="8" />
+		  <beam>
+		    <note pname="c" oct="4" dur="32" stem.dir="up" />
+		    <note pname="e" oct="4" dur="32" stem.dir="up" />
+		    <note pname="g" oct="4" dur="32" stem.dir="up" />
+		    <note pname="a" accid="s" oct="4" dur="32" stem.dir="up" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		    <note pname="a" accid="s" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="6" dur="32" />
+		    <note pname="a" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="n" oct="4" dur="32" />
+		    <note pname="c" accid="n" oct="5" dur="32" />
+		    <note pname="d" accid="s" oct="5" dur="32" />
+		    <note pname="a" accid="n" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="5" dur="32" />
+		    <note pname="e" accid="s" oct="5" dur="32" />
+		    <note pname="b" oct="5" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <rest dur="32" ploc="d" oloc="4" />
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		  </beam>
+		  <space dur="8" />
+		  <space dur="4" />
+		  <space dur="2" />
+		</layer>
+		<layer n="2">
+		  <chord dur="4" stem.dir="down">
+		    <note pname="d" oct="3" />
+		    <note pname="d" oct="2" />
+		  </chord>
+		  <beam>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="c" oct="3" />
+		      <note pname="c" oct="2" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="e" oct="3" />
+		      <note pname="e" oct="2" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="d" oct="3" />
+		      <note pname="d" oct="2" />
+		    </chord>		    
+		    <chord dur="8" stem.dir="down">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="e" oct="3" />
+		      <note pname="e" oct="2" />
+		    </chord>
+		    <chord dur="8" stem.dir="down">
+		      <note pname="g" oct="3" />
+		      <note pname="g" oct="2" />
+		    </chord>
+		  </beam>
+		</layer>
+	      </staff>
+	      <dynam tstamp="1" place="below" staff="2">sf</dynam>
+	    </measure>
+	    <measure n="27">
+	      <staff n="1">
+		<layer n="1">
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		    <note pname="c" accid="s" oct="5" dur="32" />
+		    <note pname="e" accid="n" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="c" accid="n" oct="5" dur="32" />
+		    <note pname="a" accid="n" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		  </beam>
+		  <rest dur="32" />
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <note pname="a" accid="s" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <chord dur="8">
+		      <note pname="f" oct="3" />
+		      <note pname="f" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="a" accid="s" oct="3" />
+		      <note pname="a" accid="s" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="b" oct="3" />
+		      <note pname="b" oct="2" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="c" oct="4" />
+		      <note pname="c" oct="3" />
+		    </chord>
+		  </beam>
+		  <beam>
+		    <chord dur="8">
+		      <note pname="d" oct="4" />
+		      <note pname="d" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="d" accid="s" oct="4" />
+		      <note pname="d" accid="s" oct="3" />
+		    </chord>
+		    <chord dur="8">
+		      <note pname="e" oct="4" />
+		      <note pname="e" oct="3" />
+		    </chord>
+		  </beam>
+		  <note pname="e" accid="s" oct="4" dur="8" />
+		</layer>
+		<layer n="2">
+		  <space dur="2" />
+		  <space dur="4" />
+		  <space dur="8" />
+		  <beam>
+		    <note pname="e" accid="s" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		    <note pname="g" accid="s" oct="3" dur="32" />
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="28">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="c" accid="s" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="g" oct="5" dur="32" />
+		    <note pname="f" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="e" oct="5" dur="32" />
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="a" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="n" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="5" dur="32" />
+		    <note pname="c" oct="5" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="a" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="d" accid="n" oct="4" dur="32" />
+		    <note pname="e" accid="n" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="g" accid="n" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" accid="n" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" accid="n" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="d" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="29">
+	      <staff n="1">
+		<layer n="1">
+		  <beam>
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="b" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="f" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="g" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="d" oct="4" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="e" oct="4" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		  </beam>
+		  <space dur="4" />
+		  <rest dur="8" />
+		  <chord dur="8">
+		    <note pname="a" accid="s" oct="5" />
+		    <note pname="f" oct="5" />
+		    <note pname="e" oct="5" />
+		    <note pname="c" oct="5" />
+		    <note pname="a" accid="s" oct="4" />
+		  </chord>
+		  <rest dur="8" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <space dur="4" />
+		  <space dur="8" />
+		  <beam>
+		    <note pname="a" accid="s" oct="3" dur="32" />
+		    <note pname="c" oct="4" dur="32" />
+		    <note pname="a" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		  </beam>
+		  <note pname="f" oct="3" dur="8" />
+		  <space dur="8" />
+		  <space dur="4" />
+		</layer>
+		<layer n="2">
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="b" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="f" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="g" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="d" oct="3" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="e" oct="3" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="b" oct="2" dur="32" />
+		  </beam>
+		  <beam>
+		    <note pname="a" accid="s" oct="2" dur="32" />
+		    <note pname="c" oct="3" dur="32" />
+		    <note pname="a" oct="2" dur="32" />
+		    <note pname="g" oct="2" dur="32" />
+		  </beam>
+		  <note pname="f" oct="2" dur="8" />
+		  <rest dur="8" />
+		  <chord dur="8">
+		    <note pname="f" oct="3" />
+		    <note pname="e" oct="3" />
+		    <note pname="c" oct="3" />
+		    <note pname="f" oct="2" />
+		  </chord>
+		  <rest dur="8" />
+		</layer>
+	      </staff>
+	    </measure>
+	    <measure n="30" right="end">
+	      <staff n="1">
+		<layer n="1">
+		  <chord dur="8">
+		    <note pname="b" oct="5" dur="8" />
+		    <note pname="f" oct="5" dur="8" />
+		    <note pname="d" oct="5" dur="8" />
+		    <note pname="b" oct="4" dur="8" />
+		  </chord>
+		  <rest dur="8" />
+		  <rest dur="4" />
+		  <rest dur="2" fermata="above" />
+		</layer>
+	      </staff>
+	      <staff n="2">
+		<layer n="1">
+		  <chord dur="8">
+		    <note pname="b" oct="2" dur="8" />
+		    <note pname="f" oct="2" dur="8" />
+		    <note pname="d" oct="2" dur="8" />
+		    <note pname="b" oct="1" dur="8" />
+		  </chord>
+		  <rest dur="8" />
+		  <rest dur="4" />
+		  <rest dur="2" fermata="above" />
+		</layer>
+	      </staff>
+	    </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>
