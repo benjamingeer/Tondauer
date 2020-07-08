@@ -164,9 +164,9 @@
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 3) and <rend
 			  fontweight="bold">EN</rend> have
-			  G&#x0266F;, while <rend
+			  G&#x266f;, while <rend
 			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EB</rend> have G&#x0266E;
+			  fontweight="bold">EB</rend> have G&#x266e;
 			  (with no accidental).</p>
 			</annot>
 		      </lem>
@@ -386,7 +386,23 @@
 		    <note pname="b" oct="2" dur="32" />
 		    <note pname="c" oct="3" dur="32" />
 		    <note pname="b" oct="2" dur="32" />
-		    <note pname="a" accid="n" oct="2" dur="32" />
+		    <app>
+		      <lem source="A1 EB">
+			<note xml:id="m4-annot1-target1" pname="a" accid="n" oct="2" dur="32" />
+			<annot xml:id="m4-annot1" plist="#m4-annot1-target1">
+			  <p><rend fontweight="bold">A1</rend>
+			  (measure 8) and <rend
+			  fontweight="bold">EB</rend> have A&#x266e;
+			  (with no accidental in <rend
+			  fontweight="bold">A1</rend>), while <rend
+			  fontweight="bold">ES1</rend> has A&#x266f;
+			  (with no accidental).</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="a" oct="2" dur="32" />
+		      </rdg>
+		    </app>
 		  </beam>
 		</layer>
 	      </staff>
@@ -646,8 +662,8 @@
 			  while <rend fontweight="bold">ES1</rend> has
 			  G, which is surely an error. The passage is
 			  different in <rend
-			  fontweight="bold">A1</rend>, but the same
-			  melody occurs with B in measure 16.</p>
+			  fontweight="bold">A1</rend>, but the theme
+			  occurs with B in measure 16.</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -922,7 +938,7 @@
 		    the ties in measure 9 continue to the first beat
 		    of measure 11, while in <rend
 		    fontweight="bold">ES1</rend>, only the lower
-		    C&#x0266F; is tied between measures 10 and 11.</p>
+		    C&#x266f; is tied between measures 10 and 11.</p>
 		  </annot>
 		</lem>
 		<rdg source="ES1" />
@@ -1058,9 +1074,9 @@
 			<annot xml:id="m12-annot1" plist="#m12-annot1-target1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 23) and <rend
-			  fontweight="bold">EB</rend> have B&#x0266E;,
+			  fontweight="bold">EB</rend> have B&#x266e;,
 			  while <rend fontweight="bold">ES1</rend> has
-			  B&#x0266F; (with no accidental).</p>
+			  B&#x266f; (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -1168,9 +1184,9 @@
 			<annot xml:id="m13-annot1" plist="#m13-annot1-target1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 25) and <rend
-			  fontweight="bold">EB</rend> have D&#x0266F;,
+			  fontweight="bold">EB</rend> have D&#x266f;,
 			  while <rend fontweight="bold">ES1</rend> has
-			  D&#x0266E; (with no accidental).</p>
+			  D&#x266e; (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -1188,23 +1204,53 @@
 		  </beam>
 		  <beam>
 		    <note pname="b" oct="4" dur="32" />
-		    <note pname="g" accid="s" oct="4" dur="32" />
+		    <choice>
+		      <corr>
+			<note xml:id="m13-annot2-target1" pname="g" accid="s" oct="4" dur="32" />
+			<annot xml:id="m13-annot2" plist="#m13-annot2-target1">
+			  <p>In <rend fontweight="bold">ES1</rend> and
+			  <rend fontweight="bold">EB</rend>, the
+			  accidental is missing on the G&#x266f; in
+			  the upper staff. <rend
+			  fontweight="bold">A1</rend> (measure 25) is
+			  unclear.</p>
+			</annot>
+		      </corr>
+		      <sic>
+			<note pname="g" oct="4" dur="32" />
+		      </sic>
+		    </choice>
 		    <note pname="e" oct="4" dur="32" />
-		    <note pname="d" accid="n" oct="4" dur="32" />
+		    <app>
+		      <lem source="EB">
+			<note xml:id="m13-annot3-target1" pname="d" accid="n" oct="4" dur="32" />
+			<annot xml:id="m13-annot3" plist="#m13-annot3-target1">
+			  <p><rend fontweight="bold">EB</rend> has
+			  D&#x266e;, while <rend
+			  fontweight="bold">ES1</rend> has D&#x266f;
+			  (with no accidental), which is surely an
+			  error. <rend fontweight="bold">A1</rend>
+			  (measure 25) is unclear.</p>
+			</annot>
+		      </lem>
+		      <rdg source="ES1">
+			<note pname="d" oct="4" dur="32" />
+		      </rdg>
+		    </app>
 		  </beam>
 		  <beam>
 		    <note pname="a" accid="s" oct="4" dur="32" />
 		    <note pname="g" accid="n" oct="4" dur="32" />
 		    <app>
 		      <lem source="A1 EB">
-			<note xml:id="m13-annot2-target1" pname="e" accid="n" oct="4" dur="32" />
-			<annot xml:id="m13-annot2" plist="#m13-annot2-target1 #m13-annot2-target2">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 26, though slightly different) and
-			  <rend fontweight="bold">EB</rend> have
-			  E&#x0266E; twice in this beat, while <rend
-			  fontweight="bold">ES1</rend> has E&#x0266F;
-			  (also twice, with no accidental).</p>
+			<note xml:id="m13-annot4-target1" pname="e" accid="n" oct="4" dur="32" />
+			<annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2">
+			  <p>Twice in this beat, <rend
+			  fontweight="bold">A1</rend> (measure 26,
+			  though slightly different) and <rend
+			  fontweight="bold">EB</rend> have E&#x266e;,
+			  while <rend fontweight="bold">ES1</rend> has
+			  E&#x266f; (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -1216,7 +1262,7 @@
 		  <beam>
 		    <app>
 		      <lem source="A1 EB">
-			<note xml:id="m13-annot2-target2" pname="e" accid="n" oct="5" dur="32" />
+			<note xml:id="m13-annot4-target2" pname="e" accid="n" oct="5" dur="32" />
 		      </lem>
 		      <rdg source="ES1">
 			<note pname="e" oct="5" dur="32" />
@@ -1390,23 +1436,23 @@
 			<note xml:id="m15-annot1-target1" pname="e" accid="s" oct="4" dur="32" />
 			<annot xml:id="m15-annot1" plist="#m15-annot1-target1">
 			  <p><rend fontweight="bold">EB</rend> has
-			  E&#x0266F;, while <rend
+			  E&#x266f;, while <rend
 			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EN</rend> have E&#x0266E;
+			  fontweight="bold">EN</rend> have E&#x266e;
 			  (with no accidental). The corresponding
 			  passage in <rend fontweight="bold">A1</rend>
 			  (starting in measure 29) has neither, and
 			  has a somewhat different harmonic
 			  structure.</p>
 			  
-			  <p>The reading with E&#x0266F; maintains the
+			  <p>The reading with E&#x266f; maintains the
 			  parallelism of the passage: each
 			  chromatically descending diminished chord
 			  can be seen as a dominant minor ninth whose
 			  root appears in the left hand, and the same
-			  sequence of four notes occurs each time. The
-			  E&#x0266E; reading does not fit this
-			  pattern.</p>
+			  four-note interval sequence occurs each
+			  time. The E&#x266e; reading does not fit
+			  this pattern.</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1 EN">
@@ -1446,9 +1492,9 @@
 			<annot xml:id="m15-annot2" plist="#m15-annot2-target1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have E&#x0266E;,
+			  fontweight="bold">EB</rend> have E&#x266e;,
 			  while <rend fontweight="bold">ES1</rend> has
-			  E&#x0266F; (with no accidental).</p>
+			  E&#x266f; (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -1461,9 +1507,9 @@
 			<annot xml:id="m15-annot3" plist="#m15-annot3-target1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have G&#x0266E;,
+			  fontweight="bold">EB</rend> have G&#x266e;,
 			  while <rend fontweight="bold">ES1</rend> has
-			  G&#x0266F; (with no accidental).</p>
+			  G&#x266f; (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="ES1">
@@ -1500,7 +1546,7 @@
 			<annot xml:id="m16-annot1" plist="#m16-annot1-target1">
 			  <p>In <rend fontweight="bold">ES1</rend> and
 			  <rend fontweight="bold">EB</rend>, the
-			  accidental is missing on the G&#x0266F; in
+			  accidental is missing on the G&#x266f; in
 			  the upper staff.</p>
 			</annot>
 		      </corr>
@@ -1890,12 +1936,30 @@
 		  <note pname="e" oct="2" dur="8" artic="stacc" />
 		  <rest dur="8" />
 		  <clef shape="G" line="2" />
-		  <chord xml:id="m20-arpeg" dur="8" artic="stacc">
-		    <note pname="e" oct="5" />
-		    <note pname="b" oct="4" />
-		    <note pname="g" oct="4" />
-		    <note pname="e" oct="4" />
-		  </chord>
+		  <app>
+		    <lem source="ES1">
+		      <chord xml:id="m20-arpeg" dur="8" artic="stacc">
+			<note pname="e" oct="5" />
+			<note pname="b" oct="4" />
+			<note pname="g" oct="4" />
+			<note pname="e" oct="4" />
+		      </chord>
+		      <annot xml:id="m20-annot1" plist="#m20-arpeg">
+			<p>The chord is staccato in <rend
+			fontweight="bold">ES1</rend>, but not in <rend
+			fontweight="bold">EB</rend>. <rend
+			fontweight="bold">A1</rend> differs.</p>
+		      </annot>
+		    </lem>
+		    <rdg source="EB">
+		      <chord dur="8">
+			<note pname="e" oct="5" />
+			<note pname="b" oct="4" />
+			<note pname="g" oct="4" />
+			<note pname="e" oct="4" />
+		      </chord>
+		    </rdg>
+		  </app>
 		  <clef shape="F" line="4" />
 		  <note pname="b" oct="1" dur="8" artic="stacc" />
 		</layer>
