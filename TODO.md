@@ -54,7 +54,7 @@ In TypeScript:
 ## Search
 
 It would be nice to demo extended searches like, "find the annotations
-that refer to a source published in London".
+that refer to a source published in London before 1870".
 
 ## Displaying facsimiles
 
