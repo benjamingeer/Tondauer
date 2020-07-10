@@ -109,94 +109,206 @@
   <music>
     <facsimile id="source-A1-facsimile-SBB" decls="#source-A1">
       <surface id="source-A1-facsimile-SBB-page1" n="1">
-	<zone id="source-A1-facsimile-SBB-page1-m3-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m8-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m16-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m19-m21-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m23-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m25-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m25-region2" />
-	<zone id="source-A1-facsimile-SBB-page1-m25-region3" />
-	<zone id="source-A1-facsimile-SBB-page1-m26-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m29-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m30-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m30-region2" />
-	<zone id="source-A1-facsimile-SBB-page1-m31-region1" />
-	<zone id="source-A1-facsimile-SBB-page1-m40-region1" />
+	<zone id="source-A1-facsimile-SBB-page1-m3-region1">
+	  <figDesc>G♯.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m8-region1">
+	  <figDesc>A♮.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m16-region1">
+	  <figDesc>B.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m19-m21-region1">
+	  <figDesc>Both ties continue.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m23-region1">
+	  <figDesc>B♮.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m25-region1">
+	  <figDesc>D♯.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m25-region2">
+	  <figDesc>Unclear.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m25-region3">
+	  <figDesc>Unclear.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m26-region1">
+	  <figDesc>E♮.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m29-region1">
+	  <figDesc>Structure differs from V1.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m30-region1">
+	  <figDesc>E♮.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m30-region2">
+	  <figDesc>G♮.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m31-region1">
+	  <figDesc>Structure differs from V1.</figDesc>
+	</zone>
+	<zone id="source-A1-facsimile-SBB-page1-m40-region1">
+	  <figDesc>Structure differs from V1.</figDesc>
+	</zone>
       </surface>
       <surface id="source-A1-facsimile-SBB-page-02" n="2" />
     </facsimile>
     <facsimile id="source-ES1-facsimile-UCR" decls="#source-ES1">
       <surface id="source-ES1-facsimile-UCR-page1" n="1">
-	<zone id="source-ES1-facsimile-UCR-page1-m2-region1" />
-	<zone id="source-ES1-facsimile-UCR-page1-m4-region1" />
+	<zone id="source-ES1-facsimile-UCR-page1-m2-region1">
+	  <figDesc>G♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page1-m4-region1">
+	  <figDesc>A♯ (with no accidental).</figDesc>
+	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page2" n="2">
-	<zone id="source-ES1-facsimile-UCR-page2-m7-region1" />
-	<zone id="source-ES1-facsimile-UCR-page2-m10-region1" />
-	<zone id="source-ES1-facsimile-UCR-page2-m12-region1" />
+	<zone id="source-ES1-facsimile-UCR-page2-m7-region1">
+	  <figDesc>G.</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page2-m10-region1">
+	  <figDesc>Only the lower C♯ is tied between measures 10 and 11.</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page2-m12-region1">
+	  <figDesc>B♯ (with no accidental).</figDesc>
+	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page3" n="3">
-	<zone id="source-ES1-facsimile-UCR-page3-m13-region1" />
-	<zone id="source-ES1-facsimile-UCR-page3-m13-region2" />
-	<zone id="source-ES1-facsimile-UCR-page3-m13-region3" />
-	<zone id="source-ES1-facsimile-UCR-page3-m13-region4" />
-	<zone id="source-ES1-facsimile-UCR-page3-m15-region1" />
-	<zone id="source-ES1-facsimile-UCR-page3-m15-region2" />
-	<zone id="source-ES1-facsimile-UCR-page3-m15-region3" />
-	<zone id="source-ES1-facsimile-UCR-page3-m16-region1" />
+	<zone id="source-ES1-facsimile-UCR-page3-m13-region1">
+	  <figDesc>D♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m13-region2">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m13-region3">
+	  <figDesc>D♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m13-region4">
+	  <figDesc>E♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m15-region1">
+	  <figDesc>E♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m15-region2">
+	  <figDesc>E♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m15-region3">
+	  <figDesc>G♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-ES1-facsimile-UCR-page3-m16-region1">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page4" n="4">
-	<zone id="source-ES1-facsimile-UCR-page4-m20-region1" />
+	<zone id="source-ES1-facsimile-UCR-page4-m20-region1">
+	  <figDesc>Staccato.</figDesc>
+	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page5" n="5" />
     </facsimile>
     <facsimile id="source-EN-facsimile-BL" decls="#source-EN">
       <surface id="source-EN-facsimile-BL-page1" n="1">
-	<zone id="source-EN-facsimile-BL-page1-m2-region1" />
-	<zone id="source-EN-facsimile-BL-page1-m4-region1" />
+	<zone id="source-EN-facsimile-BL-page1-m2-region1">
+	  <figDesc>G♯.</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page1-m4-region1">
+	  <figDesc>A♯ (with no accidental).</figDesc>
+	</zone>
       </surface>
       <surface id="source-EN-facsimile-BL-page2" n="2">
-	<zone id="source-EN-facsimile-BL-page2-m7-region1" />
-	<zone id="source-EN-facsimile-BL-page2-m10-region1" />
-	<zone id="source-EN-facsimile-BL-page2-m12-region1" />
+	<zone id="source-EN-facsimile-BL-page2-m7-region1">
+	  <figDesc>B.</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page2-m10-region1">
+	  <figDesc>Only the lower C♯ is tied between measures 10 and 11.</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page2-m12-region1">
+	  <figDesc>B♯ (with no accidental).</figDesc>
+	</zone>
       </surface>
       <surface id="source-EN-facsimile-BL-page3" n="3">
-	<zone id="source-EN-facsimile-BL-page3-m13-region1" />
-	<zone id="source-EN-facsimile-BL-page3-m13-region2" />
-	<zone id="source-EN-facsimile-BL-page3-m13-region3" />
-	<zone id="source-EN-facsimile-BL-page3-m13-region4" />
-	<zone id="source-EN-facsimile-BL-page3-m15-region1" />
-	<zone id="source-EN-facsimile-BL-page3-m15-region2" />
-	<zone id="source-EN-facsimile-BL-page3-m15-region3" />
-	<zone id="source-EN-facsimile-BL-page3-m16-region1" />
+	<zone id="source-EN-facsimile-BL-page3-m13-region1">
+	  <figDesc>D♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m13-region2">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m13-region3">
+	  <figDesc>D♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m13-region4">
+	  <figDesc>E♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m15-region1">
+	  <figDesc>E♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m15-region2">
+	  <figDesc>E♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m15-region3">
+	  <figDesc>G♯ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EN-facsimile-BL-page3-m16-region1">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
       </surface>
       <surface id="source-EN-facsimile-BL-page4" n="4">
-	<zone id="source-EN-facsimile-BL-page4-m20-region1" />
+	<zone id="source-EN-facsimile-BL-page4-m20-region1">
+	  <figDesc>Staccato.</figDesc>
+	</zone>
       </surface>
-      <surface id="source-EN-facsimile-BL-page5" n="5" />         
+      <surface id="source-EN-facsimile-BL-page5" n="5" />
     </facsimile>
     <facsimile id="source-ES2-facsimile-SBB" decls="#source-ES2" />
     <facsimile id="source-EB-facsimile-IMSLP" decls="#source-EB">
       <surface id="source-EB-facsimile-IMSLP-page1" n="1">
-	<zone id="source-EB-facsimile-IMSLP-page1-m2-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page1-m4-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page1-m7-region1" />
+	<zone id="source-EB-facsimile-IMSLP-page1-m2-region1">
+	  <figDesc>G♮ (with no accidental).</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page1-m4-region1">
+	  <figDesc>A♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page1-m7-region1">
+	  <figDesc>B.</figDesc>
+	</zone>
       </surface>
       <surface id="source-EB-facsimile-IMSLP-page2" n="2">
-	<zone id="source-EB-facsimile-IMSLP-page2-m10-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m12-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m13-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m13-region2" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m13-region3" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m13-region4" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m15-region1" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m15-region2" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m15-region3" />
-	<zone id="source-EB-facsimile-IMSLP-page2-m16-region1" />
+	<zone id="source-EB-facsimile-IMSLP-page2-m10-region1">
+	  <figDesc>Both ties continue.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m12-region1">
+	  <figDesc>B♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m13-region1">
+	  <figDesc>D♯.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m13-region2">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m13-region3">
+	  <figDesc>D♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m13-region4">
+	  <figDesc>E♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m15-region1">
+	  <figDesc>E♯.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m15-region2">
+	  <figDesc>E♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m15-region3">
+	  <figDesc>G♮.</figDesc>
+	</zone>
+	<zone id="source-EB-facsimile-IMSLP-page2-m16-region1">
+	  <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
+	</zone>
       </surface>
       <surface id="source-EB-facsimile-IMSLP-page3" n="3">
-	<zone id="source-EB-facsimile-IMSLP-page3-m20-region1" />
+	<zone id="source-EB-facsimile-IMSLP-page3-m20-region1">
+	  <figDesc>No staccato mark.</figDesc>
+	</zone>
       </surface>
     </facsimile>
     <body>
@@ -340,13 +452,13 @@
 		    <app>
 		      <lem source="#source-A1 #source-EN">
 			<note xml:id="m2-annot1-target1" pname="g" accid="s" oct="2" dur="32" />
-			<annot xml:id="m2-annot1" plist="#m2-annot1-target1">
+			<annot xml:id="m2-annot1" plist="#m2-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m3-region1 #source-ES1-facsimile-UCR-page1-m2-region1 #source-EN-facsimile-BL-page1-m2-region1 #source-EB-facsimile-IMSLP-page1-m2-region1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 3) and <rend
 			  fontweight="bold">EN</rend> have
-			  G&#x266f;, while <rend
+			  G♯, while <rend
 			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EB</rend> have G&#x266e;
+			  fontweight="bold">EB</rend> have G♮
 			  (with no accidental).</p>
 			</annot>
 		      </lem>
@@ -569,13 +681,13 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m4-annot1-target1" pname="a" accid="n" oct="2" dur="32" />
-			<annot xml:id="m4-annot1" plist="#m4-annot1-target1">
+			<annot xml:id="m4-annot1" plist="#m4-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 8) and <rend
-			  fontweight="bold">EB</rend> have A&#x266e;
+			  fontweight="bold">EB</rend> have A♮
 			  (with no accidental in <rend
 			  fontweight="bold">A1</rend>), while <rend
-			  fontweight="bold">ES1</rend> has A&#x266f;
+			  fontweight="bold">ES1</rend> has A♯
 			  (with no accidental).</p>
 			</annot>
 		      </lem>
@@ -836,7 +948,7 @@
 			  <note pname="b" oct="2" />
 			  <note pname="b" oct="1" />
 			</chord>
-			<annot xml:id="m7-annot1" plist="#m7-annot1-target1">
+			<annot xml:id="m7-annot1" plist="#m7-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m16-region1 #source-ES1-facsimile-UCR-page2-m7-region1 #source-EN-facsimile-BL-page2-m7-region1 #source-EB-facsimile-IMSLP-page1-m7-region1">
 			  <p><rend fontweight="bold">EN</rend> and
 			  <rend fontweight="bold">EB</rend> have B,
 			  while <rend fontweight="bold">ES1</rend> has
@@ -1112,13 +1224,13 @@
 	      <app>
 		<lem source="#source-A1 #source-EB">
 		  <tie xml:id="m10-annot1-target1" staff="2" layer="1" startid="#m10-tie1-mid" endid="#m11-tie1-end" />
-		  <annot xml:id="m10-annot1" plist="#m10-annot1-target1">
+		  <annot xml:id="m10-annot1" plist="#m10-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m19-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
 		    <p>In <rend fontweight="bold">A1</rend> (measures
 		    19-21) and <rend fontweight="bold">EB</rend>, both
 		    the ties in measure 9 continue to the first beat
 		    of measure 11, while in <rend
 		    fontweight="bold">ES1</rend>, only the lower
-		    C&#x266f; is tied between measures 10 and 11.</p>
+		    C♯ is tied between measures 10 and 11.</p>
 		  </annot>
 		</lem>
 		<rdg source="#source-ES1" />
@@ -1251,12 +1363,12 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m12-annot1-target1" pname="b" accid="n" oct="3" dur="32" />
-			<annot xml:id="m12-annot1" plist="#m12-annot1-target1">
+			<annot xml:id="m12-annot1" plist="#m12-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 23) and <rend
-			  fontweight="bold">EB</rend> have B&#x266e;,
+			  fontweight="bold">EB</rend> have B♮,
 			  while <rend fontweight="bold">ES1</rend> has
-			  B&#x266f; (with no accidental).</p>
+			  B♯ (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
@@ -1361,12 +1473,12 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m13-annot1-target1" pname="d" accid="s" oct="5" dur="32" />
-			<annot xml:id="m13-annot1" plist="#m13-annot1-target1">
+			<annot xml:id="m13-annot1" plist="#m13-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 25) and <rend
-			  fontweight="bold">EB</rend> have D&#x266f;,
+			  fontweight="bold">EB</rend> have D♯,
 			  while <rend fontweight="bold">ES1</rend> has
-			  D&#x266e; (with no accidental).</p>
+			  D♮ (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
@@ -1387,10 +1499,10 @@
 		    <choice>
 		      <corr>
 			<note xml:id="m13-annot2-target1" pname="g" accid="s" oct="4" dur="32" />
-			<annot xml:id="m13-annot2" plist="#m13-annot2-target1">
+			<annot xml:id="m13-annot2" plist="#m13-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
 			  <p>In <rend fontweight="bold">ES1</rend> and
 			  <rend fontweight="bold">EB</rend>, the
-			  accidental is missing on the G&#x266f; in
+			  accidental is missing on the G♯ in
 			  the upper staff. <rend
 			  fontweight="bold">A1</rend> (measure 25) is
 			  unclear.</p>
@@ -1404,10 +1516,10 @@
 		    <app>
 		      <lem source="#source-EB">
 			<note xml:id="m13-annot3-target1" pname="d" accid="n" oct="4" dur="32" />
-			<annot xml:id="m13-annot3" plist="#m13-annot3-target1">
+			<annot xml:id="m13-annot3" plist="#m13-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m25-region3 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
 			  <p><rend fontweight="bold">EB</rend> has
-			  D&#x266e;, while <rend
-			  fontweight="bold">ES1</rend> has D&#x266f;
+			  D♮, while <rend
+			  fontweight="bold">ES1</rend> has D♯
 			  (with no accidental), which is surely an
 			  error. <rend fontweight="bold">A1</rend>
 			  (measure 25) is unclear.</p>
@@ -1424,13 +1536,13 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m13-annot4-target1" pname="e" accid="n" oct="4" dur="32" />
-			<annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2">
+			<annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2" facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
 			  <p>Twice in this beat, <rend
 			  fontweight="bold">A1</rend> (measure 26,
 			  though slightly different) and <rend
-			  fontweight="bold">EB</rend> have E&#x266e;,
+			  fontweight="bold">EB</rend> have E♮,
 			  while <rend fontweight="bold">ES1</rend> has
-			  E&#x266f; (with no accidental).</p>
+			  E♯ (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
@@ -1614,24 +1726,24 @@
 		    <app>
 		      <lem source="#source-EB">
 			<note xml:id="m15-annot1-target1" pname="e" accid="s" oct="4" dur="32" />
-			<annot xml:id="m15-annot1" plist="#m15-annot1-target1">
+			<annot xml:id="m15-annot1" plist="#m15-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
 			  <p><rend fontweight="bold">EB</rend> has
-			  E&#x266f;, while <rend
+			  E♯, while <rend
 			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EN</rend> have E&#x266e;
+			  fontweight="bold">EN</rend> have E♮
 			  (with no accidental). The corresponding
 			  passage in <rend fontweight="bold">A1</rend>
 			  (starting in measure 29) has neither, and
 			  has a somewhat different harmonic
 			  structure.</p>
 			  
-			  <p>The reading with E&#x266f; maintains the
+			  <p>The reading with E♯ maintains the
 			  parallelism of the passage: each
 			  chromatically descending diminished chord
 			  can be seen as a dominant minor ninth whose
 			  root appears in the left hand, and the same
 			  four-note interval sequence occurs each
-			  time. The E&#x266e; reading does not fit
+			  time. The E♮ reading does not fit
 			  this pattern.</p>
 			</annot>
 		      </lem>
@@ -1669,12 +1781,12 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m15-annot2-target1" pname="e" accid="n" oct="3" dur="32" />
-			<annot xml:id="m15-annot2" plist="#m15-annot2-target1">
+			<annot xml:id="m15-annot2" plist="#m15-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have E&#x266e;,
+			  fontweight="bold">EB</rend> have E♮,
 			  while <rend fontweight="bold">ES1</rend> has
-			  E&#x266f; (with no accidental).</p>
+			  E♯ (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
@@ -1684,12 +1796,12 @@
 		    <app>
 		      <lem source="#source-A1 #source-EB">
 			<note xml:id="m15-annot3-target1" pname="g" accid="n" oct="3" dur="32" />
-			<annot xml:id="m15-annot3" plist="#m15-annot3-target1">
+			<annot xml:id="m15-annot3" plist="#m15-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
 			  <p><rend fontweight="bold">A1</rend>
 			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have G&#x266e;,
+			  fontweight="bold">EB</rend> have G♮,
 			  while <rend fontweight="bold">ES1</rend> has
-			  G&#x266f; (with no accidental).</p>
+			  G♯ (with no accidental).</p>
 			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
@@ -1723,11 +1835,12 @@
 		    <choice>
 		      <corr>
 			<note xml:id="m16-annot1-target1" pname="g" accid="s" oct="4" />
-			<annot xml:id="m16-annot1" plist="#m16-annot1-target1">
+			<annot xml:id="m16-annot1" plist="#m16-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
 			  <p>In <rend fontweight="bold">ES1</rend> and
 			  <rend fontweight="bold">EB</rend>, the
-			  accidental is missing on the G&#x266f; in
-			  the upper staff.</p>
+			  accidental is missing on the G♯ in the upper
+			  staff. <rend fontweight="bold">A1</rend> has
+			  a different structure here.</p>
 			</annot>
 		      </corr>
 		      <sic>
@@ -2124,12 +2237,12 @@
 			<note pname="g" oct="4" />
 			<note pname="e" oct="4" />
 		      </chord>
-		      <annot xml:id="m20-annot1" plist="#m20-arpeg">
+		      <annot xml:id="m20-annot1" plist="#m20-arpeg" facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
 			<p>The chord is staccato in <rend
 			fontweight="bold">ES1</rend>, but not in <rend
 			fontweight="bold">EB</rend>. <rend
 			fontweight="bold">A1</rend> (measure 40)
-			differs.</p>
+			has a different structure here.</p>
 		      </annot>
 		    </lem>
 		    <rdg source="#source-EB">
