@@ -2,7 +2,11 @@
 
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
+declare namespace saxon="http://saxon.sf.net/";
 declare variable $uri external;
+declare variable $shortcode external;
+declare variable $ontology external;
+declare option saxon:output "indent=yes";
 
 (: Recursively traverses nodes. :)
 declare function local:dispatch($nodes as node()*) as item()* {
@@ -24,9 +28,19 @@ declare function local:passthru($node as node()*) as item()* {
 (: Transforms <annot> elements. :)
 declare function local:annot($node as element(mei:annot)) as element() {
   let $id := $node/@xml:id
-  let $plist := $node/@plist
+  let $targets := $node/@plist/tokenize(., '\s+')
   return
-  <annot id="{$id}" plist="{$plist}">{local:dispatch($node/node())}</annot>
+  <resource label="{$id}"
+  restype="Annot"
+  unique_id="{$id}"
+  permissions="res-default">
+    <text-prop name="hasText">{local:dispatch($node/node())}</text-prop>
+    {
+      for $target in $targets
+      return
+      <text-prop name="hasTarget">{substring-after($target, "#")}</text-prop>
+    }
+  </resource>
 };
 
 (: Transforms <p> elements. :)
@@ -44,9 +58,21 @@ declare function local:rend($node as element(mei:rend)) as element() {
     local:dispatch($node/node())
 };
 
-<annotations>
+<knora shortcode="{$shortcode}" ontology="{$ontology}">
+  <permissions id="res-default">
+    <allow group="UnknownUser">V</allow>
+    <allow group="KnownUser">V</allow>
+    <allow group="Creator">CR</allow>
+    <allow group="ProjectAdmin">CR</allow>
+  </permissions>
+  <permissions id="prop-default">
+    <allow group="UnknownUser">V</allow>
+    <allow group="KnownUser">V</allow>
+    <allow group="Creator">CR</allow>
+    <allow group="ProjectAdmin">CR</allow>
+  </permissions>
   {
     let $document := doc($uri)
     for $inputAnnot in $document//mei:annot return local:annot($inputAnnot)
   }
-</annotations>
+</knora>
