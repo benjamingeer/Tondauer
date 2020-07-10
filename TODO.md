@@ -7,7 +7,8 @@
   thread](https://lists.uni-paderborn.de/pipermail/mei-l/2016/001839.html).
 
   - Try using Mirador to draw the regions and save the coordinates in
-    the MEI document as percentages of width and height.
+    the MEI document as percentages of width and height, and copy and
+    paste them into the MEI document.
 
 - Use knora-py to make a simple ontology for musical
   editions. Maybe something like this to start with:
@@ -16,18 +17,18 @@
 	
   - An `Annotation` class, with:
   
-    - A link to the `Edition` that it belongs to.
-  
-    - Text with standoff markup (can use the standard mapping),
-      possibly referring to region IDs.
+    - Text with standoff markup (can use the standard mapping).
   
     - An annotation ID (a `TextValue`).
   
     - One or more annotation target IDs (each one a `TextValue`).
+	
+	- Zero or more links to regions (from the `facs` attribute of the
+      `<annot>`).
 
-- Write an XQuery program that extracts the annotations (and maybe
-  facsimiles and regions) from an MEI document and converts them to a
-  knora-py XML import file based on that ontology.
+- Write an XQuery program that extracts the annotations, facsimiles,
+  and regions from an MEI document and converts them to a knora-py XML
+  import file based on that ontology.
   
 - Import some MEI data into Knora for testing.
 
@@ -51,15 +52,9 @@ that refer to a source published in London before 1870".
 
 ## Displaying facsimiles
 
-In TypeScript:
-
-- If an annotation contains a link to a region of a facsimile, open a
-  IIIF viewer that displays the region as an SVG rectangle drawn over
-  the facsimile.
-  
-- Also be able to display the full contents of each facsimile and page
-  through them in a IIIF viewer. Some facsimiles may be PDFs, so use
-  Sipi's PDF functionality for this.
+If an annotation contains a link to a region of a facsimile, open a
+IIIF viewer that displays the region as an SVG rectangle drawn over
+the facsimile.
 
 ## Viewing in Verovio
 
