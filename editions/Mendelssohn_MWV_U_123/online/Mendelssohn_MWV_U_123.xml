@@ -109,6 +109,7 @@
   <music>
     <facsimile id="source-A1-facsimile-SBB" decls="#source-A1">
       <surface id="source-A1-facsimile-SBB-page1" n="1">
+	<graphic target="source-A1-facsimile-SBB-page1.tif" />
 	<zone id="source-A1-facsimile-SBB-page1-m3-region1">
 	  <figDesc>G♯.</figDesc>
 	</zone>
@@ -152,10 +153,13 @@
 	  <figDesc>Structure differs from V1.</figDesc>
 	</zone>
       </surface>
-      <surface id="source-A1-facsimile-SBB-page-02" n="2" />
+      <surface id="source-A1-facsimile-SBB-page-02" n="2">
+	<graphic target="source-A1-facsimile-SBB-page2.tif" />
+      </surface>
     </facsimile>
     <facsimile id="source-ES1-facsimile-UCR" decls="#source-ES1">
       <surface id="source-ES1-facsimile-UCR-page1" n="1">
+	<graphic target="source-ES1-facsimile-UCR-page1.png" />
 	<zone id="source-ES1-facsimile-UCR-page1-m2-region1">
 	  <figDesc>G♮ (with no accidental).</figDesc>
 	</zone>
@@ -164,6 +168,7 @@
 	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page2" n="2">
+	<graphic target="source-ES1-facsimile-UCR-page2.png" />
 	<zone id="source-ES1-facsimile-UCR-page2-m7-region1">
 	  <figDesc>G.</figDesc>
 	</zone>
@@ -175,6 +180,7 @@
 	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page3" n="3">
+	<graphic target="source-ES1-facsimile-UCR-page3.png" />
 	<zone id="source-ES1-facsimile-UCR-page3-m13-region1">
 	  <figDesc>D♮ (with no accidental).</figDesc>
 	</zone>
@@ -201,11 +207,14 @@
 	</zone>
       </surface>
       <surface id="source-ES1-facsimile-UCR-page4" n="4">
+	<graphic target="source-ES1-facsimile-UCR-page4.png" />
 	<zone id="source-ES1-facsimile-UCR-page4-m20-region1">
 	  <figDesc>Staccato.</figDesc>
 	</zone>
       </surface>
-      <surface id="source-ES1-facsimile-UCR-page5" n="5" />
+      <surface id="source-ES1-facsimile-UCR-page5" n="5">
+	<graphic target="source-ES1-facsimile-UCR-page5.png" />
+      </surface>
     </facsimile>
     <facsimile id="source-EN-facsimile-BL" decls="#source-EN">
       <surface id="source-EN-facsimile-BL-page1" n="1">
@@ -263,6 +272,7 @@
     <facsimile id="source-ES2-facsimile-SBB" decls="#source-ES2" />
     <facsimile id="source-EB-facsimile-IMSLP" decls="#source-EB">
       <surface id="source-EB-facsimile-IMSLP-page1" n="1">
+	<graphic target="source-EB-facsimile-IMSLP-page1.tif" />
 	<zone id="source-EB-facsimile-IMSLP-page1-m2-region1">
 	  <figDesc>G♮ (with no accidental).</figDesc>
 	</zone>
@@ -274,6 +284,7 @@
 	</zone>
       </surface>
       <surface id="source-EB-facsimile-IMSLP-page2" n="2">
+	<graphic target="source-EB-facsimile-IMSLP-page2.tif" />
 	<zone id="source-EB-facsimile-IMSLP-page2-m10-region1">
 	  <figDesc>Both ties continue.</figDesc>
 	</zone>
@@ -306,6 +317,7 @@
 	</zone>
       </surface>
       <surface id="source-EB-facsimile-IMSLP-page3" n="3">
+	<graphic target="source-EB-facsimile-IMSLP-page3.tif" />
 	<zone id="source-EB-facsimile-IMSLP-page3-m20-region1">
 	  <figDesc>No staccato mark.</figDesc>
 	</zone>
