@@ -2,24 +2,17 @@
 
 ## Data import
 
+- Figure out an IIIF-compatible way to encode facsimiles, surfaces,
+  and zones in MEI. See [this
+  thread](https://lists.uni-paderborn.de/pipermail/mei-l/2016/001839.html).
+
+  - Try using Mirador to draw the regions and save the coordinates in
+    the MEI document as percentages of width and height.
+
 - Use knora-py to make a simple ontology for musical
   editions. Maybe something like this to start with:
   
-  - An `Edition` class, with some basic metadata (title, composer,
-    etc.).
-	
-  - Something for facsimiles. Can we use [MEI's support for
-    facsimiles](https://music-encoding.org/guidelines/v4/content/facsimilesrecordings.html#facsimiles)
-    with IIIF, or do we need something else? Conceptual requirements:
-	
-	- A source has one or more facsimiles (e.g. different copies of
-      the same publication).
-	
-	- A facsimile has one or more pages (and can be a PDF).
-	
-	- A page can have regions, each of which could have an ID that we
-      could use in MEI annotations. This seems better than referring
-      to coordinates in the MEI document.
+  - Something for facsimiles.
 	
   - An `Annotation` class, with:
   
@@ -32,9 +25,9 @@
   
     - One or more annotation target IDs (each one a `TextValue`).
 
-- Write an XQuery program that extracts the annotations from an MEI
-  document and converts them to a knora-py XML import file based on
-  that ontology.
+- Write an XQuery program that extracts the annotations (and maybe
+  facsimiles and regions) from an MEI document and converts them to a
+  knora-py XML import file based on that ontology.
   
 - Import some MEI data into Knora for testing.
 
