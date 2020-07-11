@@ -3,13 +3,14 @@
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
 declare namespace saxon="http://saxon.sf.net/";
+declare namespace array="http://www.w3.org/2005/xpath-functions/array";
 declare variable $uri external;
 declare variable $shortcode external;
 declare variable $ontology external;
 declare option saxon:output "indent=yes";
 
 (: Recursively traverses nodes. :)
-declare function local:dispatch($nodes as node()*) as item()* {
+declare function local:traverse($nodes as node()*) as item()* {
   for $node in $nodes
   return
     typeswitch($node)
@@ -22,30 +23,61 @@ declare function local:dispatch($nodes as node()*) as item()* {
 
 (: Copies nodes unchanged. :)
 declare function local:passthru($node as node()*) as item()* {
-  element {name($node)} {($node/@*, local:dispatch($node/node()))}
+  element {name($node)} {($node/@*, local:traverse($node/node()))}
+};
+
+(: Parses an attribute value containing a space-delimited list of element ID references. :)
+declare function local:parseIDs($attr as attribute()*) as xs:string* {
+  for $idRef in $attr/tokenize(., '\s+') return substring-after($idRef, "#")
 };
 
 (: Transforms <annot> elements. :)
 declare function local:annot($node as element(mei:annot)) as element() {
   let $id := $node/@xml:id
-  let $targets := $node/@plist/tokenize(., '\s+')
+
+  (: The text of the annotation. :)
+  let $annotationText := local:traverse($node/node())
+
+  (: The measure number that the annotation occurs in. :)
+  let $measureNum := data($node/(ancestor::mei:measure[@n][1]/@n))
+
+  (: The IDs of the elements that are targets of the annotation. :)
+  let $targetIDs := local:parseIDs($node/@plist)
+
+  (: The IDs of sources mentioned in <lem> elements that are contained within targets of the annotation. :)
+  let $sourceIDs := distinct-values(array:flatten(for $target in $node/id($targetIDs) return
+    local:parseIDs($target/mei:lem/@source)))
+
+  (: The IDs of zones that the annotation refers to. :)
+  let $zoneIDs := local:parseIDs($node/@facs)
+  
   return
   <resource label="{$id}"
-  restype="Annot"
+  restype="Annotation"
   unique_id="{$id}"
   permissions="res-default">
-    <text-prop name="hasText">{local:dispatch($node/node())}</text-prop>
+    <text-prop name="hasText" permissions="prop-default"><text>{$annotationText}</text></text-prop>
+    <integer-prop name="inMeasure" permissions="prop-default">{$measureNum}</integer-prop>
     {
-      for $target in $targets
-      return
-      <text-prop name="hasTarget">{substring-after($target, "#")}</text-prop>
+      for $targetID in $targetIDs return
+      <text-prop name="hasTarget" permissions="prop-default">{$targetID}</text-prop>
+    }
+    {
+      for $sourceID in $sourceIDs return
+      <text-prop name="hasPreferredSource" permissions="prop-default">{$sourceID}</text-prop>
+    }
+    {
+      for $zoneID in $zoneIDs return
+      <resptr-prop name="refersToRegion">
+        <resptr permissions="prop-default">{$zoneID}</resptr>
+      </resptr-prop>
     }
   </resource>
 };
 
 (: Transforms <p> elements. :)
 declare function local:p($node as element(mei:p)) as element() {
-<p>{local:dispatch($node/node())}</p>
+<p>{local:traverse($node/node())}</p>
 };
 
 (: Transforms <rend> elements. :)
@@ -53,9 +85,9 @@ declare function local:rend($node as element(mei:rend)) as element() {
   let $fontweight := $node/@fontweight
   return
     if ($fontweight = 'bold') then
-    <strong>{local:dispatch($node/node())}</strong>
+    <strong>{local:traverse($node/node())}</strong>
   else
-    local:dispatch($node/node())
+    local:traverse($node/node())
 };
 
 <knora shortcode="{$shortcode}" ontology="{$ontology}">

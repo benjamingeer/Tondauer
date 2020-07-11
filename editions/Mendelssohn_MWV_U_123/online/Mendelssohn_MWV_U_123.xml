@@ -461,18 +461,9 @@
 		  </beam>
 		  <beam>
 		    <note pname="e" accid="s" oct="2" dur="32" />
-		    <app>
+		    <app xml:id="m2-annot1-target1">
 		      <lem source="#source-A1 #source-EN">
-			<note xml:id="m2-annot1-target1" pname="g" accid="s" oct="2" dur="32" />
-			<annot xml:id="m2-annot1" plist="#m2-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m3-region1 #source-ES1-facsimile-UCR-page1-m2-region1 #source-EN-facsimile-BL-page1-m2-region1 #source-EB-facsimile-IMSLP-page1-m2-region1">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 3) and <rend
-			  fontweight="bold">EN</rend> have
-			  G♯, while <rend
-			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EB</rend> have G♮
-			  (with no accidental).</p>
-			</annot>
+			<note pname="g" accid="s" oct="2" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1 #source-EB">
 			<note pname="g" oct="2" dur="32" />
@@ -513,6 +504,15 @@
 		  </beam>
 		</layer>
 	      </staff>
+	      <annot xml:id="m2-annot1" plist="#m2-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m3-region1 #source-ES1-facsimile-UCR-page1-m2-region1 #source-EN-facsimile-BL-page1-m2-region1 #source-EB-facsimile-IMSLP-page1-m2-region1">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 3) and <rend
+		fontweight="bold">EN</rend> have
+		G♯, while <rend
+		fontweight="bold">ES1</rend> and <rend
+		fontweight="bold">EB</rend> have G♮
+		(with no accidental).</p>
+	      </annot>
 	    </measure>
     	    <measure n="3">
 	      <staff n="1">
@@ -690,18 +690,9 @@
 		    <note pname="b" oct="2" dur="32" />
 		    <note pname="c" oct="3" dur="32" />
 		    <note pname="b" oct="2" dur="32" />
-		    <app>
+		    <app xml:id="m4-annot1-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m4-annot1-target1" pname="a" accid="n" oct="2" dur="32" />
-			<annot xml:id="m4-annot1" plist="#m4-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 8) and <rend
-			  fontweight="bold">EB</rend> have A♮
-			  (with no accidental in <rend
-			  fontweight="bold">A1</rend>), while <rend
-			  fontweight="bold">ES1</rend> has A♯
-			  (with no accidental).</p>
-			</annot>
+			<note pname="a" accid="n" oct="2" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="a" oct="2" dur="32" />
@@ -712,6 +703,15 @@
 	      </staff>
 	      <slur startid="#m4-slur-start" endid="#m4-slur-end" />
               <dynam staff="1" layer="1" place="below" tstamp="3">cresc.</dynam>
+	      <annot xml:id="m4-annot1" plist="#m4-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 8) and <rend
+		fontweight="bold">EB</rend> have A♮
+		(with no accidental in <rend
+		fontweight="bold">A1</rend>), while <rend
+		fontweight="bold">ES1</rend> has A♯
+		(with no accidental).</p>
+	      </annot>
 	    </measure>
  	    <measure n="5">
 	      <staff n="1">
@@ -954,21 +954,12 @@
 		    </chord>
 		  </beam>
 		  <beam>
-		    <app>
+		    <app xml:id="m7-annot1-target1">
 		      <lem source="#source-EN #source-EB">
-			<chord xml:id="m7-annot1-target1" dur="8" stem.dir="down">
+			<chord dur="8" stem.dir="down">
 			  <note pname="b" oct="2" />
 			  <note pname="b" oct="1" />
 			</chord>
-			<annot xml:id="m7-annot1" plist="#m7-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m16-region1 #source-ES1-facsimile-UCR-page2-m7-region1 #source-EN-facsimile-BL-page2-m7-region1 #source-EB-facsimile-IMSLP-page1-m7-region1">
-			  <p><rend fontweight="bold">EN</rend> and
-			  <rend fontweight="bold">EB</rend> have B,
-			  while <rend fontweight="bold">ES1</rend> has
-			  G, which is surely an error. The passage is
-			  different in <rend
-			  fontweight="bold">A1</rend>, but the theme
-			  occurs with B in measure 16.</p>
-			</annot>
 		      </lem>
 		      <rdg source="#source-ES1">
 			<chord dur="8" stem.dir="down">
@@ -994,6 +985,15 @@
 	      </staff>
 	      <slur startid="#m7-slur-start" endid="#m7-slur-end" curvedir="below" />
 	      <dynam tstamp="4" tstamp2="1m+2" extender="true" place="below" staff="1">cresc.</dynam>
+	      <annot xml:id="m7-annot1" plist="#m7-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m16-region1 #source-ES1-facsimile-UCR-page2-m7-region1 #source-EN-facsimile-BL-page2-m7-region1 #source-EB-facsimile-IMSLP-page1-m7-region1">
+		<p><rend fontweight="bold">EN</rend> and
+		<rend fontweight="bold">EB</rend> have B,
+		while <rend fontweight="bold">ES1</rend> has
+		G, which is surely an error. The passage is
+		different in <rend
+		fontweight="bold">A1</rend>, but the theme
+		occurs with B in measure 16.</p>
+	      </annot>
 	    </measure>
 	    <measure n="8">
 	      <staff n="1">
@@ -1233,22 +1233,22 @@
 		  </chord>
 		</layer>
 	      </staff>
-	      <app>
+	      <app xml:id="m10-annot1-target1">
 		<lem source="#source-A1 #source-EB">
-		  <tie xml:id="m10-annot1-target1" staff="2" layer="1" startid="#m10-tie1-mid" endid="#m11-tie1-end" />
-		  <annot xml:id="m10-annot1" plist="#m10-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m19-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
-		    <p>In <rend fontweight="bold">A1</rend> (measures
-		    19-21) and <rend fontweight="bold">EB</rend>, both
-		    the ties in measure 9 continue to the first beat
-		    of measure 11, while in <rend
-		    fontweight="bold">ES1</rend>, only the lower
-		    C♯ is tied between measures 10 and 11.</p>
-		  </annot>
+		  <tie staff="2" layer="1" startid="#m10-tie1-mid" endid="#m11-tie1-end" />
 		</lem>
 		<rdg source="#source-ES1" />
 	      </app>
 	      <tie staff="2" layer="1" startid="#m10-tie2-mid" endid="#m11-tie2-end" />
 	      <dynam tstamp="1" place="below" staff="1">dim.</dynam>
+	      <annot xml:id="m10-annot1" plist="#m10-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m19-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
+		<p>In <rend fontweight="bold">A1</rend> (measures
+		19-21) and <rend fontweight="bold">EB</rend>, both
+		the ties in measure 9 continue to the first beat
+		of measure 11, while in <rend
+		fontweight="bold">ES1</rend>, only the lower
+		C♯ is tied between measures 10 and 11.</p>
+	      </annot>
 	    </measure>
 	    <measure n="11">
 	      <staff n="1">
@@ -1372,16 +1372,9 @@
 		    <note pname="g" accid="s" oct="4" dur="32" />
 		    <note pname="e" accid="s" oct="4" dur="32" />
 		    <note pname="d" accid="n" oct="4" dur="32" />
-		    <app>
+		    <app xml:id="m12-annot1-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m12-annot1-target1" pname="b" accid="n" oct="3" dur="32" />
-			<annot xml:id="m12-annot1" plist="#m12-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 23) and <rend
-			  fontweight="bold">EB</rend> have B♮,
-			  while <rend fontweight="bold">ES1</rend> has
-			  B♯ (with no accidental).</p>
-			</annot>
+			<note pname="b" accid="n" oct="3" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="b" oct="3" dur="32" />
@@ -1456,6 +1449,13 @@
 		  </beam>
 		</layer>
 	      </staff>
+	      <annot xml:id="m12-annot1" plist="#m12-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 23) and <rend
+		fontweight="bold">EB</rend> have B♮,
+		while <rend fontweight="bold">ES1</rend> has
+		B♯ (with no accidental).</p>
+	      </annot>
 	    </measure>
 	    <measure n="13">
 	      <staff n="1">
@@ -1482,16 +1482,9 @@
 		  </beam>
 		  <beam>
 		    <note pname="f" oct="5" dur="32" />
-		    <app>
+		    <app xml:id="m13-annot1-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m13-annot1-target1" pname="d" accid="s" oct="5" dur="32" />
-			<annot xml:id="m13-annot1" plist="#m13-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 25) and <rend
-			  fontweight="bold">EB</rend> have D♯,
-			  while <rend fontweight="bold">ES1</rend> has
-			  D♮ (with no accidental).</p>
-			</annot>
+			<note pname="d" accid="s" oct="5" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="d" oct="5" dur="32" />
@@ -1508,34 +1501,18 @@
 		  </beam>
 		  <beam>
 		    <note pname="b" oct="4" dur="32" />
-		    <choice>
+		    <choice xml:id="m13-annot2-target1">
 		      <corr>
-			<note xml:id="m13-annot2-target1" pname="g" accid="s" oct="4" dur="32" />
-			<annot xml:id="m13-annot2" plist="#m13-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
-			  <p>In <rend fontweight="bold">ES1</rend> and
-			  <rend fontweight="bold">EB</rend>, the
-			  accidental is missing on the G♯ in
-			  the upper staff. <rend
-			  fontweight="bold">A1</rend> (measure 25) is
-			  unclear.</p>
-			</annot>
+			<note pname="g" accid="s" oct="4" dur="32" />
 		      </corr>
 		      <sic>
 			<note pname="g" oct="4" dur="32" />
 		      </sic>
 		    </choice>
 		    <note pname="e" oct="4" dur="32" />
-		    <app>
+		    <app xml:id="m13-annot3-target1">
 		      <lem source="#source-EB">
-			<note xml:id="m13-annot3-target1" pname="d" accid="n" oct="4" dur="32" />
-			<annot xml:id="m13-annot3" plist="#m13-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m25-region3 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
-			  <p><rend fontweight="bold">EB</rend> has
-			  D♮, while <rend
-			  fontweight="bold">ES1</rend> has D♯
-			  (with no accidental), which is surely an
-			  error. <rend fontweight="bold">A1</rend>
-			  (measure 25) is unclear.</p>
-			</annot>
+			<note pname="d" accid="n" oct="4" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="d" oct="4" dur="32" />
@@ -1545,17 +1522,9 @@
 		  <beam>
 		    <note pname="a" accid="s" oct="4" dur="32" />
 		    <note pname="g" accid="n" oct="4" dur="32" />
-		    <app>
+		    <app xml:id="m13-annot4-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m13-annot4-target1" pname="e" accid="n" oct="4" dur="32" />
-			<annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2" facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
-			  <p>Twice in this beat, <rend
-			  fontweight="bold">A1</rend> (measure 26,
-			  though slightly different) and <rend
-			  fontweight="bold">EB</rend> have E♮,
-			  while <rend fontweight="bold">ES1</rend> has
-			  E♯ (with no accidental).</p>
-			</annot>
+			<note pname="e" accid="n" oct="4" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="e" oct="4" dur="32" />
@@ -1564,9 +1533,9 @@
 		    <note pname="c" oct="4" dur="32" />
 		  </beam>
 		  <beam>
-		    <app>
+		    <app xml:id="m13-annot4-target2">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m13-annot4-target2" pname="e" accid="n" oct="5" dur="32" />
+			<note pname="e" accid="n" oct="5" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="e" oct="5" dur="32" />
@@ -1610,6 +1579,37 @@
 		  </chord>
 		</layer>
 	      </staff>
+	      <annot xml:id="m13-annot1" plist="#m13-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 25) and <rend
+		fontweight="bold">EB</rend> have D♯,
+		while <rend fontweight="bold">ES1</rend> has
+		D♮ (with no accidental).</p>
+	      </annot>
+	      <annot xml:id="m13-annot2" plist="#m13-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
+		<p>In <rend fontweight="bold">ES1</rend> and
+		<rend fontweight="bold">EB</rend>, the
+		accidental is missing on the G♯ in
+		the upper staff. <rend
+		fontweight="bold">A1</rend> (measure 25) is
+		unclear.</p>
+	      </annot>
+	      <annot xml:id="m13-annot3" plist="#m13-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m25-region3 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
+		<p><rend fontweight="bold">EB</rend> has
+		D♮, while <rend
+		fontweight="bold">ES1</rend> has D♯
+		(with no accidental), which is surely an
+		error. <rend fontweight="bold">A1</rend>
+		(measure 25) is unclear.</p>
+	      </annot>
+	      <annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2" facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
+		<p>Twice in this beat, <rend
+		fontweight="bold">A1</rend> (measure 26,
+		though slightly different) and <rend
+		fontweight="bold">EB</rend> have E♮,
+		while <rend fontweight="bold">ES1</rend> has
+		E♯ (with no accidental).</p>
+	      </annot>
 	    </measure>
 	    <measure n="14">
 	      <staff n="1">
@@ -1735,29 +1735,9 @@
 		  <beam>
 		    <note pname="b" accid="s" oct="3" dur="32" />
 		    <note pname="d" accid="s" oct="4" dur="32" />
-		    <app>
+		    <app xml:id="m15-annot1-target1">
 		      <lem source="#source-EB">
-			<note xml:id="m15-annot1-target1" pname="e" accid="s" oct="4" dur="32" />
-			<annot xml:id="m15-annot1" plist="#m15-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
-			  <p><rend fontweight="bold">EB</rend> has
-			  E♯, while <rend
-			  fontweight="bold">ES1</rend> and <rend
-			  fontweight="bold">EN</rend> have E♮
-			  (with no accidental). The corresponding
-			  passage in <rend fontweight="bold">A1</rend>
-			  (starting in measure 29) has neither, and
-			  has a somewhat different harmonic
-			  structure.</p>
-			  
-			  <p>The reading with E♯ maintains the
-			  parallelism of the passage: each
-			  chromatically descending diminished chord
-			  can be seen as a dominant minor ninth whose
-			  root appears in the left hand, and the same
-			  four-note interval sequence occurs each
-			  time. The E♮ reading does not fit
-			  this pattern.</p>
-			</annot>
+			<note pname="e" accid="s" oct="4" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1 #source-EN">
 			<note pname="e" oct="4" dur="32" />
@@ -1790,31 +1770,17 @@
 		    <note pname="e" oct="4" dur="32" />
 		  </beam>
 		  <beam>
-		    <app>
+		    <app xml:id="m15-annot2-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m15-annot2-target1" pname="e" accid="n" oct="3" dur="32" />
-			<annot xml:id="m15-annot2" plist="#m15-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have E♮,
-			  while <rend fontweight="bold">ES1</rend> has
-			  E♯ (with no accidental).</p>
-			</annot>
+			<note pname="e" accid="n" oct="3" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="e" oct="3" dur="32" />
 		      </rdg>
 		    </app>
-		    <app>
+		    <app xml:id="m15-annot3-target1">
 		      <lem source="#source-A1 #source-EB">
-			<note xml:id="m15-annot3-target1" pname="g" accid="n" oct="3" dur="32" />
-			<annot xml:id="m15-annot3" plist="#m15-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
-			  <p><rend fontweight="bold">A1</rend>
-			  (measure 30) and <rend
-			  fontweight="bold">EB</rend> have G♮,
-			  while <rend fontweight="bold">ES1</rend> has
-			  G♯ (with no accidental).</p>
-			</annot>
+			<note pname="g" accid="n" oct="3" dur="32" />
 		      </lem>
 		      <rdg source="#source-ES1">
 			<note pname="g" oct="3" dur="32" />
@@ -1837,6 +1803,40 @@
 		  </beam>
 		</layer>
 	      </staff>
+	      <annot xml:id="m15-annot1" plist="#m15-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
+		<p><rend fontweight="bold">EB</rend> has
+		E♯, while <rend
+		fontweight="bold">ES1</rend> and <rend
+		fontweight="bold">EN</rend> have E♮
+		(with no accidental). The corresponding
+		passage in <rend fontweight="bold">A1</rend>
+		(starting in measure 29) has neither, and
+		has a somewhat different harmonic
+		structure.</p>
+		
+		<p>The reading with E♯ maintains the
+		parallelism of the passage: each
+		chromatically descending diminished chord
+		can be seen as a dominant minor ninth whose
+		root appears in the left hand, and the same
+		four-note interval sequence occurs each
+		time. The E♮ reading does not fit
+		this pattern.</p>
+	      </annot>
+	      <annot xml:id="m15-annot2" plist="#m15-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 30) and <rend
+		fontweight="bold">EB</rend> have E♮,
+		while <rend fontweight="bold">ES1</rend> has
+		E♯ (with no accidental).</p>
+	      </annot>
+	      <annot xml:id="m15-annot3" plist="#m15-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
+		<p><rend fontweight="bold">A1</rend>
+		(measure 30) and <rend
+		fontweight="bold">EB</rend> have G♮,
+		while <rend fontweight="bold">ES1</rend> has
+		G♯ (with no accidental).</p>
+	      </annot>
 	    </measure>
 	    <measure n="16">
 	      <staff n="1">
@@ -1844,16 +1844,9 @@
 		  <chord dur="4">
 		    <note pname="e" accid="s" oct="5" />
 		    <note pname="b" oct="4" />
-		    <choice>
+		    <choice xml:id="m16-annot1-target1">
 		      <corr>
-			<note xml:id="m16-annot1-target1" pname="g" accid="s" oct="4" />
-			<annot xml:id="m16-annot1" plist="#m16-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
-			  <p>In <rend fontweight="bold">ES1</rend> and
-			  <rend fontweight="bold">EB</rend>, the
-			  accidental is missing on the G♯ in the upper
-			  staff. <rend fontweight="bold">A1</rend> has
-			  a different structure here.</p>
-			</annot>
+			<note pname="g" accid="s" oct="4" />
 		      </corr>
 		      <sic>
 			<note pname="g" oct="4" />
@@ -1943,6 +1936,13 @@
 		  </beam>
 		</layer>
 	      </staff>
+	      <annot xml:id="m16-annot1" plist="#m16-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
+		<p>In <rend fontweight="bold">ES1</rend> and
+		<rend fontweight="bold">EB</rend>, the
+		accidental is missing on the G♯ in the upper
+		staff. <rend fontweight="bold">A1</rend> has
+		a different structure here.</p>
+	      </annot>
 	    </measure>
 	    <measure n="17">
 	      <staff n="1">
@@ -2241,29 +2241,24 @@
 		  <note pname="e" oct="2" dur="8" artic="stacc" />
 		  <rest dur="8" />
 		  <clef shape="G" line="2" />
-		  <app>
+		  <app xml:id="m20-annot1-target1">
 		    <lem source="#source-ES1">
-		      <chord xml:id="m20-arpeg" dur="8" artic="stacc">
+		      <chord xml:id="m20-arpeg1" dur="8" artic="stacc">
 			<note pname="e" oct="5" />
 			<note pname="b" oct="4" />
 			<note pname="g" oct="4" />
 			<note pname="e" oct="4" />
 		      </chord>
-		      <annot xml:id="m20-annot1" plist="#m20-arpeg" facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
-			<p>The chord is staccato in <rend
-			fontweight="bold">ES1</rend>, but not in <rend
-			fontweight="bold">EB</rend>. <rend
-			fontweight="bold">A1</rend> (measure 40)
-			has a different structure here.</p>
-		      </annot>
+		      <arpeg plist="#m20-arpeg1" />
 		    </lem>
 		    <rdg source="#source-EB">
-		      <chord dur="8">
+		      <chord xml:id="m20-arpeg2" dur="8">
 			<note pname="e" oct="5" />
 			<note pname="b" oct="4" />
 			<note pname="g" oct="4" />
 			<note pname="e" oct="4" />
 		      </chord>
+		      <arpeg plist="#m20-arpeg2" />
 		    </rdg>
 		  </app>
 		  <clef shape="F" line="4" />
@@ -2323,8 +2318,14 @@
 		</layer>
 	      </staff>
 	      <slur startid="#m20-slur-start" endid="#m20-slur-end" />
-	      <arpeg plist="#m20-arpeg" />
-	      <dynam tstamp="4" place="below" staff="1">sf</dynam>
+ 	      <dynam tstamp="4" place="below" staff="1">sf</dynam>
+	      <annot xml:id="m20-annot1" plist="#m20-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
+		<p>The chord is staccato in <rend
+		fontweight="bold">ES1</rend>, but not in <rend
+		fontweight="bold">EB</rend>. <rend
+		fontweight="bold">A1</rend> (measure 40)
+		has a different structure here.</p>
+	      </annot>
 	    </measure>
 	    <measure n="21">
 	      <staff n="1">
