@@ -18,12 +18,25 @@ declare function local:traverse($nodes as node()*) as item()* {
       case element(mei:annot) return local:annot($node)
       case element(mei:p) return local:p($node)
       case element(mei:rend) return local:rend($node)
+      case element(mei:ptr) return local:ptr($node)
       default return local:passthru($node)
 };
 
 (: Copies nodes unchanged. :)
 declare function local:passthru($node as node()*) as item()* {
   element {name($node)} {($node/@*, local:traverse($node/node()))}
+};
+
+(: Transforms <ptr> elements. :)
+declare function local:ptr($node as node()*) as item()* {
+  let $target := $node/id(local:parseIDs($node/@target))
+  return
+    typeswitch($target)
+      case element(mei:source)
+        (: Just return the name of the source. TODO: return a resource reference. :)
+        return <strong>{string($target/mei:name)}</strong>
+
+      default return local:passthru($node)  
 };
 
 (: Parses an attribute value containing a space-delimited list of element ID references. :)
