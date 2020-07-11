@@ -17,7 +17,11 @@
 	
   - An `Annotation` class, with:
   
-    - Text with standoff markup (can use the standard mapping).
+    - Text with standoff markup (can use the standard mapping). TODO:
+      can a knora-py XML bulk import accept text with markup,
+      containing resource references? If so, each MEI source can be a
+      Knora resource, and the text of annotations can contain links to
+      sources.
   
     - An annotation ID (a `TextValue`).
   
@@ -29,7 +33,7 @@
 - Write an XQuery program that extracts the annotations, facsimiles,
   and regions from an MEI document and converts them to a knora-py XML
   import file based on that ontology.
-  
+
 - Import some MEI data into Knora for testing.
 
 ## Loading annotations
