@@ -5,9 +5,10 @@ XQUERY=import.xql
 KNORA_IMPORT=import.xml
 SHORTCODE=082A
 ONTOLOGY=tondauer
+MARKUP=false
 
 $(KNORA_IMPORT): $(MEI_FILE) $(XQUERY)
-	java -cp $(SAXON_JAR) net.sf.saxon.Query -q:$(XQUERY) -o:$@ uri=$(MEI_FILE) shortcode=$(SHORTCODE) ontology=$(ONTOLOGY)
+	java -cp $(SAXON_JAR) net.sf.saxon.Query -q:$(XQUERY) -o:$@ uri=$(MEI_FILE) shortcode=$(SHORTCODE) ontology=$(ONTOLOGY) markup=$(MARKUP)
 
 .PHONY: clean
 clean:

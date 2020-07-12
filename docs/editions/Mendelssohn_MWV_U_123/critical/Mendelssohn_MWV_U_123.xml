@@ -20,7 +20,7 @@
       <pubStmt></pubStmt>
       <sourceDesc>
         <source xml:id="source-A1">
-          <name>A1</name>
+          <name>A<rend valign="bottom">1</rend></name>
           <title>Autograph of version 1 of MWV U 123</title>
           <date isodate="1868-10-12" calendar="Gregorian">12 October 1868</date>
           <identifier type="siglum">Mus.ms.autogr. Mendelssohn Bartholdy, F. 28</identifier>
@@ -30,7 +30,7 @@
           </physLoc>
         </source>
         <source xml:id="source-ES1">
-          <name>ES1</name>
+          <name>E<rend valign="bottom">S1</rend></name>
           <bibl>
             <date isodate="1868" calendar="Gregorian">1868</date>
             <publisher>
@@ -48,7 +48,7 @@
           </bibl>
         </source>
         <source xml:id="source-EN">
-          <name>EN</name>
+          <name>E<rend valign="bottom">N</rend></name>
           <bibl>
             <date isodate="1868" calendar="Gregorian">1868</date>
             <publisher>
@@ -73,7 +73,7 @@
           </bibl>
         </source>
         <source xml:id="source-ES2">
-          <name>ES2</name>
+          <name>E<rend valign="bottom">S2</rend></name>
           <bibl>
             <date notbefore="1869" notafter="1880" calendar="Gregorian">c. 1875</date>
             <publisher>
@@ -91,7 +91,7 @@
           </bibl>
         </source>
         <source xml:id="source-EB">
-          <name>EB</name>
+          <name>E<rend valign="bottom">B</rend></name>
           <bibl>
             <date notbefore="1874" notafter="1877" calendar="Gregorian">1874-1877</date>
             <publisher>
