@@ -509,7 +509,7 @@
                   </beam>
                 </layer>
               </staff>
-              <annot xml:id="m2-annot1" plist="#m2-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m3-region1 #source-ES1-facsimile-UCR-page1-m2-region1 #source-EN-facsimile-BL-page1-m2-region1 #source-EB-facsimile-IMSLP-page1-m2-region1">
+              <annot xml:id="m2-annot1" n="1" plist="#m2-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m3-region1 #source-ES1-facsimile-UCR-page1-m2-region1 #source-EN-facsimile-BL-page1-m2-region1 #source-EB-facsimile-IMSLP-page1-m2-region1">
                 <p><ptr target="#source-A1" />
                 (measure 3) and <ptr target="#source-EN" /> have
                 G♯, while <ptr target="#source-ES1" /> and <ptr target="#source-EB" /> have G♮
@@ -705,7 +705,7 @@
               </staff>
               <slur startid="#m4-slur-start" endid="#m4-slur-end" />
               <dynam staff="1" layer="1" place="below" tstamp="3">cresc.</dynam>
-              <annot xml:id="m4-annot1" plist="#m4-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
+              <annot xml:id="m4-annot1" n="1" plist="#m4-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
                 <p><ptr target="#source-A1" />
                 (measure 8) and <ptr target="#source-EB" /> have A♮
                 (with no accidental in <ptr target="#source-A1" />), while <ptr target="#source-ES1" /> has A♯
@@ -984,7 +984,7 @@
               </staff>
               <slur startid="#m7-slur-start" endid="#m7-slur-end" curvedir="below" />
               <dynam tstamp="4" tstamp2="1m+2" extender="true" place="below" staff="1">cresc.</dynam>
-              <annot xml:id="m7-annot1" plist="#m7-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m16-region1 #source-ES1-facsimile-UCR-page2-m7-region1 #source-EN-facsimile-BL-page2-m7-region1 #source-EB-facsimile-IMSLP-page1-m7-region1">
+              <annot xml:id="m7-annot1" n="1" plist="#m7-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m16-region1 #source-ES1-facsimile-UCR-page2-m7-region1 #source-EN-facsimile-BL-page2-m7-region1 #source-EB-facsimile-IMSLP-page1-m7-region1">
                 <p><ptr target="#source-EN" /> and
                 <ptr target="#source-EB" /> have B,
                 while <ptr target="#source-ES1" /> has
@@ -1239,7 +1239,7 @@
               </app>
               <tie staff="2" layer="1" startid="#m10-tie2-mid" endid="#m11-tie2-end" />
               <dynam tstamp="1" place="below" staff="1">dim.</dynam>
-              <annot xml:id="m10-annot1" plist="#m10-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m19-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
+              <annot xml:id="m10-annot1" n="1" plist="#m10-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m19-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
                 <p>In <ptr target="#source-A1" /> (measures
                 19-21) and <ptr target="#source-EB" />, both
                 the ties in measure 9 continue to the first beat
@@ -1446,7 +1446,7 @@
                   </beam>
                 </layer>
               </staff>
-              <annot xml:id="m12-annot1" plist="#m12-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
+              <annot xml:id="m12-annot1" n="1" plist="#m12-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
                 <p><ptr target="#source-A1" />
                 (measure 23) and <ptr target="#source-EB" /> have B♮,
                 while <ptr target="#source-ES1" /> has
@@ -1575,27 +1575,27 @@
                   </chord>
                 </layer>
               </staff>
-              <annot xml:id="m13-annot1" plist="#m13-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
+              <annot xml:id="m13-annot1" n="1" plist="#m13-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
                 <p><ptr target="#source-A1" />
                 (measure 25) and <ptr target="#source-EB" /> have D♯,
                 while <ptr target="#source-ES1" /> has
                 D♮ (with no accidental).</p>
               </annot>
-              <annot xml:id="m13-annot2" plist="#m13-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
+              <annot xml:id="m13-annot2" n="2" plist="#m13-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
                 <p>In <ptr target="#source-ES1" /> and
                 <ptr target="#source-EB" />, the
                 accidental is missing on the G♯ in
                 the upper staff. <ptr target="#source-A1" /> (measure 25) is
                 unclear.</p>
               </annot>
-              <annot xml:id="m13-annot3" plist="#m13-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m25-region3 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
+              <annot xml:id="m13-annot3" n="3" plist="#m13-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m25-region3 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
                 <p><ptr target="#source-EB" /> has
                 D♮, while <ptr target="#source-ES1" /> has D♯
                 (with no accidental), which is surely an
                 error. <ptr target="#source-A1" />
                 (measure 25) is unclear.</p>
               </annot>
-              <annot xml:id="m13-annot4" plist="#m13-annot4-target1 #m13-annot4-target2" facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
+              <annot xml:id="m13-annot4" n="4" plist="#m13-annot4-target1 #m13-annot4-target2" facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
                 <p>Twice in this beat, <ptr target="#source-A1" /> (measure 26,
                 though slightly different) and <ptr target="#source-EB" /> have E♮,
                 while <ptr target="#source-ES1" /> has
@@ -1794,7 +1794,7 @@
                   </beam>
                 </layer>
               </staff>
-              <annot xml:id="m15-annot1" plist="#m15-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
+              <annot xml:id="m15-annot1" n="1" plist="#m15-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
                 <p><ptr target="#source-EB" /> has
                 E♯, while <ptr target="#source-ES1" /> and <ptr target="#source-EN" /> have E♮
                 (with no accidental). The corresponding
@@ -1812,13 +1812,13 @@
                 time. The E♮ reading does not fit
                 this pattern.</p>
               </annot>
-              <annot xml:id="m15-annot2" plist="#m15-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
+              <annot xml:id="m15-annot2" n="2" plist="#m15-annot2-target1" facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
                 <p><ptr target="#source-A1" />
                 (measure 30) and <ptr target="#source-EB" /> have E♮,
                 while <ptr target="#source-ES1" /> has
                 E♯ (with no accidental).</p>
               </annot>
-              <annot xml:id="m15-annot3" plist="#m15-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
+              <annot xml:id="m15-annot3" n="3" plist="#m15-annot3-target1" facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
                 <p><ptr target="#source-A1" />
                 (measure 30) and <ptr target="#source-EB" /> have G♮,
                 while <ptr target="#source-ES1" /> has
@@ -1923,7 +1923,7 @@
                   </beam>
                 </layer>
               </staff>
-              <annot xml:id="m16-annot1" plist="#m16-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
+              <annot xml:id="m16-annot1" n="1" plist="#m16-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
                 <p>In <ptr target="#source-ES1" /> and
                 <ptr target="#source-EB" />, the
                 accidental is missing on the G♯ in the upper
@@ -2306,7 +2306,7 @@
               </staff>
               <slur startid="#m20-slur-start" endid="#m20-slur-end" />
               <dynam tstamp="4" place="below" staff="1">sf</dynam>
-              <annot xml:id="m20-annot1" plist="#m20-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
+              <annot xml:id="m20-annot1" n="1" plist="#m20-annot1-target1" facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
                 <p>The chord is staccato in <ptr target="#source-ES1" />, but not in <ptr target="#source-EB" />. <ptr target="#source-A1" /> (measure 40)
                 has a different structure here.</p>
               </annot>
