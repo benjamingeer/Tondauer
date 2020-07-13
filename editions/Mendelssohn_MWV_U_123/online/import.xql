@@ -2,8 +2,8 @@
 
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
-declare namespace saxon="http://saxon.sf.net/";
-declare namespace array="http://www.w3.org/2005/xpath-functions/array";
+declare namespace saxon = "http://saxon.sf.net/";
+declare namespace array = "http://www.w3.org/2005/xpath-functions/array";
 
 (: The file path of the MEI document. :)
 declare variable $meidoc external;
