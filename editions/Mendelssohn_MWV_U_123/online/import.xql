@@ -76,8 +76,11 @@ declare function local:pass-through($node as node()*) as item()* {
   element {name($node)} {($node/@*, local:traverse($node/node()))}
 };
 
-(: Parses an attribute value containing a space-delimited list of element ID references. :)
-declare function local:parse-ids($attr as attribute()*) as xs:string* {
+(:
+  Parses an optional attribute value containing a space-delimited list of
+  element ID references.
+:)
+declare function local:parse-ids($attr as attribute()?) as xs:string* {
   for $id-ref in $attr/tokenize(., "\s+") return substring-after($id-ref, "#")
 };
 
