@@ -4,10 +4,19 @@ xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
 declare namespace saxon="http://saxon.sf.net/";
 declare namespace array="http://www.w3.org/2005/xpath-functions/array";
-declare variable $uri external;
+
+(: The file path of the MEI document. :)
+declare variable $meidoc external;
+
+(: The Knora project shortcode. :)
 declare variable $shortcode external;
+
+(: The name of the Knora ontology. :)
 declare variable $ontology external;
+
+(: "true" if text markup should be used, "false" otherwise. :)
 declare variable $markup external;
+
 declare variable $use-markup := xs:boolean($markup);
 declare option saxon:output "indent=yes";
 
@@ -138,7 +147,7 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   </resource>
 };
 
-let $document := doc($uri) return
+let $mei-document := doc($meidoc) return
 
 <knora shortcode="{$shortcode}" ontology="{$ontology}">
   <permissions id="res-default">
@@ -156,9 +165,9 @@ let $document := doc($uri) return
     <allow group="ProjectAdmin">CR</allow>
   </permissions>
   {
-    for $input-source in $document//mei:source return local:source($input-source)
+    for $input-source in $mei-document//mei:source return local:source($input-source)
   }
   {
-    for $input-annot in $document//mei:annot return local:annot($input-annot)
+    for $input-annot in $mei-document//mei:annot return local:annot($input-annot)
   }
 </knora>
