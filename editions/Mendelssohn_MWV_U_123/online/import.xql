@@ -125,6 +125,35 @@ declare function local:surface($node as element(mei:surface)) as element(resourc
   </resource>  
 };
 
+(: Transforms <zone> elements. :)
+declare function local:zone($node as element(mei:zone)) as element(resource) {
+  let $id := string($node/@xml:id)
+  let $surface-id := string($node/../@xml:id)
+  let $description := local:traverse($node/mei:figDesc/node())
+  (: TODO: load the coordinates from another file. :) 
+  return
+  <resource label="{$id}"
+    restype="Region"
+    unique_id="{$id}"
+    permissions="res-default">
+    <color-prop>
+      <color>#ff0000</color>
+    </color-prop>
+    <resptr-prop name="isRegionOf">
+      <resptr permissions="prop-default">{$surface-id}</resptr>
+    </resptr-prop>
+    <geometry-prop name="hasGeometry">
+      <geometry permissions="prop-default">{{"points":[{{"x":0.08098591549295775,"y":0.16741071428571427}},{{"x":0.7394366197183099,"y":0.7299107142857143}}],"type":"rectangle"}}</geometry>
+    </geometry-prop>
+    <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
+      if ($use-markup) then
+        <text>{$description}</text>
+      else
+	$description
+    }</text></text-prop>
+  </resource>  
+};
+
 (: Transforms <annot> elements. :)
 declare function local:annot($node as element(mei:annot)) as element(resource) {
   let $id := string($node/@xml:id)
@@ -153,12 +182,12 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   restype="Annotation"
   unique_id="{$id}"
   permissions="res-default">
-    <text-prop name="hasText" permissions="prop-default">{
+    <text-prop name="hasText"><text permissions="prop-default" encoding="utf8">{
       if ($use-markup) then
         <text>{$annotation-text}</text>
       else
 	$annotation-text
-    }</text-prop>
+    }</text></text-prop>
     <integer-prop name="inMeasure" permissions="prop-default">{$measure-num}</integer-prop>
     <integer-prop name="indexInMeasure" permissions="prop-default">{$annot-index}</integer-prop>
     {
@@ -203,7 +232,10 @@ let $mei-document := doc($meidoc) return
   {
     for $facsimile in $mei-document//mei:facsimile return (
       local:facsimile($facsimile),
-      for $surface in $facsimile/mei:surface return local:surface($surface)
+      for $surface in $facsimile/mei:surface return (
+        local:surface($surface),
+        for $zone in $surface/mei:zone return local:zone($zone)
+      )
     )
   }
   {
