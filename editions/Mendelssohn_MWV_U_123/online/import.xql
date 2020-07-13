@@ -1,4 +1,4 @@
-(: Extracts annotations from an MEI document for import into Knora. :)
+(: Extracts data from an MEI document for import into Knora using knora-py. :)
 
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
