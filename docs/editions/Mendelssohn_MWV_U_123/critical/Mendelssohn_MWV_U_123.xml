@@ -112,218 +112,218 @@
     </fileDesc>
   </meiHead>
   <music>
-    <facsimile id="source-A1-facsimile-SBB" decls="#source-A1">
-      <surface id="source-A1-facsimile-SBB-page1" n="1">
+    <facsimile xml:id="source-A1-facsimile-SBB" decls="#source-A1">
+      <surface xml:id="source-A1-facsimile-SBB-page1" n="1">
         <graphic target="source-A1-facsimile-SBB-page1.tif" />
-        <zone id="source-A1-facsimile-SBB-page1-m3-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m3-region1">
           <figDesc>G♯.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m8-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m8-region1">
           <figDesc>A♮.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m16-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m16-region1">
           <figDesc>B.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m19-m21-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m19-m21-region1">
           <figDesc>Both ties continue.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m23-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m23-region1">
           <figDesc>B♮.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m25-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m25-region1">
           <figDesc>D♯.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m25-region2">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m25-region2">
           <figDesc>Unclear.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m25-region3">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m25-region3">
           <figDesc>Unclear.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m26-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m26-region1">
           <figDesc>E♮.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m29-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m29-region1">
           <figDesc>Structure differs from V1.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m30-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m30-region1">
           <figDesc>E♮.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m30-region2">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m30-region2">
           <figDesc>G♮.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m31-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m31-region1">
           <figDesc>Structure differs from V1.</figDesc>
         </zone>
-        <zone id="source-A1-facsimile-SBB-page1-m40-region1">
+        <zone xml:id="source-A1-facsimile-SBB-page1-m40-region1">
           <figDesc>Structure differs from V1.</figDesc>
         </zone>
       </surface>
-      <surface id="source-A1-facsimile-SBB-page-02" n="2">
+      <surface xml:id="source-A1-facsimile-SBB-page2" n="2">
         <graphic target="source-A1-facsimile-SBB-page2.tif" />
       </surface>
     </facsimile>
-    <facsimile id="source-ES1-facsimile-UCR" decls="#source-ES1">
-      <surface id="source-ES1-facsimile-UCR-page1" n="1">
+    <facsimile xml:id="source-ES1-facsimile-UCR" decls="#source-ES1">
+      <surface xml:id="source-ES1-facsimile-UCR-page1" n="1">
         <graphic target="source-ES1-facsimile-UCR-page1.png" />
-        <zone id="source-ES1-facsimile-UCR-page1-m2-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page1-m2-region1">
           <figDesc>G♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page1-m4-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page1-m4-region1">
           <figDesc>A♯ (with no accidental).</figDesc>
         </zone>
       </surface>
-      <surface id="source-ES1-facsimile-UCR-page2" n="2">
+      <surface xml:id="source-ES1-facsimile-UCR-page2" n="2">
         <graphic target="source-ES1-facsimile-UCR-page2.png" />
-        <zone id="source-ES1-facsimile-UCR-page2-m7-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page2-m7-region1">
           <figDesc>G.</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page2-m10-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page2-m10-region1">
           <figDesc>Only the lower C♯ is tied between measures 10 and 11.</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page2-m12-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page2-m12-region1">
           <figDesc>B♯ (with no accidental).</figDesc>
         </zone>
       </surface>
-      <surface id="source-ES1-facsimile-UCR-page3" n="3">
+      <surface xml:id="source-ES1-facsimile-UCR-page3" n="3">
         <graphic target="source-ES1-facsimile-UCR-page3.png" />
-        <zone id="source-ES1-facsimile-UCR-page3-m13-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m13-region1">
           <figDesc>D♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m13-region2">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m13-region2">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m13-region3">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m13-region3">
           <figDesc>D♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m13-region4">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m13-region4">
           <figDesc>E♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m15-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m15-region1">
           <figDesc>E♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m15-region2">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m15-region2">
           <figDesc>E♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m15-region3">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m15-region3">
           <figDesc>G♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-ES1-facsimile-UCR-page3-m16-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m16-region1">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
       </surface>
-      <surface id="source-ES1-facsimile-UCR-page4" n="4">
+      <surface xml:id="source-ES1-facsimile-UCR-page4" n="4">
         <graphic target="source-ES1-facsimile-UCR-page4.png" />
-        <zone id="source-ES1-facsimile-UCR-page4-m20-region1">
+        <zone xml:id="source-ES1-facsimile-UCR-page4-m20-region1">
           <figDesc>Staccato.</figDesc>
         </zone>
       </surface>
-      <surface id="source-ES1-facsimile-UCR-page5" n="5">
+      <surface xml:id="source-ES1-facsimile-UCR-page5" n="5">
         <graphic target="source-ES1-facsimile-UCR-page5.png" />
       </surface>
     </facsimile>
-    <facsimile id="source-EN-facsimile-BL" decls="#source-EN">
-      <surface id="source-EN-facsimile-BL-page1" n="1">
-        <zone id="source-EN-facsimile-BL-page1-m2-region1">
+    <facsimile xml:id="source-EN-facsimile-BL" decls="#source-EN">
+      <surface xml:id="source-EN-facsimile-BL-page1" n="1">
+        <zone xml:id="source-EN-facsimile-BL-page1-m2-region1">
           <figDesc>G♯.</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page1-m4-region1">
+        <zone xml:id="source-EN-facsimile-BL-page1-m4-region1">
           <figDesc>A♯ (with no accidental).</figDesc>
         </zone>
       </surface>
-      <surface id="source-EN-facsimile-BL-page2" n="2">
-        <zone id="source-EN-facsimile-BL-page2-m7-region1">
+      <surface xml:id="source-EN-facsimile-BL-page2" n="2">
+        <zone xml:id="source-EN-facsimile-BL-page2-m7-region1">
           <figDesc>B.</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page2-m10-region1">
+        <zone xml:id="source-EN-facsimile-BL-page2-m10-region1">
           <figDesc>Only the lower C♯ is tied between measures 10 and 11.</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page2-m12-region1">
+        <zone xml:id="source-EN-facsimile-BL-page2-m12-region1">
           <figDesc>B♯ (with no accidental).</figDesc>
         </zone>
       </surface>
-      <surface id="source-EN-facsimile-BL-page3" n="3">
-        <zone id="source-EN-facsimile-BL-page3-m13-region1">
+      <surface xml:id="source-EN-facsimile-BL-page3" n="3">
+        <zone xml:id="source-EN-facsimile-BL-page3-m13-region1">
           <figDesc>D♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m13-region2">
+        <zone xml:id="source-EN-facsimile-BL-page3-m13-region2">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m13-region3">
+        <zone xml:id="source-EN-facsimile-BL-page3-m13-region3">
           <figDesc>D♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m13-region4">
+        <zone xml:id="source-EN-facsimile-BL-page3-m13-region4">
           <figDesc>E♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m15-region1">
+        <zone xml:id="source-EN-facsimile-BL-page3-m15-region1">
           <figDesc>E♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m15-region2">
+        <zone xml:id="source-EN-facsimile-BL-page3-m15-region2">
           <figDesc>E♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m15-region3">
+        <zone xml:id="source-EN-facsimile-BL-page3-m15-region3">
           <figDesc>G♯ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EN-facsimile-BL-page3-m16-region1">
+        <zone xml:id="source-EN-facsimile-BL-page3-m16-region1">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
       </surface>
-      <surface id="source-EN-facsimile-BL-page4" n="4">
-        <zone id="source-EN-facsimile-BL-page4-m20-region1">
+      <surface xml:id="source-EN-facsimile-BL-page4" n="4">
+        <zone xml:id="source-EN-facsimile-BL-page4-m20-region1">
           <figDesc>Staccato.</figDesc>
         </zone>
       </surface>
-      <surface id="source-EN-facsimile-BL-page5" n="5" />
+      <surface xml:id="source-EN-facsimile-BL-page5" n="5" />
     </facsimile>
-    <facsimile id="source-ES2-facsimile-SBB" decls="#source-ES2" />
-    <facsimile id="source-EB-facsimile-IMSLP" decls="#source-EB">
-      <surface id="source-EB-facsimile-IMSLP-page1" n="1">
+    <facsimile xml:id="source-ES2-facsimile-SBB" decls="#source-ES2" />
+    <facsimile xml:id="source-EB-facsimile-IMSLP" decls="#source-EB">
+      <surface xml:id="source-EB-facsimile-IMSLP-page1" n="1">
         <graphic target="source-EB-facsimile-IMSLP-page1.tif" />
-        <zone id="source-EB-facsimile-IMSLP-page1-m2-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page1-m2-region1">
           <figDesc>G♮ (with no accidental).</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page1-m4-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page1-m4-region1">
           <figDesc>A♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page1-m7-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page1-m7-region1">
           <figDesc>B.</figDesc>
         </zone>
       </surface>
-      <surface id="source-EB-facsimile-IMSLP-page2" n="2">
+      <surface xml:id="source-EB-facsimile-IMSLP-page2" n="2">
         <graphic target="source-EB-facsimile-IMSLP-page2.tif" />
-        <zone id="source-EB-facsimile-IMSLP-page2-m10-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m10-region1">
           <figDesc>Both ties continue.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m12-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m12-region1">
           <figDesc>B♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m13-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m13-region1">
           <figDesc>D♯.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m13-region2">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m13-region2">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m13-region3">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m13-region3">
           <figDesc>D♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m13-region4">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m13-region4">
           <figDesc>E♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m15-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m15-region1">
           <figDesc>E♯.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m15-region2">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m15-region2">
           <figDesc>E♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m15-region3">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m15-region3">
           <figDesc>G♮.</figDesc>
         </zone>
-        <zone id="source-EB-facsimile-IMSLP-page2-m16-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m16-region1">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
       </surface>
-      <surface id="source-EB-facsimile-IMSLP-page3" n="3">
+      <surface xml:id="source-EB-facsimile-IMSLP-page3" n="3">
         <graphic target="source-EB-facsimile-IMSLP-page3.tif" />
-        <zone id="source-EB-facsimile-IMSLP-page3-m20-region1">
+        <zone xml:id="source-EB-facsimile-IMSLP-page3-m20-region1">
           <figDesc>No staccato mark.</figDesc>
         </zone>
       </surface>

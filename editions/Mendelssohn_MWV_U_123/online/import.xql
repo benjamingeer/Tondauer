@@ -26,8 +26,6 @@ declare function local:traverse($nodes as node()*) as item()* {
   return
     typeswitch($node)
       case text() return $node
-      case element(mei:annot) return local:annot($node)
-      case element(mei:source) return local:source($node)
       case element(mei:p) return local:p($node)
       case element(mei:ptr) return local:ptr($node)
       case element(mei:rend) return local:rend($node)
@@ -82,7 +80,7 @@ declare function local:rend($node as element(mei:rend)) as item()* {
 
 (: Transforms <source> elements. :)
 declare function local:source($node as element(mei:source)) as element(resource) {
-  let $id := $node/@xml:id
+  let $id := string($node/@xml:id)
   return
     <resource label="{$id}"
       restype="Source"
@@ -92,9 +90,44 @@ declare function local:source($node as element(mei:source)) as element(resource)
     </resource>
 };
 
+(: Transforms <facsimile> elements. :)
+declare function local:facsimile($node as element(mei:facsimile)) as element(resource) {
+  let $id := string($node/@xml:id)
+  let $source-id := local:parse-ids($node/@decls)
+  let $surfaces := $node/mei:surface
+  return
+    <resource label="{$id}"
+      restype="Facsimile"
+      unique_id="{$id}"
+      permissions="res-default">
+      <resptr-prop name="representsSource">
+        <resptr permissions="prop-default">{$source-id}</resptr>
+      </resptr-prop>
+    </resource>
+};
+
+(: Transforms <surface> elements. :)
+declare function local:surface($node as element(mei:surface)) as element(resource) {
+  let $id := string($node/@xml:id)
+  let $facsimile-id := string($node/../@xml:id)
+  let $page-num := string($node/@n)
+  let $image := string($node/mei:graphic/@target)
+  return
+  <resource label="{$id}"
+    restype="FacsimilePage"
+    unique_id="{$id}"
+    permissions="res-default">
+    <image>facsimiles/{$facsimile-id}/{$image}</image>
+    <resptr-prop name="isPartOf">
+      <resptr permissions="prop-default">{$facsimile-id}</resptr>
+    </resptr-prop>
+    <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
+  </resource>  
+};
+
 (: Transforms <annot> elements. :)
 declare function local:annot($node as element(mei:annot)) as element(resource) {
-  let $id := $node/@xml:id
+  let $id := string($node/@xml:id)
 
   (: The text of the annotation. :)
   let $annotation-text := local:traverse($node/node())
@@ -165,9 +198,15 @@ let $mei-document := doc($meidoc) return
     <allow group="ProjectAdmin">CR</allow>
   </permissions>
   {
-    for $input-source in $mei-document//mei:source return local:source($input-source)
+    for $source in $mei-document//mei:source return local:source($source)
   }
   {
-    for $input-annot in $mei-document//mei:annot return local:annot($input-annot)
+    for $facsimile in $mei-document//mei:facsimile return (
+      local:facsimile($facsimile),
+      for $surface in $facsimile/mei:surface return local:surface($surface)
+    )
+  }
+  {
+    for $annot in $mei-document//mei:annot return local:annot($annot)
   }
 </knora>
