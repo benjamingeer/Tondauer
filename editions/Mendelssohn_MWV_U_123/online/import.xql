@@ -1,4 +1,43 @@
-(: Extracts data from an MEI document for import into Knora using knora-py. :)
+(:
+
+Extracts data from an MEI document for import into Knora using
+knora-py.
+
+- If the parameter 'markup' is 'true', text markup will be converted
+  to Knora's standard mapping; otherwise it will be removed. If markup
+  is activated, a <ptr> referring to a <source> will be replaced with
+  a resource reference.
+
+- Each <source> must have a <name>, which can contain markup.
+
+- Facsimiles must be in a directory ./facsimiles, in which there's a
+  subdirectory for each facsimile. The name of each subdirectory is
+  the ID of the facsimile in the MEI document.
+
+- Each <facsimile> must contain a <surface> for each page, specifying
+  its page number with @n.
+
+- Each <surface> must contain a <graphic>, whose @target is the
+  filename in the facsimile's directory.
+
+- Each <zone> must contain a <figDesc>, which can contain markup.
+
+- Each <lem> should specify its sources in @source, using the IDs of
+  <source> elements.
+
+- Each <annot> must have a <measure> as its parent element. Probably
+  we will require annotations to be collected at the end of each
+  measure for automated update.
+
+- Each <annot> must use @n to specify its 1-based index among the
+  annotations in the same measure.
+
+- The IDs in the @plist of an <annot> (its targets) should be <app> or
+  <choice> elements.
+
+- An <annot> should have a @facs specifying the zones it refers to.
+
+:)
 
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
@@ -6,7 +45,7 @@ declare namespace saxon = "http://saxon.sf.net/";
 declare namespace array = "http://www.w3.org/2005/xpath-functions/array";
 
 (: The file path of the MEI document. :)
-declare variable $meidoc external;
+declare variable $mei-file external;
 
 (: The Knora project shortcode. :)
 declare variable $shortcode external;
@@ -43,7 +82,7 @@ declare function local:parse-ids($attr as attribute()*) as xs:string* {
 };
 
 (: Transforms <ptr> elements. :)
-declare function local:ptr($node as node()*) as item()* {
+declare function local:ptr($node as element(mei:ptr)) as item()* {
   let $target-id := local:parse-ids($node/@target)
   let $target := $node/id($target-id)
   return
@@ -109,7 +148,7 @@ declare function local:facsimile($node as element(mei:facsimile)) as element(res
 (: Transforms <surface> elements. :)
 declare function local:surface($node as element(mei:surface)) as element(resource) {
   let $id := string($node/@xml:id)
-  let $facsimile-id := string($node/../@xml:id)
+  let $facsimile-id := string($node/parent::mei:facsimile/@xml:id)
   let $page-num := string($node/@n)
   let $image := string($node/mei:graphic/@target)
   return
@@ -128,7 +167,7 @@ declare function local:surface($node as element(mei:surface)) as element(resourc
 (: Transforms <zone> elements. :)
 declare function local:zone($node as element(mei:zone)) as element(resource) {
   let $id := string($node/@xml:id)
-  let $surface-id := string($node/../@xml:id)
+  let $surface-id := string($node/parent::mei:surface/@xml:id)
   let $description := local:traverse($node/mei:figDesc/node())
   (: TODO: load the coordinates from another file. :) 
   return
@@ -162,7 +201,7 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   let $annotation-text := local:traverse($node/node())
 
   (: The measure number that the annotation occurs in. :)
-  let $measure-num := string($node/(ancestor::mei:measure[@n][1]/@n))
+  let $measure-num := string($node/(parent::mei:measure/@n))
 
   (: The index of the annotation in the measure. :)
   let $annot-index := string($node/@n)
@@ -209,7 +248,7 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   </resource>
 };
 
-let $mei-document := doc($meidoc) return
+let $mei-document := doc($mei-file) return
 
 <knora shortcode="{$shortcode}" ontology="{$ontology}">
   <permissions id="res-default">
