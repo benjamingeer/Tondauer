@@ -81,7 +81,7 @@ declare function local:pass-through($node as node()*) as item()* {
   element ID references.
 :)
 declare function local:parse-ids($attr as attribute()?) as xs:string* {
-  for $id-ref in $attr/tokenize(., "\s+") return substring-after($id-ref, "#")
+  for $id-ref in tokenize($attr, "\s+") return substring-after($id-ref, "#")
 };
 
 (: Transforms <ptr> elements. :)
