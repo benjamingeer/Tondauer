@@ -144,12 +144,14 @@ let $document := doc($uri) return
   <permissions id="res-default">
     <allow group="UnknownUser">V</allow>
     <allow group="KnownUser">V</allow>
+    <allow group="ProjectMember">M</allow>
     <allow group="Creator">CR</allow>
     <allow group="ProjectAdmin">CR</allow>
   </permissions>
   <permissions id="prop-default">
     <allow group="UnknownUser">V</allow>
     <allow group="KnownUser">V</allow>
+    <allow group="ProjectMember">M</allow>
     <allow group="Creator">CR</allow>
     <allow group="ProjectAdmin">CR</allow>
   </permissions>
