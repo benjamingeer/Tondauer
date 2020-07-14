@@ -2,13 +2,18 @@
 
 ## Data import
 
-- Figure out an IIIF-compatible way to encode facsimiles, surfaces,
-  and zones in MEI. See [this
+Currently we can generate a knora-py XML import document using
+XQuery. What's left:
+
+- See if there's an IIIF-compatible way to encode facsimiles,
+  surfaces, and zones in MEI. See [this
   thread](https://lists.uni-paderborn.de/pipermail/mei-l/2016/001839.html).
 
-  - Try using Mirador to draw the regions and save the coordinates in
-    the MEI document as percentages of width and height, and copy and
-    paste them into the MEI document.
+  - Currently we can use
+    [Tesselle](https://github.com/medialab/tesselle/) to draw regions,
+    then merge them with the MEI zones to make Knora regions.
+	
+  - Try using Mirador for this.
 
 - Use knora-py to make a simple ontology for musical
   editions. Maybe something like this to start with:
@@ -17,22 +22,20 @@
 	
   - An `Annotation` class, with:
   
-    - Text with standoff markup (can use the standard mapping). TODO:
-      can a knora-py XML bulk import accept text with markup,
-      containing resource references? If so, each MEI source can be a
-      Knora resource, and the text of annotations can contain links to
-      sources.
+    - Text with standoff markup (can use the standard
+      mapping). Currently knora-py requires markup to be
+      Base64-encoded
+      ([DSP-471](https://dasch.myjetbrains.com/youtrack/issue/DSP-471)),
+      which we can't do in XQuery.
   
     - An annotation ID (a `TextValue`).
   
-    - One or more annotation target IDs (each one a `TextValue`).
+    - Annotation target IDs (each one a `TextValue`).
 	
-	- Zero or more links to regions (from the `facs` attribute of the
-      `<annot>`).
+	- Links to regions (from the `facs` attribute of the `<annot>`).
 
-- Write an XQuery program that extracts the annotations, facsimiles,
-  and regions from an MEI document and converts them to a knora-py XML
-  import file based on that ontology.
+- Figure out how to use knora-base classes in knora-py
+  ([DSP-477](https://dasch.myjetbrains.com/youtrack/issue/DSP-477)).
 
 - Import some MEI data into Knora for testing.
 
