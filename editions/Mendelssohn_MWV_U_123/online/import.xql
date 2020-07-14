@@ -22,6 +22,12 @@ knora-py.
 
 - Each <zone> must contain a <figDesc>, which can contain markup.
 
+- The coordinates of zones are loaded from an external file. Currently
+  Tesselle <https://github.com/medialab/tesselle/> is supported. One
+  Tesselle Zip file should be made for each page, and unpacked into a
+  directory tesselle/<facsimile id>/<surface id>. The content of each
+  Tesselle annotation must be the zone ID.
+
 - Each <lem> should specify its sources in @source, using the IDs of
   <source> elements.
 
@@ -42,7 +48,7 @@ knora-py.
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
 declare namespace saxon = "http://saxon.sf.net/";
-declare namespace array = "http://www.w3.org/2005/xpath-functions/array";
+import module namespace tesselle = "http://tondauer.art/tesselle" at "tesselle.xqm";
 
 (: The file path of the MEI document. :)
 declare variable $mei-file external;
@@ -52,6 +58,9 @@ declare variable $shortcode external;
 
 (: The name of the Knora ontology. :)
 declare variable $ontology external;
+
+(: The type of file to read regions from. Currently only "tesselle" is supported. :)
+declare variable $region-type external;
 
 (: "true" if text markup should be used, "false" otherwise. :)
 declare variable $markup external;
@@ -133,46 +142,55 @@ declare function local:source($node as element(mei:source)) as element(resource)
 };
 
 (: Transforms <facsimile> elements. :)
-declare function local:facsimile($node as element(mei:facsimile)) as element(resource) {
+declare function local:facsimile($node as element(mei:facsimile)) as item()* (: element(resource)+ :) {
   let $id := string($node/@xml:id)
   let $source-id := local:parse-ids($node/@decls)
-  let $surfaces := $node/mei:surface
   return
-    <resource label="{$id}"
+    (<resource label="{$id}"
       restype="Facsimile"
       unique_id="{$id}"
       permissions="res-default">
       <resptr-prop name="representsSource">
         <resptr permissions="prop-default">{$source-id}</resptr>
       </resptr-prop>
-    </resource>
+    </resource>,
+    for $surface in $node/mei:surface return local:surface($surface))
 };
 
 (: Transforms <surface> elements. :)
-declare function local:surface($node as element(mei:surface)) as element(resource) {
+declare function local:surface($node as element(mei:surface)) as item()* (: element(resource)+ :) {
   let $id := string($node/@xml:id)
   let $facsimile-id := string($node/parent::mei:facsimile/@xml:id)
   let $page-num := string($node/@n)
   let $image := string($node/mei:graphic/@target)
+  let $regions := local:load-regions($facsimile-id, $id)
   return
-  <resource label="{$id}"
-    restype="FacsimilePage"
-    unique_id="{$id}"
-    permissions="res-default">
-    <image>facsimiles/{$facsimile-id}/{$image}</image>
-    <resptr-prop name="isPartOf">
-      <resptr permissions="prop-default">{$facsimile-id}</resptr>
-    </resptr-prop>
-    <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
-  </resource>  
+    (<resource label="{$id}"
+      restype="FacsimilePage"
+      unique_id="{$id}"
+      permissions="res-default">
+      <image>facsimiles/{$facsimile-id}/{$image}</image>
+      <resptr-prop name="isPartOf">
+        <resptr permissions="prop-default">{$facsimile-id}</resptr>
+      </resptr-prop>
+      <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
+    </resource>,
+    for $zone in $node/mei:zone return local:zone($zone, $regions))
+};
+
+(: Loads regions from an external file. :)
+declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
+  if ($region-type = "tesselle") then
+    tesselle:load-regions($facsimile-id, $surface-id)
+  else
+    error(QName("http://tondauer.arg/error", "InvalidRegionType"), "Invalid region type", $region-type)
 };
 
 (: Transforms <zone> elements. :)
-declare function local:zone($node as element(mei:zone)) as element(resource) {
+declare function local:zone($node as element(mei:zone), $regions as element(regions)?) as element(resource) {
   let $id := string($node/@xml:id)
   let $surface-id := string($node/parent::mei:surface/@xml:id)
   let $description := local:traverse($node/mei:figDesc/node())
-  (: TODO: load the coordinates from another file. :) 
   return
   <resource label="{$id}"
     restype="Region"
@@ -185,7 +203,7 @@ declare function local:zone($node as element(mei:zone)) as element(resource) {
       <resptr permissions="prop-default">{$surface-id}</resptr>
     </resptr-prop>
     <geometry-prop name="hasGeometry">
-      <geometry permissions="prop-default">{{"points":[{{"x":0.08098591549295775,"y":0.16741071428571427}},{{"x":0.7394366197183099,"y":0.7299107142857143}}],"type":"rectangle"}}</geometry>
+      <geometry permissions="prop-default">{$regions/region[@target = $id]/node()}</geometry>
     </geometry-prop>
     <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
       if ($use-markup) then
@@ -213,8 +231,7 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   let $target-ids := local:parse-ids($node/@plist)
 
   (: The IDs of sources mentioned in <lem> elements that are contained within targets of the annotation. :)
-  let $source-ids := distinct-values(array:flatten(for $target in $node/id($target-ids) return
-    local:parse-ids($target/mei:lem/@source)))
+  let $source-ids := distinct-values(for $target in $node/id($target-ids) return local:parse-ids($target/mei:lem/@source))
 
   (: The IDs of zones that the annotation refers to. :)
   let $zone-ids := local:parse-ids($node/@facs)
@@ -251,6 +268,12 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   </resource>
 };
 
+(:
+
+  Generate the output document.
+
+:)
+
 let $mei-document := doc($mei-file) return
 
 <knora shortcode="{$shortcode}" ontology="{$ontology}">
@@ -272,13 +295,7 @@ let $mei-document := doc($mei-file) return
     for $source in $mei-document//mei:source return local:source($source)
   }
   {
-    for $facsimile in $mei-document//mei:facsimile return (
-      local:facsimile($facsimile),
-      for $surface in $facsimile/mei:surface return (
-        local:surface($surface),
-        for $zone in $surface/mei:zone return local:zone($zone)
-      )
-    )
+    for $facsimile in $mei-document//mei:facsimile return local:facsimile($facsimile)
   }
   {
     for $annot in $mei-document//mei:annot return local:annot($annot)

@@ -6,10 +6,11 @@ KNORA_IMPORT=import.xml
 SHORTCODE=082A
 ONTOLOGY=tondauer
 MARKUP=false
+REGION_TYPE=tesselle
 
 $(KNORA_IMPORT): $(MEI_FILE) $(XQUERY)
-	java -cp $(SAXON_JAR) net.sf.saxon.Query -q:$(XQUERY) -o:$@ mei-file=$(MEI_FILE) shortcode=$(SHORTCODE) ontology=$(ONTOLOGY) markup=$(MARKUP)
+	java -cp $(SAXON_JAR) net.sf.saxon.Query -q:$(XQUERY) -o:$@ mei-file=$(MEI_FILE) shortcode=$(SHORTCODE) ontology=$(ONTOLOGY) markup=$(MARKUP) region-type=$(REGION_TYPE)
 
 .PHONY: clean
 clean:
-	rm $(KNORA_IMPORT)
+	rm -f $(KNORA_IMPORT)
