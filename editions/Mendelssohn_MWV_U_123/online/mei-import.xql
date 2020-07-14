@@ -3,46 +3,6 @@
 Extracts data from an MEI document for import into Knora using
 knora-py.
 
-- If the parameter 'markup' is 'true', text markup will be converted
-  to Knora's standard mapping; otherwise it will be removed. If markup
-  is activated, a <ptr> referring to a <source> will be replaced with
-  a resource reference.
-
-- Each <source> must have a <name>, which can contain markup.
-
-- Facsimiles must be in a directory ./facsimiles, in which there's a
-  subdirectory for each facsimile. The name of each subdirectory is
-  the ID of the facsimile in the MEI document.
-
-- Each <facsimile> must contain a <surface> for each page, specifying
-  its page number with @n.
-
-- Each <surface> must contain a <graphic>, whose @target is the
-  filename in the facsimile's directory.
-
-- Each <zone> must contain a <figDesc>, which can contain markup.
-
-- The coordinates of zones are loaded from an external file. Currently
-  Tesselle <https://github.com/medialab/tesselle/> is supported. One
-  Tesselle Zip file should be made for each page, and unpacked into a
-  directory tesselle/<facsimile id>/<surface id>. The content of each
-  Tesselle annotation must be the zone ID.
-
-- Each <lem> should specify its sources in @source, using the IDs of
-  <source> elements.
-
-- Each <annot> must have a <measure> as its parent element. Probably
-  we will require annotations to be collected at the end of each
-  measure for automated update.
-
-- Each <annot> must use @n to specify its 1-based index among the
-  annotations in the same measure.
-
-- The IDs in the @plist of an <annot> (its targets) should be <app> or
-  <choice> elements.
-
-- An <annot> should have a @facs specifying the zones it refers to.
-
 :)
 
 xquery version "3.1";
@@ -59,14 +19,22 @@ declare variable $shortcode external;
 (: The name of the Knora ontology. :)
 declare variable $ontology external;
 
-(: The type of file to read regions from. Currently only "tesselle" is supported. :)
-declare variable $region-type external;
+(: The external provider to load regions from. :)
+declare variable $region-provider external;
 
 (: "true" if text markup should be used, "false" otherwise. :)
 declare variable $markup external;
 
 declare variable $use-markup := xs:boolean($markup);
 declare option saxon:output "indent=yes";
+
+(: Loads a surface's regions from an external provider. :)
+declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
+  if ($region-provider = "tesselle") then
+    tesselle:load-regions($facsimile-id, $surface-id)
+  else
+    error(QName("http://tondauer.arg/error", "InvalidRegionType"), "Invalid region provider", $region-provider)
+};
 
 (: Recursively traverses nodes. :)
 declare function local:traverse($nodes as node()*) as item()* {
@@ -105,7 +73,7 @@ declare function local:ptr($node as element(mei:ptr)) as item()* {
 	else
           local:traverse($target/mei:name/node())
 
-      default return local:pass-through($node)  
+      default return error(QName("http://tondauer.arg/error", "InvalidPtr"), "Invalid ptr", $node)
 };
 
 (: Transforms <p> elements. :)
@@ -163,6 +131,7 @@ declare function local:surface($node as element(mei:surface)) as item()* (: elem
   let $facsimile-id := string($node/parent::mei:facsimile/@xml:id)
   let $page-num := string($node/@n)
   let $image := string($node/mei:graphic/@target)
+  (: Load externally defined regions. :)
   let $regions := local:load-regions($facsimile-id, $id)
   return
     (<resource label="{$id}"
@@ -176,14 +145,6 @@ declare function local:surface($node as element(mei:surface)) as item()* (: elem
       <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
     </resource>,
     for $zone in $node/mei:zone return local:zone($zone, $regions))
-};
-
-(: Loads regions from an external file. :)
-declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
-  if ($region-type = "tesselle") then
-    tesselle:load-regions($facsimile-id, $surface-id)
-  else
-    error(QName("http://tondauer.arg/error", "InvalidRegionType"), "Invalid region type", $region-type)
 };
 
 (: Transforms <zone> elements. :)

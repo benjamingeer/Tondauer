@@ -1,51 +1,66 @@
 module namespace tesselle = "http://tondauer.art/tesselle";
 
-(: Loads regions drawn with Tesselle. :)
+(: Loads regions drawn with Tesselle for a given surface. :)
 declare function tesselle:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
   try {
+    (: Parse slideshow.json and convert it to XML. :)
     let $tesselle-xml := json-to-xml(
-      unparsed-text(concat("tesselle/", $facsimile-id, "/", $surface-id, "/slideshow.json"), "UTF-8"))
+      unparsed-text(
+	concat(
+	  "tesselle/",
+	  $facsimile-id,
+	  "/",
+	  $surface-id,
+	  "/slideshow.json"
+	),
+	"UTF-8"))
+
+    (: Get the image width and height in pixels. :)
     let $image := $tesselle-xml//fn:map[@key = "image"]
     let $image-width := xs:integer($image/fn:number[@key = "width"])
     let $image-height := xs:integer($image/fn:number[@key = "height"])
-    let $bounding-box := tesselle:make-bounding-box($image-width, $image-height)
+
+    (: Calculate the size of the bounding box that Tesselle used for its coordinates. :)
+    let $bounding-box := tesselle:calculate-bounding-box($image-width, $image-height)
     let $max-x := $bounding-box[1]
     let $max-y := $bounding-box[2]
     return
-      <regions image-width="{$image-width}" image-height="{$image-height}" max-x="{$max-x}" max-y="{$max-y}">
-      {
-        for $region in $tesselle-xml//fn:array[@key = "annotations"]/fn:map
-        let $region-id := string($region/fn:map[@key = "properties"]/fn:string[@key = "content"])
-        let $coordinates := $region/fn:map[@key = "geometry"]/fn:array[@key = "coordinates"]/fn:array/fn:array
-        let $points := tesselle:coordinates-to-points($coordinates, $max-x, $max-y)
-        return
-        <region target="{$region-id}">{{"points":[{string-join($points, ", ")}], "type": "polygon"}}</region>
+      <regions>
+	{
+	  (: Convert Tesselle's data structure to a sequence of
+	     elements containing Knora region definitions in JSON. :)
+          for $region in $tesselle-xml//fn:array[@key = "annotations"]/fn:map
+            let $region-id := string($region/fn:map[@key = "properties"]/fn:string[@key = "content"])
+            let $coordinates := $region/fn:map[@key = "geometry"]/fn:array[@key = "coordinates"]/fn:array/fn:array
+            let $points := tesselle:coordinates-to-knora-points($coordinates, $max-x, $max-y)
+            return
+              <region target="{$region-id}">{{"points": [{string-join($points, ", ")}], "type": "polygon"}}</region>
       }
     </regions>
-  } catch err:FOUT1170 (: File not found :) {
+  } catch err:FOUT1170 (: File not found, OK because maybe some regions haven't been drawn yet. :) {
     ()
   }  
 };
 
-declare function tesselle:coordinates-to-points($coordinates as element(fn:array)*,
-  $max-x as xs:decimal, $max-y as xs:decimal) as xs:string* {
+(: Converts a sequence of Tesselle coordinates to a sequence of JSON
+   strings representing points in a Knora region. :)
+declare function tesselle:coordinates-to-knora-points($coordinates as element(fn:array)*,
+  $max-x as xs:decimal,
+  $max-y as xs:decimal) as xs:string* {
   for $coordinate in $coordinates
-  let $x := xs:decimal($coordinate/fn:number[1]) div $max-x
-  let $y := xs:decimal($coordinate/fn:number[2]) div $max-y
-  return concat("{&#34;x&#34;: ", $x, ", &#34;y&#34;: ", $y, "}")
+    let $x := xs:decimal($coordinate/fn:number[1]) div $max-x
+    let $y := xs:decimal($coordinate/fn:number[2]) div $max-y
+    return concat("{&#34;x&#34;: ", $x, ", &#34;y&#34;: ", $y, "}")
 };
 
-(:
- 
+(: 
   Reimplementation of Tesselle's bounding box calculation, needed to
-  convert Tesselle coordinates to Knora coordinates. Based on:
+  convert Tesselle coordinates to points in a Knora region. Based on:
 
   https://github.com/medialab/tesselle/blob/949b7e2c30fb38abbfc65efbce2f67e76cbc7bd0/app/utils/hooks.ts#L110
   https://github.com/medialab/tesselle/blob/949b7e2c30fb38abbfc65efbce2f67e76cbc7bd0/app/types/IIIFStatic.ts#L57
-
 :)
-
-declare function tesselle:make-bounding-box($image-width as xs:integer, $image-height as xs:integer) as xs:decimal* {
+declare function tesselle:calculate-bounding-box($image-width as xs:integer, $image-height as xs:integer) as xs:decimal* {
   let $denominator := xs:decimal(tesselle:make-scale-factor(512, $image-width, 512, $image-height))
   return (xs:decimal($image-width) div $denominator, xs:decimal(-$image-height) div $denominator)
 };
