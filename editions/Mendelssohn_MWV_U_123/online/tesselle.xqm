@@ -6,14 +6,14 @@ declare function tesselle:load-regions($facsimile-id as xs:string, $surface-id a
     (: Parse slideshow.json and convert it to XML. :)
     let $tesselle-xml := json-to-xml(
       unparsed-text(
-	concat(
-	  "tesselle/",
-	  $facsimile-id,
-	  "/",
-	  $surface-id,
-	  "/slideshow.json"
-	),
-	"UTF-8"))
+        concat(
+          "tesselle/",
+          $facsimile-id,
+          "/",
+          $surface-id,
+          "/slideshow.json"
+        ),
+        "UTF-8"))
 
     (: Get the image width and height in pixels. :)
     let $image := $tesselle-xml//fn:map[@key = "image"]
@@ -26,9 +26,9 @@ declare function tesselle:load-regions($facsimile-id as xs:string, $surface-id a
     let $max-y := $bounding-box[2]
     return
       <regions>
-	{
-	  (: Convert Tesselle's data structure to a sequence of
-	     elements containing Knora region definitions in JSON. :)
+        {
+          (: Convert Tesselle's data structure to a sequence of
+             elements containing Knora region definitions in JSON. :)
           for $region in $tesselle-xml//fn:array[@key = "annotations"]/fn:map
             let $region-id := string($region/fn:map[@key = "properties"]/fn:string[@key = "content"])
             let $coordinates := $region/fn:map[@key = "geometry"]/fn:array[@key = "coordinates"]/fn:array/fn:array
@@ -61,19 +61,19 @@ declare function tesselle:coordinates-to-knora-points($coordinates as element(fn
   https://github.com/medialab/tesselle/blob/949b7e2c30fb38abbfc65efbce2f67e76cbc7bd0/app/types/IIIFStatic.ts#L57
 :)
 declare function tesselle:calculate-bounding-box($image-width as xs:integer, $image-height as xs:integer) as xs:decimal* {
-  let $denominator := xs:decimal(tesselle:make-scale-factor(512, $image-width, 512, $image-height))
+  let $denominator := xs:decimal(tesselle:find-scale-factor(512, $image-width, 512, $image-height))
   return (xs:decimal($image-width) div $denominator, xs:decimal(-$image-height) div $denominator)
 };
 
-declare function tesselle:make-scale-factor(
+declare function tesselle:find-scale-factor(
   $tile-width as xs:integer,
   $width as xs:integer,
   $tile-height as xs:integer,
   $height as xs:integer) as xs:integer* {
-  tesselle:make-scale-factor-rec(1, $tile-width, $width, $tile-height, $height)
+  tesselle:find-scale-factor-rec(1, $tile-width, $width, $tile-height, $height)
 };
 
-declare function tesselle:make-scale-factor-rec(
+declare function tesselle:find-scale-factor-rec(
   $power,
   $tile-width as xs:integer,
   $width as xs:integer,
@@ -83,7 +83,7 @@ declare function tesselle:make-scale-factor-rec(
     if ($power = 29 or (($tile-width * $scale-factor gt $width) and ($tile-height * $scale-factor gt $height))) then
       $scale-factor
     else
-      tesselle:make-scale-factor-rec(
+      tesselle:find-scale-factor-rec(
         $power + 1,
         $tile-width,
         $width,

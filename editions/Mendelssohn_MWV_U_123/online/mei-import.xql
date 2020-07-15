@@ -1,9 +1,4 @@
-(:
-
-Extracts data from an MEI document for import into Knora using
-knora-py.
-
-:)
+(: Extracts data from an MEI document for import into Knora using knora-py. :)
 
 xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
@@ -24,12 +19,12 @@ declare variable $region-provider external;
 
 (: "true" if text markup should be used, "false" otherwise. :)
 declare variable $markup external;
-
 declare variable $use-markup := xs:boolean($markup);
+
 declare option saxon:output "indent=yes";
 
 (: Loads a surface's regions from an external provider. :)
-declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
+declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as element(regions)? {
   if ($region-provider = "tesselle") then
     tesselle:load-regions($facsimile-id, $surface-id)
   else
@@ -38,8 +33,7 @@ declare function local:load-regions($facsimile-id as xs:string, $surface-id as x
 
 (: Recursively traverses nodes. :)
 declare function local:traverse($nodes as node()*) as item()* {
-  for $node in $nodes
-  return
+  for $node in $nodes return
     typeswitch($node)
       case text() return $node
       case element(mei:p) return local:p($node)
@@ -70,7 +64,7 @@ declare function local:ptr($node as element(mei:ptr)) as item()* {
       case element(mei:source) return
         if ($use-markup) then
           <strong><a class="salsah-link" href="#{$target-id}">{local:traverse($target/mei:name/node())}</a></strong>
-	else
+        else
           local:traverse($target/mei:name/node())
 
       default return error(QName("http://tondauer.arg/error", "InvalidPtr"), "Invalid ptr", $node)
@@ -153,26 +147,26 @@ declare function local:zone($node as element(mei:zone), $regions as element(regi
   let $surface-id := string($node/parent::mei:surface/@xml:id)
   let $description := local:traverse($node/mei:figDesc/node())
   return
-  <resource label="{$id}"
-    restype="Region"
-    unique_id="{$id}"
-    permissions="res-default">
-    <color-prop>
-      <color>#ff0000</color>
-    </color-prop>
-    <resptr-prop name="isRegionOf">
-      <resptr permissions="prop-default">{$surface-id}</resptr>
-    </resptr-prop>
-    <geometry-prop name="hasGeometry">
-      <geometry permissions="prop-default">{$regions/region[@target = $id]/node()}</geometry>
-    </geometry-prop>
-    <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
-      if ($use-markup) then
-        <text>{$description}</text>
-      else
-	$description
-    }</text></text-prop>
-  </resource>  
+    <resource label="{$id}"
+      restype="Region"
+      unique_id="{$id}"
+      permissions="res-default">
+      <color-prop>
+        <color>#ff0000</color>
+      </color-prop>
+      <resptr-prop name="isRegionOf">
+        <resptr permissions="prop-default">{$surface-id}</resptr>
+      </resptr-prop>
+      <geometry-prop name="hasGeometry">
+        <geometry permissions="prop-default">{$regions/region[@target = $id]/node()}</geometry>
+      </geometry-prop>
+      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
+        if ($use-markup) then
+          <text>{$description}</text>
+        else
+          $description
+      }</text></text-prop>
+    </resource>  
 };
 
 (: Transforms <annot> elements. :)
@@ -198,42 +192,36 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   let $zone-ids := local:parse-ids($node/@facs)
   
   return
-  <resource label="{$id}"
-  restype="Annotation"
-  unique_id="{$id}"
-  permissions="res-default">
-    <text-prop name="hasText"><text permissions="prop-default" encoding="utf8">{
-      if ($use-markup) then
-        <text>{$annotation-text}</text>
-      else
-	$annotation-text
-    }</text></text-prop>
-    <integer-prop name="inMeasure" permissions="prop-default">{$measure-num}</integer-prop>
-    <integer-prop name="indexInMeasure" permissions="prop-default">{$annot-index}</integer-prop>
-    {
-      for $target-id in $target-ids return
-      <text-prop name="hasTarget" permissions="prop-default">{$target-id}</text-prop>
-    }
-    {
-      for $source-id in $source-ids return
-      <resptr-prop name="hasPreferredSource">
-        <resptr permissions="prop-default">{$source-id}</resptr>
-      </resptr-prop>
-    }
-    {
-      for $zone-id in $zone-ids return
-      <resptr-prop name="refersToRegion">
-        <resptr permissions="prop-default">{$zone-id}</resptr>
-      </resptr-prop>
-    }
-  </resource>
+    <resource label="{$id}"
+    restype="Annotation"
+    unique_id="{$id}"
+    permissions="res-default">
+      <text-prop name="hasText"><text permissions="prop-default" encoding="utf8">{
+        if ($use-markup) then
+          <text>{$annotation-text}</text>
+        else
+          $annotation-text
+      }</text></text-prop>
+      <integer-prop name="inMeasure" permissions="prop-default">{$measure-num}</integer-prop>
+      <integer-prop name="indexInMeasure" permissions="prop-default">{$annot-index}</integer-prop>
+      {
+        (
+          for $target-id in $target-ids return
+            <text-prop name="hasTarget" permissions="prop-default">{$target-id}</text-prop>,
+          for $source-id in $source-ids return
+            <resptr-prop name="hasPreferredSource">
+              <resptr permissions="prop-default">{$source-id}</resptr>
+            </resptr-prop>,
+          for $zone-id in $zone-ids return
+            <resptr-prop name="refersToRegion">
+              <resptr permissions="prop-default">{$zone-id}</resptr>
+            </resptr-prop>
+        )
+      }
+    </resource>
 };
 
-(:
-
-  Generate the output document.
-
-:)
+(: Generate the output document. :)
 
 let $mei-document := doc($mei-file) return
 
@@ -253,12 +241,10 @@ let $mei-document := doc($mei-file) return
     <allow group="ProjectAdmin">CR</allow>
   </permissions>
   {
-    for $source in $mei-document//mei:source return local:source($source)
-  }
-  {
-    for $facsimile in $mei-document//mei:facsimile return local:facsimile($facsimile)
-  }
-  {
-    for $annot in $mei-document//mei:annot return local:annot($annot)
+    (
+      for $source in $mei-document//mei:source return local:source($source),
+      for $facsimile in $mei-document//mei:facsimile return local:facsimile($facsimile),
+      for $annot in $mei-document//mei:annot return local:annot($annot)
+    )
   }
 </knora>
