@@ -1,8 +1,12 @@
 (: Extracts data from an MEI document for import into Knora using knora-py. :)
 
 xquery version "3.1";
+
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
 declare namespace saxon = "http://saxon.sf.net/";
+declare namespace err = "http://www.w3.org/2005/xqt-errors";
+declare namespace tondauer-err = "http://tondauer.art/xqt-errors";
+
 import module namespace tesselle = "http://tondauer.art/tesselle" at "tesselle.xqm";
 
 (: The file path of the MEI document. :)
@@ -28,7 +32,7 @@ declare function local:load-regions($facsimile-id as xs:string, $surface-id as x
   if ($region-provider = "tesselle") then
     tesselle:load-regions($facsimile-id, $surface-id)
   else
-    error(QName("http://tondauer.arg/error", "InvalidRegionType"), "Invalid region provider", $region-provider)
+    error(xs:QName("tondauer-err:InvalidRegionType"), "Invalid region provider", $region-provider)
 };
 
 (: Recursively traverses nodes. :)
@@ -63,11 +67,11 @@ declare function local:ptr($node as element(mei:ptr)) as item()* {
     typeswitch($target)
       case element(mei:source) return
         if ($use-markup) then
-          <strong><a class="salsah-link" href="#{$target-id}">{local:traverse($target/mei:name/node())}</a></strong>
+          <strong><a class="salsah-link" href="#{$target-id}">{local:traverse($target/mei:bibl/mei:name/node())}</a></strong>
         else
-          local:traverse($target/mei:name/node())
+          local:traverse($target/mei:bibl/mei:name/node())
 
-      default return error(QName("http://tondauer.arg/error", "InvalidPtr"), "Invalid ptr", $node)
+      default return error(xs:QName("tondauer-err:InvalidPtr"), "Invalid ptr", $node)
 };
 
 (: Transforms <p> elements. :)
@@ -99,7 +103,7 @@ declare function local:source($node as element(mei:source)) as element(resource)
       restype="Source"
       unique_id="{$id}"
       permissions="res-default">
-      <text-prop name="hasName" permissions="prop-default">{local:traverse($node/mei:name/node())}</text-prop>
+      <text-prop name="hasName" permissions="prop-default">{local:traverse($node/mei:bibl/mei:name/node())}</text-prop>
     </resource>
 };
 

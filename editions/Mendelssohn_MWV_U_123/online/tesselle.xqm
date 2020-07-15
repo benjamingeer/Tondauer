@@ -1,4 +1,11 @@
+(: Module for loading regions drawn with Tesselle. :)
+
+xquery version "3.1";
+
 module namespace tesselle = "http://tondauer.art/tesselle";
+
+declare namespace err = "http://www.w3.org/2005/xqt-errors";
+declare namespace tondauer-err = "http://tondauer.art/xqt-errors";
 
 (: Loads regions drawn with Tesselle for a given surface. :)
 declare function tesselle:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {

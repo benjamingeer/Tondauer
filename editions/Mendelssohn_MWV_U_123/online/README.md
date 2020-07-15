@@ -17,7 +17,7 @@ This is a proof-of-concept for importing MEI data into Knora using
 
 The MEI input file must follow these conventions:
 
-- Each `<source>` must have a `<name>`, which can contain markup.
+- Each `<source>` must have a `<bibl>` containing a `<name>`, which can contain markup.
 
 - Facsimile images must be in a directory `./facsimiles`, in which
   there's a subdirectory for each `<facsimile>`, and an image file for
