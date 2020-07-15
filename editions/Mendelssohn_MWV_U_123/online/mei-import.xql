@@ -186,7 +186,8 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
   let $target-ids := local:parse-ids($node/@plist)
 
   (: The IDs of sources mentioned in <lem> elements that are contained within targets of the annotation. :)
-  let $source-ids := distinct-values(for $target in $node/id($target-ids) return local:parse-ids($target/mei:lem/@source))
+  let $source-ids := distinct-values(for $target in $node/id($target-ids) return
+    local:parse-ids($target/mei:lem/@source))
 
   (: The IDs of zones that the annotation refers to. :)
   let $zone-ids := local:parse-ids($node/@facs)
@@ -196,7 +197,7 @@ declare function local:annot($node as element(mei:annot)) as element(resource) {
     restype="Annotation"
     unique_id="{$id}"
     permissions="res-default">
-      <text-prop name="hasText"><text permissions="prop-default" encoding="utf8">{
+      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
         if ($use-markup) then
           <text>{$annotation-text}</text>
         else
