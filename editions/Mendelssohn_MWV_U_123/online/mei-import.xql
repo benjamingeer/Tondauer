@@ -104,7 +104,7 @@ declare function local:source($node as element(mei:source)) as element(resource)
 };
 
 (: Transforms <facsimile> elements. :)
-declare function local:facsimile($node as element(mei:facsimile)) as item()* (: element(resource)+ :) {
+declare function local:facsimile($node as element(mei:facsimile)) as element(resource)+ {
   let $id := string($node/@xml:id)
   let $source-id := local:parse-ids($node/@decls)
   return
@@ -120,7 +120,7 @@ declare function local:facsimile($node as element(mei:facsimile)) as item()* (: 
 };
 
 (: Transforms <surface> elements. :)
-declare function local:surface($node as element(mei:surface)) as item()* (: element(resource)+ :) {
+declare function local:surface($node as element(mei:surface)) as element(resource)+ {
   let $id := string($node/@xml:id)
   let $facsimile-id := string($node/parent::mei:facsimile/@xml:id)
   let $page-num := string($node/@n)
