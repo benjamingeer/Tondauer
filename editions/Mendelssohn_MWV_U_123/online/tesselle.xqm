@@ -79,7 +79,7 @@ declare function tesselle:find-scale-factor(
 };
 
 declare function tesselle:find-scale-factor-rec(
-  $power,
+  $power as xs:integer,
   $tile-width as xs:integer,
   $width as xs:integer,
   $tile-height as xs:integer,

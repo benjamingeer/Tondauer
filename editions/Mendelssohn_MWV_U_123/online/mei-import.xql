@@ -5,7 +5,7 @@ xquery version "3.1";
 declare namespace mei = "http://www.music-encoding.org/ns/mei";
 declare namespace saxon = "http://saxon.sf.net/";
 declare namespace err = "http://www.w3.org/2005/xqt-errors";
-declare namespace tondauer-err = "http://tondauer.art/xqt-errors";
+declare namespace tondauer-err = "http://tondauer.art/errors";
 
 import module namespace tesselle = "http://tondauer.art/tesselle" at "tesselle.xqm";
 
@@ -60,9 +60,9 @@ declare function local:parse-ids($attr as attribute()?) as xs:string* {
 };
 
 (: Transforms <ptr> elements. :)
-declare function local:ptr($node as element(mei:ptr)) as item()* {
-  let $target-id := local:parse-ids($node/@target)
-  let $target := $node/id($target-id)
+declare function local:ptr($ptr as element(mei:ptr)) as item()* {
+  let $target-id := local:parse-ids($ptr/@target)
+  let $target := $ptr/id($target-id)
   return
     typeswitch($target)
       case element(mei:source) return
@@ -71,70 +71,72 @@ declare function local:ptr($node as element(mei:ptr)) as item()* {
         else
           local:traverse($target/mei:bibl/mei:name/node())
 
-      default return error(xs:QName("tondauer-err:InvalidPtr"), "Invalid ptr", $node)
+      default return error(xs:QName("tondauer-err:InvalidPtr"), "Invalid ptr", $ptr)
 };
 
 (: Transforms <p> elements. :)
-declare function local:p($node as element(mei:p)) as item()* {
+declare function local:p($p as element(mei:p)) as item()* {
   if ($use-markup) then
-    <p>{local:traverse($node/node())}</p>
+    <p>{local:traverse($p/node())}</p>
   else
-    local:traverse($node/node())
+    local:traverse($p/node())
 };
 
 (: Transforms <rend> elements. :)
-declare function local:rend($node as element(mei:rend)) as item()* {
+declare function local:rend($rend as element(mei:rend)) as item()* {
   if ($use-markup) then
-    if ($node/@fontstyle = "italic") then
-      <em>{local:traverse($node/node())}</em>
-    else if ($node/@valign = "bottom") then
-      <sub>{local:traverse($node/node())}</sub>
+    if ($rend/@fontstyle = "italic") then
+      <em>{local:traverse($rend/node())}</em>
+    else if ($rend/@valign = "bottom") then
+      <sub>{local:traverse($rend/node())}</sub>
     else
-      local:traverse($node/node())
+      local:traverse($rend/node())
   else
-    local:traverse($node/node())
+    local:traverse($rend/node())
 };
 
 (: Transforms <source> elements. :)
-declare function local:source($node as element(mei:source)) as element(resource) {
-  let $id := string($node/@xml:id)
+declare function local:source($source as element(mei:source)) as element(resource) {
+  let $source-id:= string($source/@xml:id)
   return
-    <resource label="{$id}"
+    <resource label="{$source-id}"
       restype="Source"
-      unique_id="{$id}"
+      unique_id="{$source-id}"
       permissions="res-default">
-      <text-prop name="hasName" permissions="prop-default">{local:traverse($node/mei:bibl/mei:name/node())}</text-prop>
+      <text-prop name="hasName" permissions="prop-default">{local:traverse($source/mei:bibl/mei:name/node())}</text-prop>
     </resource>
 };
 
 (: Transforms <facsimile> elements. :)
-declare function local:facsimile($node as element(mei:facsimile)) as element(resource)+ {
-  let $id := string($node/@xml:id)
-  let $source-id := local:parse-ids($node/@decls)
+declare function local:facsimile($facsimile as element(mei:facsimile)) as element(resource)+ {
+  let $facsimile-id:= string($facsimile/@xml:id)
+  let $source-id := local:parse-ids($facsimile/@decls)
   return
-    (<resource label="{$id}"
+    (<resource label="{$facsimile-id}"
       restype="Facsimile"
-      unique_id="{$id}"
+      unique_id="{$facsimile-id}"
       permissions="res-default">
       <resptr-prop name="representsSource">
         <resptr permissions="prop-default">{$source-id}</resptr>
       </resptr-prop>
     </resource>,
-    for $surface in $node/mei:surface return local:surface($surface))
+    for $surface in $facsimile/mei:surface return local:surface($surface))
 };
 
 (: Transforms <surface> elements. :)
-declare function local:surface($node as element(mei:surface)) as element(resource)+ {
-  let $id := string($node/@xml:id)
-  let $facsimile-id := string($node/parent::mei:facsimile/@xml:id)
-  let $page-num := string($node/@n)
-  let $image := string($node/mei:graphic/@target)
+declare function local:surface($surface as element(mei:surface)) as element(resource)+ {
+  let $surface-id:= string($surface/@xml:id)
+  let $facsimile-id := string($surface/parent::mei:facsimile/@xml:id)
+  let $page-num := string($surface/@n)
+  let $image := string($surface/mei:graphic/@target)
+
   (: Load externally defined regions. :)
-  let $regions := local:load-regions($id)
+  let $regions := local:load-regions($surface-id)
+
   return
-    (<resource label="{$id}"
+    (<resource label="{$surface-id}"
       restype="FacsimilePage"
-      unique_id="{$id}"
+      unique_id="{$surface-id}"
       permissions="res-default">
       <image>facsimiles/{$facsimile-id}/{$image}</image>
       <resptr-prop name="isPartOf">
@@ -142,18 +144,18 @@ declare function local:surface($node as element(mei:surface)) as element(resourc
       </resptr-prop>
       <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
     </resource>,
-    for $zone in $node/mei:zone return local:zone($zone, $regions))
+    for $zone in $surface/mei:zone return local:zone($zone, $regions))
 };
 
 (: Transforms <zone> elements. :)
-declare function local:zone($node as element(mei:zone), $regions as element(regions)?) as element(resource) {
-  let $id := string($node/@xml:id)
-  let $surface-id := string($node/parent::mei:surface/@xml:id)
-  let $description := local:traverse($node/mei:figDesc/node())
+declare function local:zone($zone as element(mei:zone), $regions as element(regions)?) as element(resource) {
+  let $zone-id:= string($zone/@xml:id)
+  let $surface-id := string($zone/parent::mei:surface/@xml:id)
+  let $description := local:traverse($zone/mei:figDesc/node())
   return
-    <resource label="{$id}"
+    <resource label="{$zone-id}"
       restype="Region"
-      unique_id="{$id}"
+      unique_id="{$zone-id}"
       permissions="res-default">
       <color-prop>
         <color>#ff0000</color>
@@ -162,7 +164,7 @@ declare function local:zone($node as element(mei:zone), $regions as element(regi
         <resptr permissions="prop-default">{$surface-id}</resptr>
       </resptr-prop>
       <geometry-prop name="hasGeometry">
-        <geometry permissions="prop-default">{$regions/region[@target = $id]/node()}</geometry>
+        <geometry permissions="prop-default">{$regions/region[@target = $zone-id]/node()}</geometry>
       </geometry-prop>
       <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
         if ($use-markup) then
@@ -174,32 +176,33 @@ declare function local:zone($node as element(mei:zone), $regions as element(regi
 };
 
 (: Transforms <annot> elements. :)
-declare function local:annot($node as element(mei:annot)) as element(resource) {
-  let $id := string($node/@xml:id)
+declare function local:annot($annot as element(mei:annot)) as element(resource) {
+  let $annot-id:= string($annot/@xml:id)
 
   (: The text of the annotation. :)
-  let $annotation-text := local:traverse($node/node())
+  let $annotation-text := local:traverse($annot/node())
 
   (: The measure number that the annotation occurs in. :)
-  let $measure-num := string($node/(parent::mei:measure/@n))
+  let $measure-num := string($annot/(parent::mei:measure/@n))
 
   (: The index of the annotation in the measure. :)
-  let $annot-index := string($node/@n)
+  let $annot-index := string($annot/@n)
 
   (: The IDs of the elements that are targets of the annotation. :)
-  let $target-ids := local:parse-ids($node/@plist)
+  let $target-ids := local:parse-ids($annot/@plist)
 
   (: The IDs of sources mentioned in <lem> elements that are contained within targets of the annotation. :)
-  let $source-ids := distinct-values(for $target in $node/id($target-ids) return
-    local:parse-ids($target/mei:lem/@source))
+  let $source-ids := distinct-values(
+    for $target in $annot/id($target-ids) return local:parse-ids($target/mei:lem/@source)
+  )
 
   (: The IDs of zones that the annotation refers to. :)
-  let $zone-ids := local:parse-ids($node/@facs)
+  let $zone-ids := local:parse-ids($annot/@facs)
   
   return
-    <resource label="{$id}"
+    <resource label="{$annot-id}"
     restype="Annotation"
-    unique_id="{$id}"
+    unique_id="{$annot-id}"
     permissions="res-default">
       <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
         if ($use-markup) then
