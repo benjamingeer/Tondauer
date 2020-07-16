@@ -25,16 +25,13 @@ XQUERY_MODULES ::= tesselle.xqm
 SAXON_JAR=../../../lib/saxon-he-10.1.jar
 
 $(KNORA_PY_XML_IMPORT_FILE): $(MEI_FILE) $(TESSELLE_ZIP_FILES) $(XQUERY_PROGRAM) $(XQUERY_MODULES)
-	./tesselle-clean.sh
-	./tesselle-unzip.sh
+	./tesselle-extract.sh
 	java -cp $(SAXON_JAR) net.sf.saxon.Query \
 		-q:$(XQUERY_PROGRAM) -o:$@ \
 		mei-file=$(MEI_FILE) shortcode=$(SHORTCODE) \
 		ontology=$(ONTOLOGY) markup=$(MARKUP) \
 		region-provider=$(REGION_PROVIDER)
-	./tesselle-clean.sh
 
 .PHONY: clean
 clean:
 	rm -f $(KNORA_PY_XML_IMPORT_FILE)
-	./tesselle-clean.sh

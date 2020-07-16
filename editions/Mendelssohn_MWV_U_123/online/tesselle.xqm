@@ -8,17 +8,15 @@ declare namespace err = "http://www.w3.org/2005/xqt-errors";
 declare namespace tondauer-err = "http://tondauer.art/xqt-errors";
 
 (: Loads regions drawn with Tesselle for a given surface. :)
-declare function tesselle:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as item()* {
+declare function tesselle:load-regions($surface-id as xs:string) as item()* {
   try {
     (: Parse slideshow.json and convert it to XML. :)
     let $tesselle-xml := json-to-xml(
       unparsed-text(
         concat(
           "tesselle/",
-          $facsimile-id,
-          "/",
           $surface-id,
-          "/slideshow.json"
+          ".json"
         ),
         "UTF-8"))
 

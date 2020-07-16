@@ -42,13 +42,16 @@ The MEI input file must follow these conventions:
     zones.
   
   - The filename of the Zip file must be the surface ID plus `.zip`,
-    and it must be saved in the directory `./tesselle/<facsimile ID>`.
+    and it must be saved in the directory `./tesselle`.
 
   - The text content of each Tesselle annotation must be the zone ID.
 	
-  - If a surface's zones need to be changed, its Zip file can be
-    reloaded into Tesselle, edited, and downloaded again.
-
+  - The Makefile extracts JSON files from the Zip files.
+    These JSON files can be kept in git. The Zip file should be
+    saved somewhere else, so that if a surface's zones need to be
+    changed, its Zip file can be reloaded into Tesselle, edited,
+    and downloaded again.
+    
 - Each `<lem>` should specify its sources in `@source`, using the IDs of
   `<source>` elements.
 

@@ -28,9 +28,9 @@ declare variable $use-markup := xs:boolean($markup);
 declare option saxon:output "indent=yes";
 
 (: Loads a surface's regions from an external provider. :)
-declare function local:load-regions($facsimile-id as xs:string, $surface-id as xs:string) as element(regions)? {
+declare function local:load-regions($surface-id as xs:string) as element(regions)? {
   if ($region-provider = "tesselle") then
-    tesselle:load-regions($facsimile-id, $surface-id)
+    tesselle:load-regions($surface-id)
   else
     error(xs:QName("tondauer-err:InvalidRegionType"), "Invalid region provider", $region-provider)
 };
@@ -130,7 +130,7 @@ declare function local:surface($node as element(mei:surface)) as element(resourc
   let $page-num := string($node/@n)
   let $image := string($node/mei:graphic/@target)
   (: Load externally defined regions. :)
-  let $regions := local:load-regions($facsimile-id, $id)
+  let $regions := local:load-regions($id)
   return
     (<resource label="{$id}"
       restype="FacsimilePage"
