@@ -95,15 +95,24 @@ declare function local:rend($rend as element(mei:rend)) as item()* {
     local:traverse($rend/node())
 };
 
+(: Wraps text in a <text> element if markup is enabled. :)
+declare function local:text-prop($content as item()*) as item()* {
+  if ($use-markup) then
+    <text>{$content}</text>
+  else
+    $content
+};
+
 (: Transforms <source> elements. :)
 declare function local:source($source as element(mei:source)) as element(resource) {
   let $source-id:= string($source/@xml:id)
+  let $source-name := local:traverse($source/mei:bibl/mei:name/node())
   return
     <resource label="{$source-id}"
       restype="Source"
       unique_id="{$source-id}"
       permissions="res-default">
-      <text-prop name="hasName" permissions="prop-default">{local:traverse($source/mei:bibl/mei:name/node())}</text-prop>
+      <text-prop name="hasName"><text permissions="prop-default" encoding="utf8">{local:text-prop($source-name)}</text></text-prop>
     </resource>
 };
 
@@ -142,7 +151,7 @@ declare function local:surface($surface as element(mei:surface)) as element(reso
       <resptr-prop name="isPartOf">
         <resptr permissions="prop-default">{$facsimile-id}</resptr>
       </resptr-prop>
-      <integer-prop name="hasPageNumber" permissions="prop-default">{$page-num}</integer-prop>
+      <integer-prop name="hasPageNumber"><integer permissions="prop-default">{$page-num}</integer></integer-prop>
     </resource>,
     for $zone in $surface/mei:zone return local:zone($zone, $regions))
 };
@@ -157,8 +166,8 @@ declare function local:zone($zone as element(mei:zone), $regions as element(regi
       restype="Region"
       unique_id="{$zone-id}"
       permissions="res-default">
-      <color-prop>
-        <color>#ff0000</color>
+      <color-prop name="hasColor">
+        <color permissions="prop-default">#ff0000</color>
       </color-prop>
       <resptr-prop name="isRegionOf">
         <resptr permissions="prop-default">{$surface-id}</resptr>
@@ -166,12 +175,7 @@ declare function local:zone($zone as element(mei:zone), $regions as element(regi
       <geometry-prop name="hasGeometry">
         <geometry permissions="prop-default">{$regions/region[@target = $zone-id]/node()}</geometry>
       </geometry-prop>
-      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
-        if ($use-markup) then
-          <text>{$description}</text>
-        else
-          $description
-      }</text></text-prop>
+      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{local:text-prop($description)}</text></text-prop>
     </resource>  
 };
 
@@ -204,18 +208,13 @@ declare function local:annot($annot as element(mei:annot)) as element(resource) 
     restype="Annotation"
     unique_id="{$annot-id}"
     permissions="res-default">
-      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{
-        if ($use-markup) then
-          <text>{$annotation-text}</text>
-        else
-          $annotation-text
-      }</text></text-prop>
-      <integer-prop name="inMeasure" permissions="prop-default">{$measure-num}</integer-prop>
-      <integer-prop name="indexInMeasure" permissions="prop-default">{$annot-index}</integer-prop>
+      <text-prop name="hasComment"><text permissions="prop-default" encoding="utf8">{local:text-prop($annotation-text)}</text></text-prop>
+      <integer-prop name="inMeasure"><integer permissions="prop-default">{$measure-num}</integer></integer-prop>
+      <integer-prop name="indexInMeasure"><integer permissions="prop-default">{$annot-index}</integer></integer-prop>
       {
         (
           for $target-id in $target-ids return
-            <text-prop name="hasTarget" permissions="prop-default">{$target-id}</text-prop>,
+            <text-prop name="hasTarget"><text permissions="prop-default">{$target-id}</text></text-prop>,
           for $source-id in $source-ids return
             <resptr-prop name="hasPreferredSource">
               <resptr permissions="prop-default">{$source-id}</resptr>

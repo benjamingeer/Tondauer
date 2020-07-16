@@ -1,0 +1,218 @@
+{
+  "prefixes": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "project": {
+    "shortcode": "082A",
+    "shortname": "tondauer",
+    "longname": "Tondauer project",
+    "descriptions": {
+      "en": "A test project for music editions"
+    },
+    "keywords": ["music", "editions"],
+    "users": [
+      {
+        "username": "testuser",
+        "email": "testuser@test.org",
+        "givenName": "test",
+        "familyName": "user",
+        "password": "test",
+        "lang": "en",
+        "groups": ["ProjectAdmin"]
+      }
+    ],
+    "ontology": {
+      "name": "tondauer",
+      "label": "A test ontology for music editions",
+      "resources": [
+        {
+          "name": "Source",
+          "super": "Resource",
+          "labels": {
+            "en": "source"
+          },
+          "properties": [
+            {
+              "name": "hasName",
+              "object": "TextValue",
+              "labels": {
+                "en": "has name"
+              },
+              "gui_element": "SimpleText",
+              "gui_attributes": ["size=64", "maxlength=128"],
+              "cardinality": "1"
+            }
+          ]
+        },
+        {
+          "name": "Facsimile",
+          "super": "Resource",
+          "labels": {
+            "en": "facsimile"
+          },
+          "properties": [
+            {
+              "name": "representsSource",
+              "super": ["hasLinkTo"],
+              "object": ":Source",
+              "labels": {
+                "en": "represents source"
+              },
+              "gui_element": "Searchbox",
+              "cardinality": "1"
+            }
+          ]
+        },
+        {
+          "name": "FacsimilePage",
+          "super": "FacsimilePage",
+          "labels": {
+            "en": "facsimile page"
+          },
+          "properties": [
+            {
+              "name": "isPartOf",
+              "super": ["isPartOf"],
+              "object": ":Facsimile",
+              "labels": {
+                "en": "is part of"
+              },
+              "gui_element": "Searchbox",
+              "cardinality": "1"
+            },
+            {
+              "name": "hasPageNumber",
+              "object": "IntValue",
+              "labels": {
+                "en": "has page number"
+              },
+              "gui_element": "Spinbox",
+              "gui_attributes": ["min=1", "max=99"],
+              "cardinality": "1"
+            }
+          ]
+        },
+        {
+          "name": "Region",
+          "super": "Region",
+          "labels": {
+            "en": "region"
+          },
+          "properties": [
+            {
+              "name": "isRegionOf",
+              "super": ["isRegionOf"],
+              "object": ":FacsimilePage",
+              "labels": {
+                "en": "is region of"
+              },
+              "gui_element": "Searchbox",
+              "cardinality": "1"
+            },
+            {
+              "name": "hasGeometry",
+              "super": ["hasGeometry"],
+              "object": "GeomValue",
+              "labels": {
+                "en": "has geometry"
+              },
+              "gui_element": "Geometry",
+              "cardinality": "1"
+            },
+            {
+              "name": "hasColor",
+              "super": ["hasColor"],
+              "object": "ColorValue",
+              "labels": {
+                "en": "has color"
+              },
+              "gui_element": "Colorpicker",
+              "cardinality": "1"
+            },
+            {
+              "name": "hasComment",
+              "super": ["hasComment"],
+              "object": "TextValue",
+              "labels": {
+                "en": "has comment"
+              },
+              "gui_element": "Textarea",
+              "gui_attributes": ["cols=80", "rows=10"],
+              "cardinality": "1"
+            }
+          ]
+        },
+        {
+          "name": "Annotation",
+          "labels": {
+            "en": "region"
+          },
+          "properties": [
+            {
+              "name": "hasComment",
+              "super": ["hasComment"],
+              "object": "TextValue",
+              "labels": {
+                "en": "has comment"
+              },
+              "gui_element": "Textarea",
+              "gui_attributes": ["cols=80", "rows=10"],
+              "cardinality": "1"
+            },
+            {
+              "name": "inMeasure",
+              "object": "IntValue",
+              "labels": {
+                "en": "in measure number"
+              },
+              "gui_element": "Spinbox",
+              "gui_attributes": ["min=1", "max=999"],
+              "cardinality": "1"
+            },
+            {
+              "name": "indexInMeasure",
+              "object": "IntValue",
+              "labels": {
+                "en": "index in measure"
+              },
+              "gui_element": "Spinbox",
+              "gui_attributes": ["min=1", "max=99"],
+              "cardinality": "1"
+            },
+            {
+              "name": "hasTarget",
+              "object": "TextValue",
+              "labels": {
+                "en": "has target"
+              },
+              "gui_element": "SimpleText",
+              "gui_attributes": ["size=64", "maxlength=128"],
+              "cardinality": "1-n"
+            },
+            {
+              "name": "hasPreferredSource",
+              "super": ["hasLinkTo"],
+              "object": ":Source",
+              "labels": {
+                "en": "has preferred source"
+              },
+              "gui_element": "Searchbox",
+              "cardinality": "0-n"
+            },
+            {
+              "name": "refersToRegion",
+              "super": ["hasLinkTo"],
+              "object": ":Region",
+              "labels": {
+                "en": "refers to region"
+              },
+              "gui_element": "Searchbox",
+              "cardinality": "1-n"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
