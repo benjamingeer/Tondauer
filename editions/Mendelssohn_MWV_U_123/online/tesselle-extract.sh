@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Unzips Tesselle Zip files.
+# Extracts regions from Tesselle Zip files.
 
 zip_files=$(find tesselle -name '*.zip')
 
