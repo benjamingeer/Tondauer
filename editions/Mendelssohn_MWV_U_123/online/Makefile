@@ -1,25 +1,25 @@
 # The MEI input file.
-MEI_FILE ::= Mendelssohn_MWV_U_123.xml
+MEI_FILE=Mendelssohn_MWV_U_123.xml
 
 # The Knora project shortcode.
-SHORTCODE ::= 082A
+SHORTCODE=082A
 
 # The name of the Knora ontology to be created.
-ONTOLOGY ::= tondauer
+ONTOLOGY=tondauer
 
 # "true" if text markup should be converted to standoff/XML, "false" otherwise.
-MARKUP ::= false
+MARKUP=false
 
 # The external provider of region coordinates.
-REGION_PROVIDER ::= tesselle
-TESSELLE_ZIP_FILES ::= $(shell find tesselle -name '*.zip')
+REGION_PROVIDER=tesselle
+TESSELLE_ZIP_FILES=$(shell find tesselle -name '*.zip')
 
 # The XML import file to be generated for knora-py.
-KNORA_PY_XML_IMPORT_FILE ::= knora-py-import.xml
+KNORA_PY_XML_IMPORT_FILE=knora-py-import.xml
 
 # The XQuery conversion program and its modules.
-XQUERY_PROGRAM ::= mei-import.xql
-XQUERY_MODULES ::= tesselle.xqm
+XQUERY_PROGRAM=mei-import.xql
+XQUERY_MODULES=tesselle.xqm
 
 # The Saxon XQuery interpreter.
 SAXON_JAR=../../../lib/saxon-he-10.1.jar
