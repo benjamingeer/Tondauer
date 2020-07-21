@@ -218,6 +218,15 @@
         <zone xml:id="source-ES1-facsimile-UCR-page3-m16-region1">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m16-region2">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m17-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page3-m18-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
       </surface>
       <surface xml:id="source-ES1-facsimile-UCR-page4" n="4">
         <graphic target="source-ES1-facsimile-UCR-page4.png"/>
@@ -1891,7 +1900,7 @@
                   <beam>
                     <note pname="c" oct="3" dur="32"/>
                     <note pname="f" oct="3" dur="32"/>
-                    <note pname="g" oct="3" dur="32"/>
+                    <note xml:id="m16-annot2-target1" pname="g" oct="3" dur="32"/>
                     <note pname="a" oct="3" dur="32"/>
                   </beam>
                   <beam>
@@ -1918,6 +1927,10 @@
                      facs="#source-A1-facsimile-SBB-page1-m31-region1 #source-ES1-facsimile-UCR-page3-m16-region1 #source-EN-facsimile-BL-page3-m16-region1 #source-EB-facsimile-IMSLP-page2-m16-region1">
                 <p>In <ptr target="#source-ES1"/> and <ptr target="#source-EB"/>, the accidental is missing
                   on the G♯ in the upper staff. <ptr target="#source-A1"/> has a different structure here.</p>
+              </annot>
+              <annot xml:id="m16-annot2" n="2" plist="#m16-annot2-target1"
+                     facs="#source-ES1-facsimile-UCR-page3-m16-region2">
+                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
               </annot>
             </measure>
             <measure n="17">
@@ -1995,7 +2008,7 @@
                   <beam>
                     <note pname="c" oct="3" dur="32"/>
                     <note pname="f" oct="3" dur="32"/>
-                    <note pname="g" oct="3" dur="32"/>
+                    <note xml:id="m17-annot1-target1" pname="g" oct="3" dur="32"/>
                     <note pname="a" oct="3" dur="32"/>
                   </beam>
                   <beam>
@@ -2024,6 +2037,10 @@
                        tstamp="4.125" tstamp2="0m+4.5"/>
               <hairpin form="dim" staff="2" layer="1" place="below"
                        tstamp="4.625" tstamp2="0m+4.875"/>
+              <annot xml:id="m17-annot1" n="1" plist="#m17-annot1-target1"
+                     facs="#source-ES1-facsimile-UCR-page3-m17-region1">
+                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
+              </annot>
             </measure>
             <measure n="18">
               <staff n="1">
@@ -2085,7 +2102,7 @@
                   <beam>
                     <note pname="c" oct="3" dur="32"/>
                     <note pname="f" oct="3" dur="32"/>
-                    <note pname="g" oct="3" dur="32"/>
+                    <note xml:id="m18-annot1-target1" pname="g" oct="3" dur="32"/>
                     <note pname="a" oct="3" dur="32"/>
                   </beam>
                   <beam>
@@ -2109,6 +2126,10 @@
                 </layer>
               </staff>
               <slur startid="#m18-slur-start" endid="#m18-slur-end"/>
+              <annot xml:id="m18-annot1" n="1" plist="#m18-annot1-target1"
+                     facs="#source-ES1-facsimile-UCR-page3-m18-region1">
+                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
+              </annot>
             </measure>
             <measure n="19">
               <staff n="1">
