@@ -1727,11 +1727,11 @@
                     <note pname="b" accid="s" oct="3" dur="32"/>
                     <note pname="d" accid="s" oct="4" dur="32"/>
                     <app xml:id="m15-annot1-target1">
-                      <lem source="#source-EB">
-                        <note pname="e" accid="s" oct="4" dur="32"/>
-                      </lem>
-                      <rdg source="#source-ES1 #source-EN">
+                      <lem source="#source-ES1 #source-EN">
                         <note pname="e" oct="4" dur="32"/>
+                      </lem>
+                      <rdg source="#source-EB">
+                        <note pname="e" accid="s" oct="4" dur="32"/>
                       </rdg>
                     </app>
                     <note pname="f" oct="4" dur="32"/>
@@ -1796,8 +1796,8 @@
               </staff>
               <annot xml:id="m15-annot1" n="1" plist="#m15-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
-                <p><ptr target="#source-EB"/> has E♯, while <ptr target="#source-ES1"/>
-                  and <ptr target="#source-EN"/> have E♮ (with no accidental). The corresponding
+                <p><ptr target="#source-ES1"/> and <ptr target="#source-EN"/>
+		  have E♮ (with no accidental), while <ptr target="#source-EB"/> has E♯. The corresponding
                   passage in <ptr target="#source-A1"/> (starting in measure 29) has neither, and
                   has a somewhat different harmonic structure.</p>
                 <p>The reading with E♯ maintains the parallelism of the passage: each
