@@ -135,6 +135,9 @@
         <zone xml:id="source-A1-facsimile-SBB-page1-m19-region1">
           <figDesc>Both ties continue.</figDesc>
         </zone>
+        <zone xml:id="source-A1-facsimile-SBB-page1-m19-region2">
+          <figDesc>Structure differs from V1.</figDesc>
+        </zone>
         <zone xml:id="source-A1-facsimile-SBB-page1-m21-region1">
           <figDesc>Both ties continue.</figDesc>
         </zone>
@@ -191,6 +194,9 @@
         <zone xml:id="source-ES1-facsimile-UCR-page2-m12-region1">
           <figDesc>B♯ (with no accidental).</figDesc>
         </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page2-m12-region2">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
       </surface>
       <surface xml:id="source-ES1-facsimile-UCR-page3" n="3">
         <graphic target="source-ES1-facsimile-UCR-page3.png"/>
@@ -233,6 +239,12 @@
         <zone xml:id="source-ES1-facsimile-UCR-page4-m20-region1">
           <figDesc>Staccato.</figDesc>
         </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page4-m23-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-ES1-facsimile-UCR-page4-m23-region2">
+          <figDesc>G♯ or G♮?</figDesc>
+        </zone>
       </surface>
       <surface xml:id="source-ES1-facsimile-UCR-page5" n="5">
         <graphic target="source-ES1-facsimile-UCR-page5.png"/>
@@ -256,6 +268,9 @@
         </zone>
         <zone xml:id="source-EN-facsimile-BL-page2-m12-region1">
           <figDesc>B♯ (with no accidental).</figDesc>
+        </zone>
+        <zone xml:id="source-EN-facsimile-BL-page2-m12-region2">
+          <figDesc>Redundant accidental.</figDesc>
         </zone>
       </surface>
       <surface xml:id="source-EN-facsimile-BL-page3" n="3">
@@ -283,10 +298,25 @@
         <zone xml:id="source-EN-facsimile-BL-page3-m16-region1">
           <figDesc>The accidental is missing on the G♯ in the upper staff.</figDesc>
         </zone>
+        <zone xml:id="source-EN-facsimile-BL-page3-m16-region2">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-EN-facsimile-BL-page3-m17-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-EN-facsimile-BL-page3-m18-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
       </surface>
       <surface xml:id="source-EN-facsimile-BL-page4" n="4">
         <zone xml:id="source-EN-facsimile-BL-page4-m20-region1">
           <figDesc>Staccato.</figDesc>
+        </zone>
+        <zone xml:id="source-EN-facsimile-BL-page4-m23-region1">
+          <figDesc>Redundant accidental.</figDesc>
+        </zone>
+        <zone xml:id="source-EN-facsimile-BL-page4-m23-region2">
+          <figDesc>G♯ or G♮?</figDesc>
         </zone>
       </surface>
       <surface xml:id="source-EN-facsimile-BL-page5" n="5"/>
@@ -342,6 +372,9 @@
         <graphic target="source-EB-facsimile-IMSLP-page3.tif"/>
         <zone xml:id="source-EB-facsimile-IMSLP-page3-m20-region1">
           <figDesc>No staccato mark.</figDesc>
+        </zone>
+        <zone xml:id="source-EB-facsimile-IMSLP-page3-m23-region1">
+          <figDesc>G♯ or G♮?</figDesc>
         </zone>
       </surface>
     </facsimile>
@@ -713,7 +746,7 @@
                       <lem source="#source-A1 #source-EB">
                         <note pname="a" accid="n" oct="2" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="a" oct="2" dur="32"/>
                       </rdg>
                     </app>
@@ -726,7 +759,7 @@
                      facs="#source-A1-facsimile-SBB-page1-m8-region1 #source-ES1-facsimile-UCR-page1-m4-region1 #source-EN-facsimile-BL-page1-m4-region1 #source-EB-facsimile-IMSLP-page1-m4-region1">
                 <p><ptr target="#source-A1"/> (measure 8) and <ptr target="#source-EB"/> have A♮
                   (with no accidental in <ptr target="#source-A1"/>), while <ptr target="#source-ES1"/>
-                  has A♯ (with no accidental).</p>
+                  and <ptr target="#source-EN"/> have A♯ (with no accidental).</p>
               </annot>
             </measure>
             <measure n="5">
@@ -1193,7 +1226,14 @@
                     <note pname="b" oct="4" dur="32"/>
                     <note pname="a" oct="4" dur="32"/>
                     <note pname="f" oct="4" dur="32"/>
-                    <note pname="d" accid="s" oct="4" dur="32"/>
+                    <app xml:id="m10-annot2-target1">
+                      <lem source="#source-EN #source-EB">
+                        <note pname="d" accid="s" oct="4" dur="32"/>
+                      </lem>
+                      <rdg source="#source-ES1">
+                        <note pname="d" oct="4" dur="32"/>
+                      </rdg>
+                    </app>
                   </beam>
                   <beam>
                     <note pname="a" oct="4" dur="32"/>
@@ -1250,16 +1290,24 @@
                 <lem source="#source-A1 #source-EB">
                   <tie staff="2" layer="1" startid="#m10-tie1-mid" endid="#m11-tie1-end"/>
                 </lem>
-                <rdg source="#source-ES1"/>
+                <rdg source="#source-ES1 #source-EN"/>
               </app>
               <tie staff="2" layer="1" startid="#m10-tie2-mid" endid="#m11-tie2-end"/>
               <dynam tstamp="1" place="below" staff="1">dim.</dynam>
               <annot xml:id="m10-annot1" n="1"
                      plist="#m10-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m19-region1 #source-A1-facsimile-SBB-page1-m21-region1 #source-ES1-facsimile-UCR-page2-m10-region1 #source-EN-facsimile-BL-page2-m10-region1 #source-EB-facsimile-IMSLP-page2-m10-region1">
-                <p>In <ptr target="#source-A1"/> (measures 19-21) and<ptr target="#source-EB"/>, both
+                <p>In <ptr target="#source-A1"/> (measures 19-21) and <ptr target="#source-EB"/>, both
                   the ties in measure 9 continue to the first beat of measure 11, while in
-                  <ptr target="#source-ES1"/>, only the lower C♯ is tied between measures 10 and 11.</p>
+                  <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>, only the lower C♯ is tied
+                  between measures 10 and 11.</p>
+              </annot>
+              <annot xml:id="m10-annot2" n="2"
+                     plist="#m10-annot2-target1"
+                     facs="#source-A1-facsimile-SBB-page1-m19-region2 #source-ES1-facsimile-UCR-page2-m10-region2 #source-EN-facsimile-BL-page2-m10-region2 #source-EB-facsimile-IMSLP-page2-m10-region2">
+                <p><ptr target="#source-EN"/> and <ptr target="#source-EB"/> have D♯, while <ptr target="#source-ES1"/>
+                  has D♮ (with no accidental), which is surely an error. <ptr target="#source-A1"/> (measure 19)
+                  has a different structure here.</p>
               </annot>
             </measure>
             <measure n="11">
@@ -1388,7 +1436,7 @@
                       <lem source="#source-A1 #source-EB">
                         <note pname="b" accid="n" oct="3" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="b" oct="3" dur="32"/>
                       </rdg>
                     </app>
@@ -1407,7 +1455,7 @@
                   </beam>
                   <beam>
                     <note pname="b" oct="4" dur="32"/>
-                    <note pname="e" oct="4" dur="32"/>
+                    <note xml:id="m12-annot2-target1" pname="e" oct="4" dur="32"/>
                     <note pname="d" oct="4" dur="32"/>
                     <note pname="b" oct="3" dur="32"/>
                   </beam>
@@ -1464,7 +1512,12 @@
               <annot xml:id="m12-annot1" n="1" plist="#m12-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m23-region1 #source-ES1-facsimile-UCR-page2-m12-region1 #source-EN-facsimile-BL-page2-m12-region1 #source-EB-facsimile-IMSLP-page2-m12-region1">
                 <p><ptr target="#source-A1"/> (measure 23) and <ptr target="#source-EB"/>
-                  have B♮, while <ptr target="#source-ES1"/> has B♯ (with no accidental).</p>
+                  have B♮, while <ptr target="#source-ES1"/> and <ptr target="#source-EN"/> have
+                  B♯ (with no accidental).</p>
+              </annot>
+              <annot xml:id="m12-annot2" n="1" plist="#m12-annot2-target1"
+                     facs="#source-ES1-facsimile-UCR-page2-m12-region2 #source-EN-facsimile-BL-page2-m12-region2">
+                <p>Redundant sharp in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>.</p>
               </annot>
             </measure>
             <measure n="13">
@@ -1493,7 +1546,7 @@
                   <beam>
                     <note pname="f" oct="5" dur="32"/>
                     <app xml:id="m13-annot1-target1">
-                      <lem source="#source-A1 #source-EB">
+                      <lem source="#source-A1 #source-EN #source-EB">
                         <note pname="d" accid="s" oct="5" dur="32"/>
                       </lem>
                       <rdg source="#source-ES1">
@@ -1524,7 +1577,7 @@
                       <lem source="#source-EB">
                         <note pname="d" accid="n" oct="4" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="d" oct="4" dur="32"/>
                       </rdg>
                     </app>
@@ -1536,7 +1589,7 @@
                       <lem source="#source-A1 #source-EB">
                         <note pname="e" accid="n" oct="4" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="e" oct="4" dur="32"/>
                       </rdg>
                     </app>
@@ -1547,7 +1600,7 @@
                       <lem source="#source-A1 #source-EB">
                         <note pname="e" accid="n" oct="5" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="e" oct="5" dur="32"/>
                       </rdg>
                     </app>
@@ -1591,24 +1644,27 @@
               </staff>
               <annot xml:id="m13-annot1" n="1" plist="#m13-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m25-region1 #source-ES1-facsimile-UCR-page3-m13-region1 #source-EN-facsimile-BL-page3-m13-region1 #source-EB-facsimile-IMSLP-page2-m13-region1">
-                <p><ptr target="#source-A1"/> (measure 25) and <ptr target="#source-EB"/> have D♯,
-                  while <ptr target="#source-ES1"/> has D♮ (with no accidental).</p>
+                <p><ptr target="#source-A1"/> (measure 25), <ptr target="#source-EN"/>, and
+                  <ptr target="#source-EB"/> have D♯, while <ptr target="#source-ES1"/> has D♮
+                  (with no accidental).</p>
               </annot>
               <annot xml:id="m13-annot2" n="2" plist="#m13-annot2-target1"
                      facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region2 #source-EN-facsimile-BL-page3-m13-region2 #source-EB-facsimile-IMSLP-page2-m13-region2">
-                <p>In <ptr target="#source-ES1"/> and <ptr target="#source-EB"/>, the accidental is missing on the
-                  G♯ in the upper staff. <ptr target="#source-A1"/> (measure 25) is unclear.</p>
+                <p>In <ptr target="#source-ES1"/>, <ptr target="#source-EN"/>, and <ptr target="#source-EB"/>,
+                  the accidental is missing on the G♯ in the upper staff. <ptr target="#source-A1"/>
+                  (measure 25) is unclear.</p>
               </annot>
               <annot xml:id="m13-annot3" n="3" plist="#m13-annot3-target1"
                      facs="#source-A1-facsimile-SBB-page1-m25-region2 #source-ES1-facsimile-UCR-page3-m13-region3 #source-EN-facsimile-BL-page3-m13-region3 #source-EB-facsimile-IMSLP-page2-m13-region3">
-                <p><ptr target="#source-EB"/> has D♮, while <ptr target="#source-ES1"/> has D♯
-                  (with no accidental), which is surely an error. <ptr target="#source-A1"/> (measure 25) is unclear.</p>
+                <p><ptr target="#source-EB"/> has D♮, while <ptr target="#source-ES1"/> and
+                  <ptr target="#source-EN"/> have D♯ (with no accidental), which is surely an error.
+                  <ptr target="#source-A1"/> (measure 25) is unclear.</p>
               </annot>
               <annot xml:id="m13-annot4" n="4" plist="#m13-annot4-target1 #m13-annot4-target2"
                      facs="#source-A1-facsimile-SBB-page1-m26-region1 #source-ES1-facsimile-UCR-page3-m13-region4 #source-EN-facsimile-BL-page3-m13-region4 #source-EB-facsimile-IMSLP-page2-m13-region4">
                 <p>Twice in this beat, <ptr target="#source-A1"/> (measure 26, though slightly different) and
-                  <ptr target="#source-EB"/> have E♮, while <ptr target="#source-ES1"/> has
-                  E♯ (with no accidental).</p>
+                  <ptr target="#source-EB"/> have E♮, while <ptr target="#source-ES1"/> and
+                  <ptr target="#source-EN"/> have E♯ (with no accidental).</p>
               </annot>
             </measure>
             <measure n="14">
@@ -1774,12 +1830,12 @@
                       <lem source="#source-A1 #source-EB">
                         <note pname="e" accid="n" oct="3" dur="32"/>
                       </lem>
-                      <rdg source="#source-ES1">
+                      <rdg source="#source-ES1 #source-EN">
                         <note pname="e" oct="3" dur="32"/>
                       </rdg>
                     </app>
                     <app xml:id="m15-annot3-target1">
-                      <lem source="#source-A1 #source-EB">
+                      <lem source="#source-A1 #source-EN #source-EB">
                         <note pname="g" accid="n" oct="3" dur="32"/>
                       </lem>
                       <rdg source="#source-ES1">
@@ -1805,24 +1861,26 @@
               </staff>
               <annot xml:id="m15-annot1" n="1" plist="#m15-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m29-region1 #source-ES1-facsimile-UCR-page3-m15-region1 #source-EN-facsimile-BL-page3-m15-region1 #source-EB-facsimile-IMSLP-page2-m15-region1">
-                <p><ptr target="#source-ES1"/> and <ptr target="#source-EN"/>
-		  have E♮ (with no accidental), while <ptr target="#source-EB"/> has E♯. The corresponding
+                <p><ptr target="#source-ES1"/> and <ptr target="#source-EN"/> have E♮ (with no accidental),
+                  while <ptr target="#source-EB"/> has E♯. The corresponding
                   passage in <ptr target="#source-A1"/> (starting in measure 29) has neither, and
                   has a somewhat different harmonic structure.</p>
-                <p>The reading with E♯ maintains the parallelism of the passage: each
-                  chromatically descending diminished chord can be seen as a dominant minor ninth whose
-                  root appears in the left hand, and the same four-note interval sequence occurs each
-                  time. The E♮ reading does not fit this pattern.</p>
+                <p>Five diminished seventh chords descend chromatically in measures 13-14,
+                  and again in measures 15-16. The reading with E♮ here matches the E♮ that occurs with the
+                  corresponding chord in measure 13. On the other hand, the reading with E♯ maintains a parallelism
+                  in measures 15-16, repeating the same ascending four-note interval sequence each time
+                  (minor third, major second, minor second). That same interval sequence, inverted, also appears with
+                  the first, third, and fifth diminished chords in measures 13-14.</p>
               </annot>
               <annot xml:id="m15-annot2" n="2" plist="#m15-annot2-target1"
                      facs="#source-A1-facsimile-SBB-page1-m30-region1 #source-ES1-facsimile-UCR-page3-m15-region2 #source-EN-facsimile-BL-page3-m15-region2 #source-EB-facsimile-IMSLP-page2-m15-region2">
                 <p><ptr target="#source-A1"/> (measure 30) and <ptr target="#source-EB"/> have E♮,
-                  while <ptr target="#source-ES1"/> has E♯ (with no accidental).</p>
+                  while <ptr target="#source-ES1"/> and <ptr target="#source-EN"/> have E♯ (with no accidental).</p>
               </annot>
               <annot xml:id="m15-annot3" n="3" plist="#m15-annot3-target1"
                      facs="#source-A1-facsimile-SBB-page1-m30-region2 #source-ES1-facsimile-UCR-page3-m15-region3 #source-EN-facsimile-BL-page3-m15-region3 #source-EB-facsimile-IMSLP-page2-m15-region3">
-                <p><ptr target="#source-A1"/> (measure 30) and <ptr target="#source-EB"/> have G♮,
-                  while <ptr target="#source-ES1"/> has G♯ (with no accidental).</p>
+                <p><ptr target="#source-A1"/> (measure 30), <ptr target="#source-EN"/>, and <ptr target="#source-EB"/>
+                  have G♮, while <ptr target="#source-ES1"/> has G♯ (with no accidental).</p>
               </annot>
             </measure>
             <measure n="16">
@@ -1929,8 +1987,8 @@
                   on the G♯ in the upper staff. <ptr target="#source-A1"/> has a different structure here.</p>
               </annot>
               <annot xml:id="m16-annot2" n="2" plist="#m16-annot2-target1"
-                     facs="#source-ES1-facsimile-UCR-page3-m16-region2">
-                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
+                     facs="#source-ES1-facsimile-UCR-page3-m16-region2 #source-EN-facsimile-BL-page3-m16-region2">
+                <p>Redundant sharp in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>.</p>
               </annot>
             </measure>
             <measure n="17">
@@ -2038,8 +2096,8 @@
               <hairpin form="dim" staff="2" layer="1" place="below"
                        tstamp="4.625" tstamp2="0m+4.875"/>
               <annot xml:id="m17-annot1" n="1" plist="#m17-annot1-target1"
-                     facs="#source-ES1-facsimile-UCR-page3-m17-region1">
-                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
+                     facs="#source-ES1-facsimile-UCR-page3-m17-region1 #source-EN-facsimile-BL-page3-m17-region1">
+                <p>Redundant sharp in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>.</p>
               </annot>
             </measure>
             <measure n="18">
@@ -2127,8 +2185,8 @@
               </staff>
               <slur startid="#m18-slur-start" endid="#m18-slur-end"/>
               <annot xml:id="m18-annot1" n="1" plist="#m18-annot1-target1"
-                     facs="#source-ES1-facsimile-UCR-page3-m18-region1">
-                <p>Redundant sharp in <ptr target="#source-ES1"/>.</p>
+                     facs="#source-ES1-facsimile-UCR-page3-m18-region1 #source-EN-facsimile-BL-page3-m18-region1">
+                <p>Redundant sharp in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>.</p>
               </annot>
             </measure>
             <measure n="19">
@@ -2318,8 +2376,9 @@
               <dynam tstamp="4" place="below" staff="1">sf</dynam>
               <annot xml:id="m20-annot1" n="1" plist="#m20-annot1-target1"
                      facs="#source-A1-facsimile-SBB-page1-m40-region1 #source-ES1-facsimile-UCR-page4-m20-region1 #source-EN-facsimile-BL-page4-m20-region1 #source-EB-facsimile-IMSLP-page3-m20-region1">
-                <p>The chord is staccato in <ptr target="#source-ES1"/>, but not in <ptr target="#source-EB"/>.
-                  <ptr target="#source-A1"/> (measure 40) has a different structure here.</p>
+                <p>The chord is staccato in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>,
+                  but not in <ptr target="#source-EB"/>. <ptr target="#source-A1"/> (measure 40) has a different
+                  structure here.</p>
               </annot>
             </measure>
             <measure n="21">
@@ -2513,7 +2572,14 @@
                   </beam>
                   <beam>
                     <note pname="e" accid="s" oct="5" dur="32"/>
-                    <note pname="g" accid="s" oct="5" dur="32"/>
+                    <app xml:id="m23-annot2-target1">
+                      <lem source="#source-EN #source-EB">
+                        <note pname="g" accid="s" oct="5" dur="32"/>
+                      </lem>
+                      <rdg source="#source-ES1">
+                        <note pname="g" oct="5" dur="32"/>
+                      </rdg>
+                    </app>
                     <note pname="b" oct="5" dur="32"/>
                     <note pname="d" oct="6" dur="32"/>
                   </beam>
@@ -2541,7 +2607,7 @@
                     <note pname="g" oct="3" dur="32" stem.dir="down"/>
                   </beam>
                   <beam>
-                    <note pname="e" oct="3" dur="32"/>
+                    <note xml:id="m23-annot1-target1" pname="e" oct="3" dur="32"/>
                     <note pname="g" oct="3" dur="32"/>
                     <note pname="b" oct="3" dur="32"/>
                     <note pname="d" oct="4" dur="32"/>
@@ -2550,6 +2616,16 @@
                   <rest dur="4"/>
                 </layer>
               </staff>
+                <annot xml:id="m23-annot1" n="1" plist="#m23-annot1-target1"
+                       facs="#source-ES1-facsimile-UCR-page4-m23-region1 #source-EN-facsimile-BL-page4-m23-region1">
+                  <p>Redundant sharp in <ptr target="#source-ES1"/> and <ptr target="#source-EN"/>.</p>
+                </annot>
+                <annot xml:id="m23-annot2" n="2" plist="#m23-annot2-target1"
+                       facs="#source-ES1-facsimile-UCR-page4-m23-region2 #source-EN-facsimile-BL-page4-m23-region2 #source-EB-facsimile-IMSLP-page3-m23-region1">
+                  <p><ptr target="#source-EN"/> and <ptr target="#source-EB"/> have G♯, while
+                    <ptr target="#source-ES1"/> has G♮, which is surely an error. The second half of measure 23
+                    and the first half of measure 24 do not occur in <ptr target="#source-A1"/>.</p>
+                </annot>
             </measure>
             <measure n="24">
               <staff n="1">
