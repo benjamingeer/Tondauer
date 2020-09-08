@@ -250,6 +250,8 @@
         <graphic target="source-ES1-facsimile-UCR-page5.png"/>
       </surface>
     </facsimile>
+    <!--
+
     <facsimile xml:id="source-EN-facsimile-BL" decls="#source-EN">
       <surface xml:id="source-EN-facsimile-BL-page1" n="1">
         <zone xml:id="source-EN-facsimile-BL-page1-m2-region1">
@@ -321,6 +323,7 @@
       </surface>
       <surface xml:id="source-EN-facsimile-BL-page5" n="5"/>
     </facsimile>
+    -->
     <facsimile xml:id="source-ES2-facsimile-SBB" decls="#source-ES2"/>
     <facsimile xml:id="source-EB-facsimile-IMSLP" decls="#source-EB">
       <surface xml:id="source-EB-facsimile-IMSLP-page1" n="1">

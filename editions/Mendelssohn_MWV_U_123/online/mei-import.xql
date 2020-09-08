@@ -200,9 +200,11 @@ declare function local:annot($annot as element(mei:annot)) as element(resource) 
     for $target in $annot/id($target-ids) return local:parse-ids($target/mei:lem/@source)
   )
 
-  (: The IDs of zones that the annotation refers to. :)
-  let $zone-ids := local:parse-ids($annot/@facs)
-  
+  (: The IDs of zones that the annotation refers to. Skip zones in source-EN-facsimile-BL because we don't have it yet. :)
+  let $zone-ids := fn:filter(
+    local:parse-ids($annot/@facs), function($zone-id) { not(starts-with($zone-id, "source-EN-facsimile-BL")) }
+  )
+
   return
     <resource label="{$annot-id}"
     restype="Annotation"
