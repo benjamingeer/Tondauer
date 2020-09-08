@@ -243,7 +243,7 @@
           <figDesc>Redundant accidental.</figDesc>
         </zone>
         <zone xml:id="source-ES1-facsimile-UCR-page4-m23-region2">
-          <figDesc>G♯ or G♮?</figDesc>
+          <figDesc>G♮ (with no accidental).</figDesc>
         </zone>
       </surface>
       <surface xml:id="source-ES1-facsimile-UCR-page5" n="5">
@@ -316,7 +316,7 @@
           <figDesc>Redundant accidental.</figDesc>
         </zone>
         <zone xml:id="source-EN-facsimile-BL-page4-m23-region2">
-          <figDesc>G♯ or G♮?</figDesc>
+          <figDesc>G♯.</figDesc>
         </zone>
       </surface>
       <surface xml:id="source-EN-facsimile-BL-page5" n="5"/>
@@ -339,6 +339,9 @@
         <graphic target="source-EB-facsimile-IMSLP-page2.tif"/>
         <zone xml:id="source-EB-facsimile-IMSLP-page2-m10-region1">
           <figDesc>Both ties continue.</figDesc>
+        </zone>
+        <zone xml:id="source-EB-facsimile-IMSLP-page2-m10-region2">
+          <figDesc>D♯.</figDesc>
         </zone>
         <zone xml:id="source-EB-facsimile-IMSLP-page2-m12-region1">
           <figDesc>B♮.</figDesc>
@@ -374,7 +377,7 @@
           <figDesc>No staccato mark.</figDesc>
         </zone>
         <zone xml:id="source-EB-facsimile-IMSLP-page3-m23-region1">
-          <figDesc>G♯ or G♮?</figDesc>
+          <figDesc>G♯.</figDesc>
         </zone>
       </surface>
     </facsimile>
