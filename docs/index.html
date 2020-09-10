@@ -1,29 +1,75 @@
 <html>
-<head>
-<title>Tondauer</title>
-</head>
-
+  <head>  
+    <style>
+      body {
+        background-color: #d9e8fa;
+      }
+    </style>
+    <title>Tondauer</title>
+  </head>
 <body>
   <h1>Tondauer</h1>
 
   <p>This web site is for experiments with digital editions of music.</p>
 
-  <p>Source code is at <a href="https://github.com/dasch-swiss/Tondauer/">https://github.com/dasch-swiss/Tondauer/</a>.</p>
+  <h2>Felix Mendelssohn, Prelude Op. 104a, No. 2 (MWV U 123)</h2>
 
-  <h2>Felix Mendelssohn, Prelude MWV U 123</h2>
-
-  First page as an example:
+  <p>These draft editions are intended to illustrate possible
+  functionality. Source code is
+  at <a href="https://github.com/dasch-swiss/Tondauer/">https://github.com/dasch-swiss/Tondauer/</a>.</p>
   
   <ul>
-    <li><a href="editions/Mendelssohn_MWV_U_123/critical/"
-	   target="_blank">Interactive critical edition</a> encoded as
+    <li>Editions encoded and rendered
+      with <a href="https://lilypond.org" target="_blank">LilyPond</a>, in
+      PDF format, for printing or for use with a tablet:</li>
+    <ul>
+      <li><a href="/editions/Mendelssohn_MWV_U_123/print/Mendelssohn_MWV_U_123_Critical_Edition.pdf"
+	   target="_blank">Critical edition</a></li>
+      <li><a href="/editions/Mendelssohn_MWV_U_123/print/Mendelssohn_MWV_U_123_Performance_Edition.pdf"
+	   target="_blank">Performance edition</a></li>
+      <li><a href="/editions/Mendelssohn_MWV_U_123/print/Mendelssohn_MWV_U_123_Performance_Edition_Variant.pdf"
+	   target="_blank">Performance edition (variant)</a></li>
+    </ul>
+    <li><a href="/editions/Mendelssohn_MWV_U_123/online/"
+	   target="_blank">Interactive critical edition</a> (not yet
+	   fully functional) encoded as
 	   <a href="https://music-encoding.org"
 	   target="_blank">MEI</a> and rendered as SVG
-	   with <a href="https://www.verovio.org/" target="_blank">Verovio</li>
-    <li><a href="/editions/Mendelssohn_MWV_U_123/performance/Mendelssohn_MWV_U_123_Performance_Edition.pdf"
-	   target="_blank">Performance edition</a> for printing or for
-	   use with a tablet, encoded and rendered as a PDF
-	   with <a href="https://lilypond.org" target="_blank">LilyPond</a></li>
+	   with <a href="https://www.verovio.org/" target="_blank">Verovio</a></li>
+  </ul>
+
+  <p>Digital facsimiles of sources:</p>
+
+  <ul>
+    <li><a href="https://iiif.tondauer.test.dasch.swiss/server/facsimiles/Mendelssohn-MWV-U-123-A1-SBB.pdf"
+           target="_blank"><strong>A<sub>1</sub></strong></a>, the
+           autograph of <strong>V<sub>1</sub></strong>, dated 12
+           October 1836 (Staatsbibliothek zu Berlin)</li>
+    <li><strong>E<sub>S1</sub></strong>, the first German edition
+    of <strong>V<sub>2</sub></strong>, published in Leipzig by Bartholf Senff in
+      1868:</li>
+    <ul>
+      <li><a href="https://iiif.tondauer.test.dasch.swiss/server/facsimiles/Mendelssohn-MWV-U-123-S1-SBB.pdf"
+          target="_blank">Staatsbibliothek
+          zu Berlin</a> (high-resolution scan, but the item is in poor
+        condition)</li>
+      <li><a href="https://iiif.tondauer.test.dasch.swiss/server/facsimiles/Mendelssohn-MWV-U-123-S1-UCR.pdf"
+      target="_blank">University
+      of California Riverside Library</a> (lower-resolution scan, but the
+          item is in better condition)</li>
+    </ul>
+    <li><strong>E<sub>N</sub></strong>, published in London by Novello
+    in 1868 (not yet accessible here, for copyright reasons)</li>
+    <li><a href="https://iiif.tondauer.test.dasch.swiss/server/facsimiles/Mendelssohn-MWV-U-123-S2-SBB.pdf"
+      target="_blank"><strong>E<sub>S2</sub></strong></a>, a later Senff
+      edition, published in about 1875, identical to <strong>E<sub>S1</sub></strong> (Staatsbibliothek
+      zu Berlin)</li>
+    <li><a href="https://iiif.tondauer.test.dasch.swiss/server/facsimiles/Mendelssohn-MWV-U-123-Breitkopf-IMSLP.pdf"
+      target="_blank"><strong>E<sub>B</sub></strong></a>, the
+      Breitkopf &amp; Härtel edition of
+      of <strong>V<sub>2</sub></strong>, part of a critically revised
+      edition of Mendelssohn's collected works, published between 1874
+      and 1877 (IMSLP)</li>
   </ul>
 
   <p>Contact: <a href="mailto:benjamin.geer@dasch.swiss"

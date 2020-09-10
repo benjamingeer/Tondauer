@@ -1,0 +1,11 @@
+*.pdf
+*.log
+*.out
+*.aux
+*.bcf
+*.bbl
+*.run.xml
+*.blg
+*.svg
+*.inp
+*~

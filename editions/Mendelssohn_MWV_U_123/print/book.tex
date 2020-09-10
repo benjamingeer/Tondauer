@@ -1,0 +1,306 @@
+\documentclass[a4paper, 12pt]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+
+% Languages
+\usepackage[ngerman,british]{babel}
+\usepackage[autostyle,english=british]{csquotes}
+\usepackage[super]{nth}
+
+% Fonts
+\usepackage{fontspec}
+\usepackage{libertine}
+\usepackage{anyfontsize}
+\usepackage{musicography}
+
+% CC licence
+\usepackage[
+    type={CC},
+    modifier={by-sa},
+    version={4.0}
+]{doclicense}
+
+% Include PDF and EPS files
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+
+% Links
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{relsize}
+\renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+\usepackage{bookmark}
+
+% Bibliography
+\usepackage[backend=biber,notes,language=british]{biblatex-chicago}
+\addbibresource{bibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Parsing of annotations extracted by scholarLY
+
+\usepackage{pgfkeys}
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\usepackage{listofitems}
+\setsepchar{,}
+
+\pgfkeys{
+  /ann/.is family,
+  /ann,
+  message/.store in=\annMessage,
+  measure-no/.store in=\annMeasureNo,
+  measure-pos/.store in=\annMeasurePos,
+  beat-string/.store in=\annBeatString,
+  beat-fraction/.store in=\annBeatFraction,
+  beat-part/.store in=\annBeatPart,
+  our-beat/.store in=\annOurBeat,
+  rhythmic-location/.store in=\annRhythmicLocation,
+  meter/.store in=\annMeter,
+  source/.code={\pgfkeyssetvalue{source}{#1}\pgfkeysgetvalue{source}{\annSource}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting commands
+
+% The name of a source
+\newcommand{\source}[2]{\textbf{#1\textsubscript{#2}}}
+
+% The \criticalRemark command used in annotations extracted by scholarLY
+\newcommand{\criticalRemark}[1][]{%
+  \pgfkeys{/ann,#1}% Parse the arguments
+  \paragraph{Measure \annMeasureNo, beat \annOurBeat}
+  \pgfkeysifdefined{source}{
+    \ifthenelse{\equal{\annSource}{}}{}{
+      \readlist\annSourceList{\annSource}
+      Preferred \ifthenelse{\equal{\annSourceListlen}{1}}{source}{sources}: \annSource.
+    }
+  }{}
+  \par \annMessage
+}
+
+\begin{document}
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+
+\begin{titlepage}
+\begin{center}
+  \fontspec{Quattrocento-Bold.otf}{\fontsize{40}{50}\selectfont Felix Mendelssohn} \\
+  \fontspec{Quattrocento.otf}\vspace{2cm}
+  {\fontsize{32}{42}\selectfont Prelude} \\
+  \vspace{2 cm}
+  {\fontsize{24}{34}\selectfont MWV U 123} \\
+  \vspace{0.5 cm}
+  {\fontsize{24}{34}\selectfont Op. 104a, No. 2} \\
+  \vspace{4 cm}
+  {\Large \ifdef{\critical}{Critical Edition}{Performance Edition \ifdef{\variant}{(Variant)}{}}} \\
+  \vspace{0.5 cm}
+  {\Large Edited by Benjamin Geer} \\
+  \vspace{4.5 cm}
+  {\footnotesize Version 0.1 (draft)} \\
+  \vspace{0.1 cm}
+  {\footnotesize Copyright \copyright\ 2020 Data and Service Center
+    for the Humanities \\ \doclicenseText} \\
+  \begin{minipage}{\textwidth}
+  \centering
+  $\vcenter{\hbox{\includegraphics[height=1.5cm]{DaSCH_Logo_CMYK}}}$
+  \hspace*{.5 cm}
+  $\vcenter{\hbox{\doclicenseImage[imagewidth=2cm]}}$
+  \end{minipage}
+  \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main document content
+
+\chapter*{Preface}
+
+This draft edition is part of an experimental project,
+\url{https://tondauer.art}, aimed at developing technology for digital
+editions of music.
+\ifdef{\critical}
+  {% Text for the critical edition
+    An interactive online edition will eventually be based on this
+    one. Performance editions based on this edition can be found on
+    the project web site.
+  }{% Text for the performance edition
+    
+    Footnotes in the music text point out editorial choices that are
+    worth your attention, especially where you may prefer a different
+    option. The critical edition, which can be found on the project
+    web site, explains these choices.
+
+    % TODO: say something about the fingerings.
+  }
+
+  \ifdef{\variant}
+    {% Text for the performance edition with a variant reading
+      This variant edition follows the Breitkopf \& Härtel edition in
+      the first beat of measure 15.
+    }{}
+
+% TODO:
+% This edition is Creative Commons
+% licensed\footnote{\url{\doclicenseURL}} and the source code is
+% available,\footnote{See
+%   \url{https://github.com/dasch-swiss/Tondauer}.} to allow derived
+% editions to be made.
+
+\section*{About the Piece}
+
+Mendelssohn composed this prelude in 1836, intending at first to
+include it in Op.\ 35, a set of preludes (originally études) and
+fugues. He then chose a different prelude for Op.\ 35, and this one
+was published posthumously in 1868.\autocite[188--198]{todd_2008}
+
+\ifdef{\critical}
+  {% Text for the critical edition
+    \section*{Methodology and Sources}
+
+    Mendelssohn wrote two versions of the piece, \source{V}{1} and
+    \source{V}{2}. Like most other editions, this one presents
+    \source{V}{2}. No autograph (\source{A}{2}) or engraver's copy of
+    \source{V}{2} has been found.\footnote{I am grateful to
+      Dr. R. Larry Todd for this information.} I have used the
+    following sources:
+    
+    \begin{description}
+    \item[\source{A}{1}] The autograph of
+      \source{V}{1},\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+          zu Berlin\end{otherlanguage}, shelfmark
+          Mus.ms.autogr. Mendelssohn Bartholdy, F. 28,
+          \url{http://resolver.staatsbibliothek-berlin.de/SBB0001F9E700000315}.}
+      dated 12 October 1836.
+    \item[\source{E}{S1}] The first German edition of
+      \source{V}{2},\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+          zu Berlin\end{otherlanguage}, shelfmark N.Mus. 5420-1, and
+          University of California Riverside Library, shelfmark SCUA
+          M25.M45 P7.} published in Leipzig by Bartholf Senff in
+      1868. It also gives the date of the composition as 12 October
+      1836.
+    \item[\source{E}{N}] The first English edition of
+      \source{V}{2},\footnote{Bodleian Library, Oxford, shelfmark Deneke 256 (15).%
+        % British Library, shelfmark Music Collections
+        % R.M.26.h.6.(4.).
+      } published in London by Novello
+      in 1868.
+    \item[\source{E}{S2}] A later Senff
+      edition,\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+          zu Berlin\end{otherlanguage}, shelfmark N.Mus. 5419-1.}
+      published in about 1875. It is identical to \source{E}{S1}.
+    \item[\source{E}{B}] The Breitkopf \& Härtel edition of
+      \source{V}{2},\footnote{\url{https://imslp.org/wiki/Special:ReverseLookup/109142}}
+      part of a critically revised edition of Mendelssohn's collected
+      works, published between 1874 and 1877.
+    \end{description}
+
+    Digital facsimiles of these can be found at
+    \url{https://tondauer.art} (except for \source{E}{N}, for
+    copyright reasons).
+
+    \source{E}{S1} and \source{E}{N} were coordinated editions (each
+    mentions the other publisher), but are not identical;
+    \source{E}{N} contains several emendations. \source{E}{B} has some
+    of these as well as a number of others.
+
+    There are clearly problems with \source{E}{S1}. But it is possible
+    that only the editors of \source{E}{S1} had access to the
+    autographs, and that the variant readings in the other editions
+    are conjectural emendations. Moreover, as explained below under
+    \nameref{sec:analysis}, it seems likely that Mendelssohn left
+    \source{A}{2} in an unfinished state, which may well be accurately
+    reflected in \source{E}{S1}.
+
+    I have taken \source{E}{S1} as a starting point, and accepted
+    emendations from the other editions where they agree with
+    \source{A}{1}. This approach gives considerable weight to
+    \source{A}{1}, since it is the only available autograph, at the
+    risk of undoing changes that Mendelssohn made in \source{A}{2}.
+    I have also followed the emendation in \source{E}{N} and
+    \source{E}{B} for what appears to be an error in measure 7, and
+    supplied accidentals that are clearly missing. All these choices
+    are detailed below under \nameref{sec:comments}.
+
+    One could give more weight to \source{E}{S1}, given its proximity
+    to \source{A}{2}. Or one could take a different approach and
+    accept, for example, \source{E}{B}'s reading in the first beat of
+    measure 15, on the grounds of musical plausibility.
+    
+    \section*{Comments}
+    \label{sec:comments}
+
+    Each comment corresponds to a footnote in the music text.
+
+    \input{critical-print-score.annotations.inp}
+
+    \section*{Analysis}
+    \label{sec:analysis}
+
+    In the process of transforming \source{V}{1} into \source{V}{2},
+    Mendelssohn halved the note values throughout, and thus combined
+    every two measures into one. Some of the problems with accidentals
+    in \source{E}{S1} seem likely to have resulted from incomplete
+    proofreading of the second half of each measure after this
+    change.
+
+    For example, in measure 8 of \source{A}{1}, the last note in the
+    lower staff is A\na. There it did not need a natural sign, but it
+    needed one after the preceding bar line was removed to form
+    measure 4 of \source{V}{2}; the natural sign is missing in
+    \source{E}{S1}. The same is true of the E\na\ notes in measure 26 of
+    \source{A}{1}, which are in the third beat of measure 13 of
+    \source{V}{2}, and the E\na\ in measure 30 of \source{A}{1},
+    which is in the third beat of measure 15 in
+    \source{V}{2}.
+
+    Moreover, in measure 30 of \source{A}{1}, the first G\na\ in the
+    lower staff has a cautionary accidental, but in \source{V}{2} it
+    has been changed to another note. A natural sign therefore needs
+    to be added to the subsequent G\na\ to cancel the sharp earlier in
+    the measure, but it is missing in \source{E}{S1}.
+
+    The redundant sharp on the E\sh\ in the third beat of measure 12
+    in \source{E}{S1} seems to be another sign of this process; it was
+    probably left there after being needed in measure 24 of
+    \source{A}{1}. The same goes for the redundant sharp on the
+    G\sh\ in the third beats of measures 16, 17, and 18, and the one
+    on the E\sh\ in the third beat of measure 23.
+
+    Perhaps Mendelssohn decided not to use this prelude in Op.\ 35
+    before completing the proofreading of \source{A}{2}, and therefore
+    left the manuscript in an unfinished state, with errors that were
+    then reproduced in \source{E}{S1}.
+
+    % The Novello edition in the British Library
+    %
+    % http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01004521054
+    % https://www.bl.uk/digitisation-services
+  }
+  {}
+
+\raggedbottom
+
+\vspace{\baselineskip}
+
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+  Benjamin Geer \\
+  Data and Service Center for the Humanities \\
+  University of Basel \\
+  \href{mailto:benjamin.geer@dasch.swiss}{\smaller \texttt{benjamin.geer@dasch.swiss}} \\
+  \texttt{\url{https://dasch.swiss}}
+\end{minipage}
+
+\pagebreak
+\cleardoublepage
+\mainmatter
+
+% The PDF score rendered by LilyPond
+\ifdef{\performance}
+  {\ifdef{\variant}
+    {\includepdf[pages=-]{performance-print-score-variant.pdf}}
+    {\includepdf[pages=-]{performance-print-score.pdf}}}
+  {\includepdf[pages=-]{critical-print-score.pdf}}
+\end{document}
