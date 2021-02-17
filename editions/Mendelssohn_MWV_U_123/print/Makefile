@@ -1,5 +1,5 @@
 LILY_PDF_CMD = lilypond -I ${LILYPOND_INCLUDE} --pdf
-LATEX_CMD = xelatex
+LATEX_CMD = lualatex
 
 CRITICAL_PRINT_EDITION=Mendelssohn_MWV_U_123_Critical_Edition.pdf
 PERFORMANCE_PRINT_EDITION=Mendelssohn_MWV_U_123_Performance_Edition.pdf

@@ -34,3 +34,11 @@ Add the following to your `.profile`:
 ### TeX
 
 `sudo apt install texlive-full`
+
+## Building
+
+To build all the editions:
+
+```
+make
+```
