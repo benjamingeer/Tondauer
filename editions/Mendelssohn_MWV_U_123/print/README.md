@@ -33,7 +33,9 @@ Add the following to your `.profile`:
 
 ### TeX
 
-`sudo apt install texlive-full`
+```
+sudo apt install texlive-full
+```
 
 ## Building
 
