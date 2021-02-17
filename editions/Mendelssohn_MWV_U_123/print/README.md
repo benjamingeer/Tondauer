@@ -19,8 +19,8 @@ Download from [lilypond.org](https://lilypond.org/).
 
 ### openlilylib
 
-Create a directory `openlilylib` (e.g. in the directory above this
-one), containing:
+Create a directory `openlilylib` (e.g. in the directory above the `Tondauer`
+directory), containing:
 
 - [notation-fonts](https://github.com/openlilylib/notation-fonts)
 - [oll-core](https://github.com/openopenlilylib/lilylib/oll-core)
