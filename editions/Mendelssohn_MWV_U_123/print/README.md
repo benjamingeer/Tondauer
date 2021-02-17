@@ -29,7 +29,7 @@ directory), containing:
 
 Add the following to your `.profile`:
 
-``
+```
 export LILYPOND_INCLUDE=/path/to/openlilylib
 ```
 
