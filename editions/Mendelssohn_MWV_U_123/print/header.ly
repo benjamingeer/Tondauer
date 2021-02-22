@@ -10,6 +10,6 @@
   copyright = \markup {
     \vspace #1
     \with-url #"https://creativecommons.org/licenses/by-sa/4.0/deed.en" { \epsfile #X #12 #"by-sa.eps" }
-    \raise #0.7 { \tiny { Copyright © 2020 Data and Service Center for the Humanities }}
+    \raise #0.7 { \tiny { Copyright © 2021 Benjamin Geer }}
   }
 }
