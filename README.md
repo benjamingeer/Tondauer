@@ -1,3 +1,3 @@
 # Tondauer
 
-This project is for experiments with digital editions of music.
+A web site for open-source digital editions of music.
