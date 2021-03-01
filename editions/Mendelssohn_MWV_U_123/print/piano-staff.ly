@@ -137,7 +137,7 @@
     \tag #'crit \footnote #'(1 . -2.5) \markup {
       {\italic D}\sharp or {\italic D}\natural?
       \bigdot
-      {\italic Ré}\sharp ou {\italic ré}\natural?
+      {\italic Ré}\sharp ou {\italic ré}\natural ?
     }
     NoteHead
 
@@ -232,7 +232,7 @@
 	\markup {
 	  {\italic B}\natural or {\italic B}\sharp?
 	  \bigdot
-	  {\italic Si}\natural ou {\italic si}\sharp?
+	  {\italic Si}\natural ou {\italic si}\sharp ?
 	}
 	NoteHead
 
@@ -382,7 +382,7 @@
 	\markup {
 	  {\italic D}\natural or {\italic D}\sharp?
 	  \bigdot
-	  {\italic Re}\natural ou {\italic re}\sharp?
+	  {\italic Re}\natural ou {\italic re}\sharp ?
 	}
 	NoteHead
 
@@ -417,7 +417,7 @@
 	\markup {
 	  {\italic E}\natural or {\italic E}\sharp?
 	  \bigdot
-	  {\italic Mi}\natural ou {\italic mi}\sharp?	  
+	  {\italic Mi}\natural ou {\italic mi}\sharp ?
 	}
 	Stem
 
@@ -521,7 +521,7 @@
 	   \markup {
 	     {\italic G}\sharp or {\italic G}\natural?
 	     \bigdot
-	     {\italic Sol}\sharp ou {\italic sol}\natural?	     
+	     {\italic Sol}\sharp ou {\italic sol}\natural ?
 	   }
 	   Accidental
 	   gis'
@@ -709,7 +709,7 @@
     \markup {
       {\italic G}\sharp or {\italic G}\natural?
       \bigdot
-      {\italic Sol}\sharp ou {\italic sol}\natural?      
+      {\italic Sol}\sharp ou {\italic sol}\natural ?
     }
     NoteHead
 
@@ -1055,7 +1055,7 @@
     \markup {
       {\italic G}\sharp or {\italic G}\natural?
       \bigdot
-      {\italic Sol}\sharp or {\italic sol}\natural?      
+      {\italic Sol}\sharp ou {\italic sol}\natural ?
     }
     NoteHead
 
@@ -1063,7 +1063,7 @@
     \markup {
       {\italic G}\sharp or {\italic G}\natural? See the critical edition.
       \bigdot
-      {\italic Sol}\sharp or {\italic sol}\natural? Voir l'édition critique.
+      {\italic Sol}\sharp ou {\italic sol}\natural ? Voir l'édition critique.
     }
     NoteHead
 
@@ -1133,7 +1133,7 @@
     \markup {
       {\italic A}\natural or {\italic A}\sharp?
       \bigdot
-      {\italic La}\natural ou {\italic la}\sharp?
+      {\italic La}\natural ou {\italic la}\sharp ?
     }
     NoteHead
 
@@ -1235,7 +1235,7 @@
 	 \markup {
 	   {\italic B} or {\italic G}?
 	   \bigdot
-	   {\italic Si} ou {\italic sol}?
+	   {\italic Si} ou {\italic sol} ?
 	 }
 	 b,,
 
@@ -1459,7 +1459,7 @@
       \markup {
 	{\italic E}\natural or {\italic E}\sharp?
 	\bigdot
-	{\italic Mi}\natural ou {\italic mi}\sharp?	
+	{\italic Mi}\natural ou {\italic mi}\sharp ?
       }
       Stem
 
@@ -1490,7 +1490,7 @@
       \markup {
 	{\italic G}\natural or {\italic G}\sharp?
 	\bigdot
-	{\italic Sol}\natural ou {\italic sol}\sharp?	
+	{\italic Sol}\natural ou {\italic sol}\sharp ?
       }
       Stem
 
