@@ -308,7 +308,7 @@
 	\markup {
 	  {\italic D}\sharp or {\italic D}\natural?
 	  \bigdot
-	  {\italic Ré}\sharp or {\italic ré}\natural?	  
+	  {\italic Ré}\sharp ou {\italic ré}\natural?	  
 	}
 	Stem
 
