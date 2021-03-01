@@ -4,7 +4,7 @@
 \include "global.ly"
 
 \score {
-  \keepWithTag #'(crit #'m15-lemma)
-  \removeWithTag #'(perf finger #'m15-reading)
+  \keepWithTag #'crit
+  \removeWithTag #'(perf finger)
   \include "piano-staff.ly"
 }

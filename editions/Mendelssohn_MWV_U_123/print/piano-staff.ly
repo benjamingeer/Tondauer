@@ -134,10 +134,12 @@
     dis''32-\tag #'finger -4 bis'-\tag #'finger -3 a'-\tag #'finger -1 fis'-\tag #'finger -2
     bis'-\tag #'finger -5 a'-\tag #'finger -4 fis'-\tag #'finger -3
 
-
-    \tag #'crit \footnote #'(1 . -2.5)
-      \markup { D\sharp or D\natural? }
-      NoteHead
+    \tag #'crit \footnote #'(1 . -2.5) \markup {
+      {\italic D}\sharp or {\italic D}\natural?
+      \bigdot
+      {\italic Ré}\sharp ou {\italic ré}\natural?
+    }
+    NoteHead
 
     \choice variants {
       \editorialMarkup lemma \with {
@@ -145,10 +147,18 @@
         source = "\\source{E}{N}, \\source{E}{B}"
 	    
         message = "\\source{E}{N} and \\source{E}{B}
-        have D\\sh, while \\source{E}{S1} has D\\na\\ (with no
-        accidental), which is surely an error. \\source{A}{1}
-        (measure 19) has a different structure here."
-	    
+        have \\textit{D}\\sh, \\source{E}{S1} has \\textit{D}\\na\\ with no
+        accidental (surely an error). \\source{A}{1}
+        (measure 19) has a different structure here.
+
+	\\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Ré}\\sh\\ dans
+        \\source{E}{N} et \\source{E}{B}, \\textit{ré}\\na\\ sans
+        accident (sûrement une erreur) dans
+        \\source{E}{S1}. \\source{A}{1} (mesure 19) a une
+        structure différente ici.\\end{otherlanguage}"
+
         item = Accidental
       }{ dis'-\tag #'finger -2 }
       \editorialMarkup reading \with {
@@ -219,7 +229,11 @@
         gis'-\tag #'finger -4 eis'-\tag #'finger -3 d'-\tag #'finger -2
 
 	\tag #'crit \footnote #'(0.5 . -2.5)
-	\markup { B\natural or B\sharp? }
+	\markup {
+	  {\italic B}\natural or {\italic B}\sharp?
+	  \bigdot
+	  {\italic Si}\natural ou {\italic si}\sharp?
+	}
 	NoteHead
 
 	\choice variants {
@@ -228,8 +242,15 @@
 	    source = "\\source{A}{1}, \\source{E}{B}"
 	    
 	    message = "\\source{A}{1} (measure 23) and \\source{E}{B}
-            have B\\na, while \\source{E}{S1} and \\source{E}{N} have
-            B\\sh\\ (with no accidental)."
+            have \\textit{B}\\na, \\source{E}{S1} and \\source{E}{N} have
+            \\textit{B}\\sh\\ with no accidental.
+
+            \\centerbigdot
+
+            \\begin{otherlanguage}{french}\\textit{Si}\\na\\ dans
+            \\source{A}{1} (mesure 23) et \\source{E}{B},
+            \\textit{si}\\sh\\ sans accident dans \\source{E}{S1} et
+            \\source{E}{N}.\\end{otherlanguage}"
 	    
 	    item = Accidental
 	  }{ b-\tag #'finger -1 }
@@ -244,12 +265,19 @@
         b'-\tag #'finger -5
 
         \tag #'crit \footnote #'(-2 . -0.5)
-          \markup { Redundant accidental. }
-          Stem
+	\markup {
+	  Redundant accidental.
+	  \bigdot
+	  Accident superflu.
+	}
+        Stem
 
         \criticalRemark \with {
           source = ""
-          message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}."
+          message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}.
+          \\bigdot\\
+          \\begin{otherlanguage}{french}Dièse superflu dans \\source{E}{S1}
+          et \\source{E}{N}.\\end{otherlanguage}"
         } eis'-\tag #'finger -3
 
         d'-\tag #'finger -2 b-\tag #'finger -1
@@ -277,7 +305,11 @@
         fis''-\tag #'finger -4
 
 	\tag #'crit \footnote #'(-1.5 . -1.5)
-	\markup { D\sharp or D\natural? }
+	\markup {
+	  {\italic D}\sharp or {\italic D}\natural?
+	  \bigdot
+	  {\italic Ré}\sharp or {\italic ré}\natural?	  
+	}
 	Stem
 
 	\choice variants {
@@ -286,8 +318,15 @@
 	    source = "\\source{A}{1}, \\source{E}{N}, \\source{E}{B}"
 	    
 	    message = "\\source{A}{1} (measure 25), \\source{E}{N},
-            and \\source{E}{B} have D\\sh, while \\source{E}{S1}
-            has D\\na\\ (with no accidental)."
+            and \\source{E}{B} have \\textit{D}\\sh, \\source{E}{S1}
+            has \\textit{D}\\na\\ with no accidental.
+
+            \\centerbigdot
+
+            \\begin{otherlanguage}{french}\\textit{Ré}\\sh\\ dans
+            \\source{A}{1} (mesure 25), \\source{E}{N} et
+            \\source{E}{B}, \\textit{ré}\\na\\ sans accident dans
+            \\source{E}{S1}.\\end{otherlanguage}"
 	    
 	    item = Accidental
 	  } { dis''-\tag #'finger -3 }
@@ -308,14 +347,25 @@
 	    source = ""
 
 	    message = "In \\source{E}{S1}, \\source{E}{N}, and
-            \\source{E}{B}, the accidental is missing on the G\\sh\\
+            \\source{E}{B}, the accidental is missing on the \\textit{G}\\sh\\
             in the upper staff. \\source{A}{1} (measure 25) is
-            unclear."
+            unclear.
+
+            \\centerbigdot
+
+            \\begin{otherlanguage}{french}Dans \\source{E}{S1}, \\source{E}{N} et
+            \\source{E}{B}, il manque l'accident du \\textit{sol}\\sh\\
+            de la portée supérieure. \\source{A}{1} (mesure 25) n'est pas
+            clair.\\end{otherlanguage}"
 	    
 	    item = Accidental
 	  } {
 	    \tag #'crit \single \footnote #'(-2 . -3.5)
-	    \markup { Missing accidental. }
+	    \markup {
+	      Missing accidental.
+	      \bigdot
+	      Accident manquant.
+	    }
 	    Stem
 	    gis'
 	    
@@ -329,18 +379,30 @@
 	eis'-\tag #'finger -2
 
 	\tag #'crit \footnote #'(0.5 . -3)
-	  \markup { D\natural or D\sharp? }
-	  NoteHead
+	\markup {
+	  {\italic D}\natural or {\italic D}\sharp?
+	  \bigdot
+	  {\italic Re}\natural ou {\italic re}\sharp?
+	}
+	NoteHead
 
 	\choice variants {
 	  \editorialMarkup lemma \with {
 	    ann-type = critical-remark
 	    source = "\\source{E}{B}"
 	    
-	    message = "\\source{E}{B} has D\\na, while \\source{E}{S1}
-            and \\source{E}{N} have D\\sh\\ (with no accidental),
-            which is surely an error. \\source{A}{1} (measure 25) is
-            unclear."
+	    message = "\\source{E}{B} has \\textit{D}\\na,
+            \\source{E}{S1} and \\source{E}{N} have \\textit{D}\\sh\\
+            with no accidental (surely an
+            error). \\source{A}{1} (measure 25) is unclear.
+
+            \\centerbigdot
+
+            \\begin{otherlanguage}{french}\\textit{Ré}\\na\\ dans
+            \\source{E}{B}, \\textit{re}\\sh\\ sans accident (sûrement
+            une erreur) dans \\source{E}{S1} et
+            \\source{E}{N}. \\source{A}{1} (mesure 25) n'est pas
+            clair.\\end{otherlanguage}"
 	    
 	    item = Accidental
 	  } { d')-\tag #'finger -1 }
@@ -352,7 +414,11 @@
         ais'-\tag #'finger -4( g'-\tag #'finger -3
 
 	\tag #'crit \footnote #'(-1.5 . -3)
-	\markup { E\natural or E\sharp? }
+	\markup {
+	  {\italic E}\natural or {\italic E}\sharp?
+	  \bigdot
+	  {\italic Mi}\natural ou {\italic mi}\sharp?	  
+	}
 	Stem
 
 	\choice variants {
@@ -360,10 +426,19 @@
 	    ann-type = critical-remark
 	    source = "\\source{A}{1}, \\source{E}{B}"
 	    
-	    message = "Twice in this beat, \\source{A}{1} (measure 26,
-            though slightly different) and \\source{E}{B} have E\\na,
-            while \\source{E}{S1} and \\source{E}{N} have E\\sh\\
-            (with no accidental)."
+	    message = "Twice: \\source{A}{1} (measure 26,
+            though slightly different) and \\source{E}{B} have \\textit{E}\\na,
+            \\source{E}{S1} and \\source{E}{N} have \\textit{E}\\sh\\
+            with no accidental.
+
+            \\centerbigdot
+
+            \\begin{otherlanguage}{french}Deux fois :
+            \\textit{mi}\\na\\ dans
+            \\source{A}{1} (mesure 26, bien qu'elle soit un peu
+            différente) et \\source{E}{B},
+            \\textit{mi}\\sh\\ sans accident dans \\source{E}{S1} et
+            \\source{E}{N}.\\end{otherlanguage}"
 	    
 	    item = Accidental
 	  }{
@@ -427,15 +502,27 @@
 	ann-type = critical-remark
 	source = "\\source{E}{N}"
 
-	message = "\\source{E}{N} has G\\sh, while \\source{E}{S1} and
-        \\source{E}{B} have G\\na, which is surely an
-        error. \\source{A}{1} (measure 31) has a different structure
-        here."
+	message = "\\source{E}{N} has \\textit{G}\\sh, \\source{E}{S1}
+        and \\source{E}{B} have \\textit{G}\\na\\ with no accidental
+        (surely an error). \\source{A}{1} (measure 31) has a
+        different structure here.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
+        \\source{E}{N}, \\textit{sol}\\na\\ sans accident (sûrement
+        une erreur) dans \\source{E}{S1} et
+        \\source{E}{B}. \\source{A}{1} (mesure 31) a une
+        structure différente ici.\\end{otherlanguage}"
 
 	item = Accidental
       } { <eis'' b'
 	   \tag #'crit \single \footnote #'(-1 . -1)
-	   \markup {  G\sharp or G\natural? }
+	   \markup {
+	     {\italic G}\sharp or {\italic G}\natural?
+	     \bigdot
+	     {\italic Sol}\sharp ou {\italic sol}\natural?	     
+	   }
 	   Accidental
 	   gis'
 	   
@@ -529,8 +616,12 @@
       \markup { Staccato? }
       Script
     \tag #'perf \footnote #'(-2.5 . -0.75)
-      \markup { Staccato? See the critical edition. }
-      Script
+    \markup {
+      Staccato? See the critical edition.
+      \bigdot
+      Staccato ? Voir l'édition critique.
+    }
+    Script
 
     \choice variants {
       \editorialMarkup lemma \with {
@@ -539,7 +630,14 @@
 
         message = "The chord is staccato in \\source{E}{S1} and
         \\source{E}{N}, but not in \\source{E}{B}. \\source{A}{1}
-        (measure 40) has a different structure here."
+        (measure 40) has a different structure here.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}L'accord est détaché dans
+        \\source{E}{S1} et \\source{E}{N}, mais pas dans
+        \\source{E}{B}. \\source{A}{1} (mesure 40) a une
+        structure différente ici.\\end{otherlanguage}"
 
     	item = Script
       }{
@@ -608,18 +706,32 @@
     eis''-\tag #'finger -3
 
     \tag #'crit \footnote #'(1 . 2)
-      \markup { G\sharp or G\natural? }
-      NoteHead
+    \markup {
+      {\italic G}\sharp or {\italic G}\natural?
+      \bigdot
+      {\italic Sol}\sharp ou {\italic sol}\natural?      
+    }
+    NoteHead
 
     \choice variants {
       \editorialMarkup lemma \with {
         ann-type = critical-remark
         source = "\\source{E}{N}, \\source{E}{B}"
 	    
-        message = "\\source{E}{N} and \\source{E}{B} have G\\sh, while
-        \\source{E}{S1} has G\\na\\ (with no accidental), which is
-        surely an error. The second half of measure 23 and the first
-        half of measure 24 do not occur in \\source{A}{1}."
+        message = "\\source{E}{N} and \\source{E}{B} have
+        \\textit{G}\\sh, \\source{E}{S1} has
+        \\textit{G}\\na\\ with no accidental (surely an error).
+        The second half of measure 23 and the first half of
+        measure 24 do not occur in \\source{A}{1}.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
+        \\source{E}{N} et \\source{E}{B}, \\textit{sol}\\na\\ sans
+        accident (sûrement une erreur) dans \\source{E}{S1}. La
+        seconde moitié de la mesure 23 et la première moitié de la
+        mesure 24 ne se trouvent pas dans
+        \\source{A}{1}.\\end{otherlanguage}"
 	    
         item = Accidental
       }{ gis''-\tag #'finger -4 }
@@ -940,11 +1052,20 @@
     eis,-\tag #'finger _5
 
     \tag #'crit \footnote #'(1 . -2)
-      \markup { G\sharp or G\natural? }
-      NoteHead
+    \markup {
+      {\italic G}\sharp or {\italic G}\natural?
+      \bigdot
+      {\italic Sol}\sharp or {\italic sol}\natural?      
+    }
+    NoteHead
+
     \tag #'perf \footnote #'(-1 . -3)
-      \markup { G\sharp or G\natural? See the critical edition. }
-      NoteHead
+    \markup {
+      {\italic G}\sharp or {\italic G}\natural? See the critical edition.
+      \bigdot
+      {\italic Sol}\sharp or {\italic sol}\natural? Voir l'édition critique.
+    }
+    NoteHead
 
     \choice variants {
       \editorialMarkup lemma \with {
@@ -952,8 +1073,15 @@
     	source = "\\source{A}{1}, \\source{E}{N}"
 
         message = "\\source{A}{1} (measure 3) and \\source{E}{N} have
-        G\\sh, while \\source{E}{S1} and \\source{E}{B} have
-        G\\na\\ (with no accidental)."
+        \\textit{G}\\sh, \\source{E}{S1} and \\source{E}{B} have
+        \\textit{G}\\na\\ with no accidental.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
+        \\source{A}{1} (mesure 3) et \\source{E}{N},
+        \\textit{sol}\\na\\ sans accident dans \\source{E}{S1} et
+        \\source{E}{B}.\\end{otherlanguage}"
 
     	item = Accidental
       }{
@@ -1002,7 +1130,11 @@
     b,-\tag #'finger _4 cis-\tag #'finger _2 b,-\tag #'finger _3
 
     \tag #'crit \footnote #'(0.5 . -2)
-      \markup { A\natural or A\sharp? }
+    \markup {
+      {\italic A}\natural or {\italic A}\sharp?
+      \bigdot
+      {\italic La}\natural ou {\italic la}\sharp?
+    }
     NoteHead
 
     \choice variants {
@@ -1010,10 +1142,16 @@
     	ann-type = critical-remark
     	source = "\\source{A}{1}, \\source{E}{B}"
 	
-        message = "\\source{A}{1} (measure 8) and \\source{E}{B} have
-        A\\na\ (with no accidental in \\source{A}{1}), while
-        \\source{E}{S1} and \\source{E}{N} have A\\sh\
-        (with no accidental)."
+        message = "\\textit{A}\\na\\ in \\source{A}{1} (measure 8,
+        with no accidental) and \\source{E}{B}, \\textit{A}\\sh\\ with
+        no accidental in \\source{E}{S1} and \\source{E}{N}.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{La}\\na\\ dans
+        \\source{A}{1} (mesure 8, sans accident) et \\source{E}{B},
+        \\textit{la}\\sh\\ sans accident dans \\source{E}{S1} et
+        \\source{E}{N}.\\end{otherlanguage}"
 	
     	item = NoteHead
       }{ a, }
@@ -1077,16 +1215,28 @@
     	ann-type = critical-remark
     	source = "\\source{E}{N}, \\source{E}{B}"
 	
-        message = "\\source{E}{N} and \\source{E}{B} have B, while
-        \\source{E}{S1} has G, which is surely an error. The passage
-        is different in \\source{A}{1}, but the theme occurs
-        with B in measure 16."
+        message = "\\source{E}{N} and \\source{E}{B} have \\textit{B},
+        \\source{E}{S1} has \\textit{G} (surely an error). The passage
+        is different in \\source{A}{1}, but the
+        theme occurs with \\textit{B} in measure 16.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Si} dans \\source{E}{N}
+        et \\source{E}{B}, \\textit{sol} (sûrement une erreur) dans
+        \\source{E}{S1}. Le passage est différent dans \\source{A}{1},
+        mais le thème est énoncé avec \\textit{si} dans la mesure
+        16.\\end{otherlanguage}"
 	
     	item = NoteHead
       }{
 	<b,
 	 \tag #'crit \footnote #'(-1 . -2)
-	 \markup { B or G? }
+	 \markup {
+	   {\italic B} or {\italic G}?
+	   \bigdot
+	   {\italic Si} ou {\italic sol}?
+	 }
 	 b,,
 
 	 \tag #'perf b,,
@@ -1133,18 +1283,35 @@
         message = "In \\source{A}{1} (measures 19-21) and
         \\source{E}{B}, both the ties in measure 9 continue to the
         first beat of measure 11, while in \\source{E}{S1} and
-        \\source{E}{N}, only the lower C\\sh\\ is tied between
-        measures 10 and 11."
+        \\source{E}{N}, only the lower \\textit{C}\\sh\\ is tied
+        between measures 10 and 11.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}Dans \\source{A}{1} (mesures 19
+        à 21) et \\source{E}{B}, les deux liaisons de la mesure 9
+        continuent jusqu'au premier temps de la mesure 11, alors que
+        dans \\source{E}{S1} et \\source{E}{N}, seul le
+        \\textit{do}\\sh\\ inférieur est lié entre les mesures 10 et
+        11.\\end{otherlanguage}"
 
     	item = Tie
       }{
 	<
 	  \tag #'crit \footnote #'(2 . 3)
-	  \markup { Does the upper tie continue to measure 11? }
+	  \markup {
+	    Tie?
+	    \bigdot
+	    Liaison ?
+	  }
 	  cis
 
 	  \tag #'perf \footnote #'(2 . 3)
-	  \markup { Does the upper tie continue to measure 11? See the critical edition. }
+	  \markup {
+	    Tie? See the critical edition.
+	    \bigdot
+	    Liaison ? Voir l'édition critique.
+	  }
 	  cis
 
 	  cis,
@@ -1212,10 +1379,18 @@
     bis32-\tag #'finger _5 dis'-\tag #'finger _3
 
     \tag #'crit \footnote #'(2 . -2)
-      \markup { E\natural or E\sharp? }
+      \markup {
+	{\italic E}\natural or {\italic E}\sharp?
+	\bigdot
+	{\italic Mi}\natural ou {\italic mi}\sharp ?
+      }
       Stem
     \tag #'perf \footnote #'(3 . -4)
-      \markup { E\natural or E\sharp? See the critical edition. }
+      \markup {
+	E\natural or E\sharp? See the critical edition.
+	\bigdot
+	{\italic Mi}\natural ou {\italic mi}\sharp ? Voir l'édition critique.
+      }
       Stem
 
     \choice variants {
@@ -1223,28 +1398,48 @@
 	ann-type = critical-remark
         source = "\\source{E}{S1}, \\source{E}{N}"
 
-        message = "\\source{E}{S1} and \\source{E}{N} have E\\na\\
-        (with no accidental), while \\source{E}{B} has E\\sh. The
-        corresponding passage in \\source{A}{1} (starting in measure
-        29) has neither, and has a somewhat different harmonic
-        structure.
+        message = "\\source{E}{S1} and \\source{E}{N} have
+        \\textit{E}\\na\\ with no accidental, \\source{E}{B}
+        has \\textit{E}\\sh. The corresponding passage in
+        \\source{A}{1} (starting in measure 29) has neither, and has a
+        somewhat different harmonic structure.
 
         Five diminished seventh chords descend chromatically in
         measures 13-14, and again in measures 15-16. The reading with
-        E\\na\\ here matches the E\\na\\ that occurs with the
-        corresponding chord in measure 13. On the other hand, the
-        reading with E\\sh\\ maintains a parallelism in measures
-        15-16, repeating the same ascending four-note interval
-        sequence each time (minor third, major second, minor
-        second). That same interval sequence, inverted, also appears
-        with the first, third, and fifth diminished chords in measures
-        13-14."
+        \\textit{E}\\na\\ here matches the \\textit{E}\\na\\ that
+        occurs with the corresponding chord in measure 13. On the
+        other hand, the reading with \\textit{E}\\sh\\ maintains a
+        parallelism in measures 15-16, repeating the same
+        sequence of three ascending intervals each time (minor third, major
+        second, minor second). That same interval sequence, inverted,
+        also appears with the first, third, and fifth diminished
+        chords in measures 13-14.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}
+        \\textit{Mi}\\na\\ sans accident dans \\source{E}{S1} et
+        \\source{E}{N}, \\textit{mi}\\sh\\ dans \\source{E}{B}. Le
+        passage correspondant dans \\source{A}{1} (à partir de la
+        mesure 29) n'a ni l'un ni l'autre et présente une structure
+        harmonique quelque peu différente.
+
+        Cinq accords de septième diminuée descendent de manière
+        chromatique dans les mesures 13 et 14, et encore une fois dans
+        les mesures 15 et 16. La leçon avec \\textit{mi}\\na\\ ici
+        correspond au \\textit{mi}\\na\\ qui se trouve dans l'accord
+        correspondant de la measure 13. Par contre, la leçon avec
+        \\textit{mi}\\sh\\ maintient un parallélisme dans les mesures
+        15 et 16, en répétant la même séquence de trois intervalles
+        ascendants chaque fois (une tierce mineur, un ton majeur et un
+        ton mineur). La même séquence, intervertie, se trouve avec le
+        premier, le troisième et le cinquème des accords diminués des
+        mesures 13 et 14.
+        \\end{otherlanguage}"
 	
         item = Accidental
       } {
-	% TODO: find a better way to do this.
-        \tag #'m15-lemma e'-\tag #'finger _1
-	\tag #'m15-reading eis'-\tag #'finger _1
+        e'-\tag #'finger _1
       }
       \editorialMarkup reading \with {
 	source = "\\source{E}{B}"
@@ -1260,9 +1455,12 @@
 
     ais-\tag #'finger _5 cis'-\tag #'finger _3 d'-\tag #'finger _2 e'-\tag #'finger _1
 
-
     \tag #'crit \footnote #'(2 . -2)
-      \markup { E\natural or E\sharp? }
+      \markup {
+	{\italic E}\natural or {\italic E}\sharp?
+	\bigdot
+	{\italic Mi}\natural ou {\italic mi}\sharp?	
+      }
       Stem
 
     \choice variants {
@@ -1271,8 +1469,15 @@
         source = "\\source{A}{1}, \\source{E}{B}"
 	    
         message = "\\source{A}{1} (measure 30) and \\source{E}{B} have
-        E\\na, while \\source{E}{S1} and \\source{E}{N} have E\\sh\\
-        (with no accidental)."
+        \\textit{E}\\na, \\source{E}{S1} and \\source{E}{N} have
+        \\textit{E}\\sh\\ with no accidental.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Mi}\\na\\ dans
+        \\source{A}{1} (mesure 30) et \\source{E}{B},
+        \\textit{mi}\\sh\\ sans accident \\source{E}{S1} et
+        \\source{E}{N}.\\end{otherlanguage}"
 	    
 	item = Accidental
       }{ e-\tag #'finger _5 }
@@ -1282,7 +1487,11 @@
     }
 
     \tag #'crit \footnote #'(2 . -2)
-      \markup { G\natural or G\sharp? }
+      \markup {
+	{\italic G}\natural or {\italic G}\sharp?
+	\bigdot
+	{\italic Sol}\natural ou {\italic sol}\sharp?	
+      }
       Stem
 
     \choice variants {
@@ -1291,8 +1500,15 @@
         source = "\\source{A}{1}, \\source{E}{N}, \\source{E}{B}"
 	    
         message = "\\source{A}{1} (measure 30), \\source{E}{N}, and
-        \\source{E}{B} have G\\na, while \\source{E}{S1} has G\\sh\\
-        (with no accidental)."
+        \\source{E}{B} have \\textit{G}\\na, \\source{E}{S1} has
+        \\textit{G}\\sh\\ with no accidental.
+
+        \\centerbigdot
+
+        \\begin{otherlanguage}{french}\\textit{Sol}\\na\\ dans
+        \\source{A}{1} (mesure 30), \\source{E}{N} et \\source{E}{B},
+        \\textit{sol}\\sh\\ sans accident dans
+        \\source{E}{S1}.\\end{otherlanguage}"
 	    
 	item = Accidental
       }{ g-\tag #'finger _4 }
@@ -1317,12 +1533,19 @@
     cis fis
 
     \tag #'crit \footnote #'(-1 . 1.5)
-      \markup { Redundant accidental. }
+      \markup {
+	Redundant accidental.
+	\bigdot
+	Accident superflu.
+      }
       NoteHead
 
     \criticalRemark \with {
       source = ""
-      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}."
+      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}.
+      \\bigdot\\
+      \\begin{otherlanguage}{french}Dièse superflu dans \\source{E}{S1}
+      et \\source{E}{N}.\\end{otherlanguage}"
     } gis
 
     a
@@ -1343,12 +1566,19 @@
     cis fis
 
     \tag #'crit \footnote #'(-1 . 1.5)
-      \markup { Redundant accidental. }
+      \markup {
+	Redundant accidental.
+	\bigdot
+	Accident superflu.
+      }
       NoteHead
 
     \criticalRemark \with {
       source = ""
-      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}."
+      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}.
+      \\bigdot\\
+      \\begin{otherlanguage}{french}Dièse superflu dans \\source{E}{S1}
+      et \\source{E}{N}.\\end{otherlanguage}"
     } gis
 
     a
@@ -1369,12 +1599,19 @@
     cis fis
 
     \tag #'crit \footnote #'(-1 . 1.5)
-      \markup { Redundant accidental. }
+      \markup {
+	Redundant accidental.
+	\bigdot
+	Accident superflu.
+      }
       NoteHead
 
     \criticalRemark \with {
       source = ""
-      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}."
+      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}.
+      \\bigdot\\
+      \\begin{otherlanguage}{french}Dièse superflu dans \\source{E}{S1}
+      et \\source{E}{N}.\\end{otherlanguage}"
     } gis
 
     a
@@ -1454,12 +1691,19 @@
     \stemNeutral
 
     \tag #'crit \footnote #'(1 . 2)
-      \markup { Redundant accidental. }
+      \markup {
+	Redundant accidental.
+	\bigdot
+	Accident superflu.
+      }
       NoteHead
 
     \criticalRemark \with {
       source = ""
-      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}."
+      message = "Redundant sharp in \\source{E}{S1} and \\source{E}{N}.
+      \\bigdot\\
+      \\begin{otherlanguage}{french}Dièse superflu dans \\source{E}{S1}
+      et \\source{E}{N}.\\end{otherlanguage}"
     } eis
 
     gis b d'

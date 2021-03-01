@@ -4,7 +4,7 @@
 % Packages
 
 % Languages
-\usepackage[ngerman,british]{babel}
+\usepackage[french,ngerman,british]{babel}
 \usepackage[autostyle,english=british]{csquotes}
 \usepackage[super]{nth}
 
@@ -68,15 +68,13 @@
 % The \criticalRemark command used in annotations extracted by scholarLY
 \newcommand{\criticalRemark}[1][]{%
   \pgfkeys{/ann,#1}% Parse the arguments
-  \paragraph{Measure \annMeasureNo, beat \annOurBeat}
-  \pgfkeysifdefined{source}{
-    \ifthenelse{\equal{\annSource}{}}{}{
-      \readlist\annSourceList{\annSource}
-      Preferred \ifthenelse{\equal{\annSourceListlen}{1}}{source}{sources}: \annSource.
-    }
-  }{}
+  \paragraph{\annMeasureNo, \annOurBeat}\pgfkeysifdefined{source}{\ifthenelse{\equal{\annSource}{}}{}{\readlist\annSourceList{\annSource}\annSource}}{}
   \par \annMessage
 }
+
+\newcommand{\bigdot}[0]{{\Large \textbullet}}
+
+\newcommand{\centerbigdot}[0]{\begin{center}\bigdot\end{center}}
 
 \begin{document}
 
@@ -89,19 +87,19 @@
 \begin{center}
   \fontspec{Quattrocento-Bold.ttf}{\fontsize{40}{50}\selectfont Felix Mendelssohn} \\
   \fontspec{Quattrocento-Regular.ttf}\vspace{2cm}
-  {\fontsize{32}{42}\selectfont Prelude} \\
+  {\fontsize{32}{42}\selectfont Prelude \textbullet\ Prélude} \\
   \vspace{2 cm}
   {\fontsize{24}{34}\selectfont MWV U 123} \\
   \vspace{0.5 cm}
   {\fontsize{24}{34}\selectfont Op. 104a, No. 2} \\
-  \vspace{4 cm}
-  {\Large \ifdef{\critical}{Critical Edition}{Performance Edition \ifdef{\variant}{(Variant)}{}}} \\
+  \vspace{4.6 cm}
+  {\Large \ifdef{\critical}{Critical Edition \textbullet\ Édition critique}{Performance Edition \textbullet\ Édition pratique}} \\
   \vspace{0.5 cm}
-  {\Large Edited by Benjamin Geer} \\
-  \vspace{4.75 cm}
-  {\footnotesize Version 0.3, 22 February 2021} \\
+  {\Large Edited by \textbullet\ préparée par Benjamin Geer} \\
+  \vspace{4.6 cm}
+  {\footnotesize Version 0.4, 2021-03-01} \\
   \vspace{0.1 cm}
-  {\footnotesize Copyright \copyright\ 2021 Benjamin Geer \\ \doclicenseText} \\
+  {\footnotesize Copyright \copyright\ 2021 Benjamin Geer} \\
   \vspace{0.25 cm}
   \begin{minipage}{\textwidth}
   \centering
@@ -113,7 +111,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main document content
 
-\chapter*{Preface}
+\chapter*{Preface \bigdot\ Préface}
 
 \ifdef{\critical}
   {% Text for the critical edition
@@ -123,8 +121,19 @@
       \url{https://github.com/benjamingeer/Tondauer}.} to allow
     derived editions to be made.
 
-    Performance editions based on this edition can be found on
+    A performance edition based on this edition can be found on
     the project web site, \url{https://tondauer.art}.
+
+    \centerbigdot
+
+    Cette édition critique est diffusée sous licence
+    Creative Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
+    et le code source est disponible,\footnote{Voir
+      \url{https://github.com/benjamingeer/Tondauer}.} pour
+    que des éditions dérivées puissent être réalisées.
+
+    Une édition pratique basée sur cette édition se trouve
+    sur le site Internet du projet, \url{https://tondauer.art}.
   }{% Text for the performance edition
     Footnotes in the music text point out editorial choices that are
     worth your attention, especially where you may prefer a different
@@ -138,25 +147,42 @@
       \url{https://github.com/benjamingeer/Tondauer}.} to allow
     derived editions to be made.
 
+    \centerbigdot
+
+    Les notes de base de page dans la partition signalent des choix
+    éditoriaux qui méritent votre attention, surtout dans des cas où
+    vous pourriez préférer une autre option. Vous trouverez des
+    explications de ces choix dans l'édition critique, qui est
+    disponible sur le site Internet du projet,
+    \url{https://tondauer.art}.
+
+    Cette édition pratique est diffusée sous licence Creative
+    Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
+    et le code source est disponible,\footnote{Voir
+      \url{https://github.com/benjamingeer/Tondauer}.} pour que des
+    éditions dérivées puissent être réalisées.
+
     % TODO: say something about the fingerings.
   }
 
-  \ifdef{\variant}
-    {% Text for the performance edition with a variant reading
-      This variant edition follows the Breitkopf \& Härtel edition in
-      the first beat of measure 15.
-    }{}
-
-\section*{About the Piece}
+\section*{About the Piece \bigdot\ À propos de la pièce}
 
 Mendelssohn composed this prelude in 1836, intending at first to
 include it in Op.\ 35, a set of preludes (originally études) and
 fugues. He then chose a different prelude for Op.\ 35, and this one
 was published posthumously in 1868.\autocite[188--198]{todd_2008}
 
+\centerbigdot
+
+Mendelssohn a composé ce prélude en 1836, dans un premier temps pour
+son op.\ 35, qui est un ensemble de préludes (qu'il a d'abord appelé
+des études) et de fugues. Ensuite il a préféré un autre prélude pour
+l'op.\ 35. Celui qui est présenté ici a été publié en 1868 après la
+mort du compositeur.
+
 \ifdef{\critical}
   {% Text for the critical edition
-    \section*{Methodology and Sources}
+    \section*{Methodology \bigdot\ Méthodologie}
 
     Mendelssohn wrote two versions of the piece, \source{V}{1} and
     \source{V}{2}. Like most other editions, this one presents
@@ -178,8 +204,8 @@ was published posthumously in 1868.\autocite[188--198]{todd_2008}
       published in Leipzig by Bartholf Senff in 1868. It also gives
       the date of the composition as 12 October 1836.
     \item[\source{E}{N}] The first English edition of
-      \source{V}{2},\footnote{Bodleian Library, Oxford, shelfmark Deneke 256 (15).} published in London by Novello
-      in 1868.
+      \source{V}{2},\footnote{Bodleian Library, Oxford, shelfmark
+        Deneke 256 (15).} published in London by Novello in 1868.
     \item[\source{E}{S2}] A later Senff
       edition,\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
           zu Berlin\end{otherlanguage}, shelfmark N.Mus. 5419-1.}
@@ -190,7 +216,8 @@ was published posthumously in 1868.\autocite[188--198]{todd_2008}
       works, published between 1874 and 1877.
     \end{description}
 
-    Digital facsimiles of these can be found at \url{https://tondauer.art}.
+    Digital facsimiles of these can be found at
+    \url{https://tondauer.art}.
 
     \source{E}{S1} and \source{E}{N} were coordinated editions (each
     mentions the other publisher), but are not identical;
@@ -209,9 +236,9 @@ was published posthumously in 1868.\autocite[188--198]{todd_2008}
     emendations from the other editions where they agree with
     \source{A}{1}. This approach gives considerable weight to
     \source{A}{1}, since it is the only available autograph, at the
-    risk of undoing changes that Mendelssohn made in \source{A}{2}.
-    I have also followed the emendation in \source{E}{N} and
-    \source{E}{B} for what appears to be an error in measure 7, and
+    risk of undoing changes that Mendelssohn made in \source{A}{2}.  I
+    have also followed the emendation in \source{E}{N} and
+    \source{E}{B} for what apears to be an error in measure 7, and
     supplied accidentals that are clearly missing. All these choices
     are detailed below under \nameref{sec:comments}.
 
@@ -219,53 +246,174 @@ was published posthumously in 1868.\autocite[188--198]{todd_2008}
     to \source{A}{2}. Or one could take a different approach and
     accept, for example, \source{E}{B}'s reading in the first beat of
     measure 15, on the grounds of musical plausibility.
+
+    \centerbigdot
+
+    \begin{otherlanguage}{french}
+    Mendelssohn a écrit deux versions de cette pièce~: \source{V}{1} et
+    \source{V}{2}. Comme la plupart des autres éditions, celle-ci présente
+    \source{V}{2}. Aucun autographe (\source{A}{2}) ou copie d'éditeur
+    de \source{V}{2} a été trouvé.\footnote{Je suis reconnaissant au
+      Dr. R. Larry Todd pour ce renseignement.} J'ai utilisé les sources
+    suivantes :
     
-    \section*{Comments}
+    \begin{description}
+    \item[\source{A}{1}] L'autographe de
+      \source{V}{1},\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+          zu Berlin\end{otherlanguage}, cote
+          Mus.ms.autogr. Mendelssohn Bartholdy, F. 28,
+          \url{http://resolver.staatsbibliothek-berlin.de/SBB0001F9E700000315}.}
+      daté du 12 octobre 1836.
+    \item[\source{E}{S1}] La première édition allemande de
+      \source{V}{2},\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+          zu Berlin\end{otherlanguage}, \foreignlanguage{french}{cote} N.Mus. 5420-1.}
+      publiée à Leipzig par Bartholf Senff en 1868. La composition y est également
+      datée du 12 octobre 1836.
+    \item[\source{E}{N}] La première édition anglaise de
+      \source{V}{2},\footnote{Bodleian Library, Oxford, \foreignlanguage{french}{cote}
+        Deneke 256 (15).} publiée à Londres par Novello en 1868.
+    \item[\source{E}{S2}] Une édition Senff
+      ultérieure,\footnote{\begin{otherlanguage}{ngerman}Staatsbibliothek
+      zu Berlin\end{otherlanguage}, \foreignlanguage{french}{cote} N.Mus. 5419-1.}
+      publiée en 1875 environ. Elle est identique à \source{E}{S1}.
+    \item[\source{E}{B}] L'édition Breitkopf \& Härtel de
+      \source{V}{2},\footnote{\url{https://imslp.org/wiki/Special:ReverseLookup/109142}}
+      qui fait partie d'une édition revue et corrigée des \oe uvres de Mendelssohn,
+      publiée entre 1874 et 1877.
+    \end{description}
+
+    Des fac-similés numériques de ces sources se trouve sur le site
+    \url{https://tondauer.art}.
+
+    Les éditions \source{E}{S1} and \source{E}{N} ont été coordinées
+    (chacune mentionne l'autre éditeur), mais ne sont pas identiques~:
+    \source{E}{N} apporte plusieurs corrections. Plusieurs d'entre
+    elles, ainsi que bien d'autres, se trouvent dans \source{E}{B}.
+
+    Il est certain que \source{E}{S1} contient des erreurs. Mais il
+    est possible que seuls les éditeurs de \source{E}{S1} aient eu
+    accès aux autographes, et que les variantes présentes dans les
+    autres éditions soient des conjectures. De plus, il est
+    vraisemblable que Mendelssohn a laissé \source{A}{2} inachevé
+    (voir \nameref{sec:analysis}) et que \source{E}{S1} ne fait que
+    reproduire les erreurs de cet autographe.
+
+    J'ai pris \source{E}{S1} comme point de départ. Là où les autres
+    éditions présentent des leçons qui ne s'accordent pas avec
+    \source{E}{S1}, j'ai préféré les leçons qui sont également
+    présentes dans \source{A}{1}. Cela accorde un poids considérable
+    à \source{A}{1}, parce que c'est le seul autographe disponible, au
+    risque de ne pas tenir compte de modifications que Mendelssohn a
+    pu apporter dans \source{A}{2}.  J'ai aussi accepté la correction,
+    dans \source{E}{N} et \source{E}{B}, de ce qui semble être une
+    erreur dans la mesure 7. J'ai également ajouté des accidents qui
+    sont clairement nécessaires. Tous ces choix sont notés ci-dessous
+    dans la section \nameref{sec:comments}.
+
+    On pourrait accorder plus d'autorité à \source{E}{S1}, étant donné
+    sa proximité à \source{A}{2}. Ou bien on pourrait suivre une autre
+    logique et accepter, par exemple, la leçon de \source{E}{B} au
+    premier temps de la mesure 15, au nom de sa plausibilité musicale.
+    \end{otherlanguage}
+    
+    \section*{Comments \bigdot\ \foreignlanguage{french}{Remarques}}
     \label{sec:comments}
 
-    Each comment corresponds to a footnote in the music text.
+    Each comment corresponds to a footnote in the music text. The
+    numbers preceding a comment identify the measure and beat that
+    it refers to.  These are followed by the identifiers of the
+    sources, if any, that contain the preferred reading.
+    
+    \centerbigdot
+
+    \begin{otherlanguage}{french}
+      Chaque remarque correspond à une note de bas de page dans la
+      partition. Les numêros précédant une remarque identifient la
+      mesure et le temps auxquels elle se réfère. Ceux-ci sont suivis,
+      le cas échéant, par les identifiants des sources présentant la
+      leçon préférée.
+    \end{otherlanguage}
 
     \input{critical-print-score.annotations.inp}
 
-    \section*{Analysis}
+    \section*{Analysis \bigdot\ Analyse}
     \label{sec:analysis}
 
     In the process of transforming \source{V}{1} into \source{V}{2},
-    Mendelssohn halved the note values throughout, and thus combined
-    every two measures into one. Some of the problems with accidentals
-    in \source{E}{S1} seem likely to have resulted from incomplete
-    proofreading of the second half of each measure after this
-    change.
+    Mendelssohn halved the note values throughout and removed half of
+    the bar lines. Some of the problems with accidentals in
+    \source{E}{S1} seem likely to have resulted from incomplete
+    proofreading of the second half of each measure after this change.
 
     For example, in measure 8 of \source{A}{1}, the last note in the
-    lower staff is A\na. There it did not need a natural sign, but it
-    needed one after the preceding bar line was removed to form
-    measure 4 of \source{V}{2}; the natural sign is missing in
-    \source{E}{S1}. The same is true of the E\na\ notes in measure 26 of
-    \source{A}{1}, which are in the third beat of measure 13 of
-    \source{V}{2}, and the E\na\ in measure 30 of \source{A}{1},
-    which is in the third beat of measure 15 in
+    lower staff is \textit{A}\na. There it did not need a natural
+    sign, but it needed one after the preceding bar line was removed
+    to form measure 4 of \source{V}{2}; the natural sign is missing in
+    \source{E}{S1}. The same is true of the \textit{E}\na\ notes in
+    measure 26 of \source{A}{1}, which are in the third beat of
+    measure 13 of \source{V}{2}, and the \textit{E}\na\ in measure 30
+    of \source{A}{1}, which is in the third beat of measure 15 in
     \source{V}{2}.
+    
+    Moreover, in measure 30 of \source{A}{1}, the first
+    \textit{G}\na\ in the lower staff has a cautionary accidental, but
+    in \source{V}{2} it has been changed to another note. A natural
+    sign therefore needs to be added to the subsequent
+    \textit{G}\na\ to cancel the sharp earlier in the measure, but it
+    is missing in \source{E}{S1}.
 
-    Moreover, in measure 30 of \source{A}{1}, the first G\na\ in the
-    lower staff has a cautionary accidental, but in \source{V}{2} it
-    has been changed to another note. A natural sign therefore needs
-    to be added to the subsequent G\na\ to cancel the sharp earlier in
-    the measure, but it is missing in \source{E}{S1}.
-
-    The redundant sharp on the E\sh\ in the third beat of measure 12
-    in \source{E}{S1} seems to be another sign of this process; it was
-    probably left there after being needed in measure 24 of
-    \source{A}{1}. The same goes for the redundant sharp on the
-    G\sh\ in the third beats of measures 16, 17, and 18, and the one
-    on the E\sh\ in the third beat of measure 23.
+    The redundant sharp on the \textit{E}\sh\ in the third beat of
+    measure 12 in \source{E}{S1} seems to be another sign of this
+    process; it was probably left there after being needed in measure
+    24 of \source{A}{1}. The same goes for the redundant sharp on the
+    \textit{G}\sh\ in the third beats of measures 16, 17, and 18, and
+    the one on the \textit{E}\sh\ in the third beat of measure 23.
 
     Perhaps Mendelssohn decided not to use this prelude in Op.\ 35
     before completing the proofreading of \source{A}{2}, and therefore
     left the manuscript in an unfinished state, with errors that were
     then reproduced in \source{E}{S1}.
-  }
-  {}
+
+    \centerbigdot
+
+    En transformant \source{V}{1} en \source{V}{2}, Mendelssohn a
+    divisé les durées par deux et supprimé la moitié des barres de
+    mesure. Certains problèmes concernant les accidents dans
+    \source{E}{S1} ont vraisemblablement résulté d'une relecture
+    inachevée de la seconde moitié de chaque mesure après ce
+    remaniement.
+
+    Par exemple, dans la mesure 8 de \source{A}{1}, la dernière note
+    de la portée inférieure est \textit{la}\na. Un bécarre, dont la
+    note n'a pas besoin à cet endroit-là, est devenu nécessaire après
+    que la barre de mesure précédente a été supprimée pour former la
+    mesure 4 de \source{V}{2}, or ce bécarre manque dans
+    \source{E}{S1}. Il en va de même pour les \textit{mi}\na\ de la
+    mesure 26 de \source{A}{1}, qui se trouvent au troisième temps de
+    la mesure 13 de \source{V}{2}, ainsi que pour le \textit{mi}\na\ de la
+    mesure 30 de \source{A}{1}, qui se trouve au troisième temps de la
+    mesure 15 dans \source{V}{2}.
+
+    D'ailleurs, dans la mesure 30 de \source{A}{1}, il y a une
+    altération de précaution devant le premier \textit{sol}\na\ de la
+    portée inférieure, mais dans \source{V}{2} il y a une note différente à
+    cet endroit-là. Un bécarre doit donc être ajouté devant le
+    \textit{sol}\na\ suivant pour annuler le dièse précédent, mais ce
+    bécarre manque dans \source{E}{S1}.
+
+    Le dièse superflu devant le \textit{mi}\sh\ du troisième temps de
+    la mesure 12 dans \source{E}{S1} semble être encore un effet de ce
+    processus.  Il y est probablement resté parce qu'il était
+    necessaire dans la mesure 24 de \source{A}{1}. Il en va de même
+    pour le dièse superflu devant le \textit{sol}\sh\ du troisième
+    temps des mesures 16, 17 et 18, ainsi que celui devant le
+    \textit{mi}\sh\ du troisième temps de la mesure 23.
+    
+    Il se peut que Mendelssohn ait decidé de ne pas inclure ce prélude
+    dans l'op.\ 35 avant de terminer la relecture d'\source{A}{2}, et
+    qu'il ait donc laissé le manuscrit inachevé, sans avoir corrigé
+    des erreurs que \source{E}{S1} a reproduit par la suite.
+  } {}
 
 \raggedbottom
 
@@ -283,8 +431,6 @@ was published posthumously in 1868.\autocite[188--198]{todd_2008}
 
 % The PDF score rendered by LilyPond
 \ifdef{\performance}
-  {\ifdef{\variant}
-    {\includepdf[pages=-]{performance-print-score-variant.pdf}}
-    {\includepdf[pages=-]{performance-print-score.pdf}}}
-  {\includepdf[pages=-]{critical-print-score.pdf}}
+      {\includepdf[pages=-]{performance-print-score.pdf}}
+      {\includepdf[pages=-]{critical-print-score.pdf}}
 \end{document}
