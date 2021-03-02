@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tondauer</title>
-    <link>/</link>
+    <link>https://tondauer.art/</link>
     <description>Recent content on Tondauer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>[CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en) Copyright © 2021 by Benjamin Geer</copyright>
-    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tondauer.art/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About This Site</title>
-      <link>/about-this-site/</link>
+      <link>https://tondauer.art/about-this-site/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/about-this-site/</guid>
+      <guid>https://tondauer.art/about-this-site/</guid>
       <description>This is a project to provide Creative Commons licensed musical editions. For each piece, there is:
  A critical edition, including facsimiles of sources. A performance edition based on the critical edition. The source code of these editions, so that derived editions can be made.  Contact: Benjamin Geer, ben@benjamingeer.name</description>
     </item>
     
     <item>
       <title>Felix Mendelssohn, Prelude Op. 104a, No. 2 (MWV U 123)</title>
-      <link>/2021/03/mendelssohn-prelude-mwv-u-123/</link>
+      <link>https://tondauer.art/2021/03/mendelssohn-prelude-mwv-u-123/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/2021/03/mendelssohn-prelude-mwv-u-123/</guid>
+      <guid>https://tondauer.art/2021/03/mendelssohn-prelude-mwv-u-123/</guid>
       <description>Editions  Critical edition (PDF) Performance edition (PDF)  Facsimiles of sources:  A1 (Staatsbibliothek zu Berlin). Shelfmark Mus.ms.autogr. Mendelssohn Bartholdy, F. 28. Copyright © 2020 Staatsbibliothek zu Berlin. This reproduction is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. ES1 (Staatsbibliothek zu Berlin). Shelfmark N.Mus. 5420-1. Copyright © 2020 Staatsbibliothek zu Berlin. This reproduction is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. EN (Bodleian Libraries, University of Oxford).</description>
     </item>
     
