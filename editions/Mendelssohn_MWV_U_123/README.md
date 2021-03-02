@@ -40,7 +40,7 @@ sudo apt install texlive-full
 
 ## Building
 
-To build all the editions:
+To build the editions:
 
 ```
 make
