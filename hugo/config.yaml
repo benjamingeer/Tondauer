@@ -1,4 +1,4 @@
-baseURL: https://tondauer.art
+baseURL: https://tondauer.art/
 theme:
   - custom
   - bootstrap4-blog
