@@ -1,0 +1,3 @@
+[submodule "hugo/themes/bootstrap4-blog"]
+	path = hugo/themes/bootstrap4-blog
+	url = git@github.com:alanorth/hugo-theme-bootstrap4-blog.git

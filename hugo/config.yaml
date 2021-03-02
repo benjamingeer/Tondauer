@@ -1,0 +1,43 @@
+theme:
+  - custom
+  - bootstrap4-blog
+DefaultContentLanguage: en
+paginate: 5
+
+copyright: "[CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en) Copyright © 2021 by Benjamin Geer"
+
+permalinks:
+  posts: "/:year/:month/:slug/"
+  page: "/:slug/"
+  /: "/:slug/"
+
+languages:
+  en:
+    languageCode: en
+    contentDir: content/en
+    languageName: English
+    title: Tondauer
+    weight: 1
+    params:
+      description: open musical editions
+    menu:
+      navbar:
+        - name: "About This Site"
+          url: "/about-this-site/"
+          weight: 1
+  fr:
+    languageCode: fr
+    contentDir: content/fr
+    languageName: Français
+    title: Tondauer
+    weight: 2
+    params:
+      description: éditions musicales libres
+    menu:
+      navbar:
+        - name: "À propos de ce site"
+          url: "/a-propos-de-ce-site/"
+          weight: 1
+          
+params:
+  date_format: "2006-01-02"

@@ -1,0 +1,8 @@
+$primary: #3254a8;
+
+$theme-colors: (
+  "primary": #3254a8,
+);
+
+@import '../bootstrap4-blog/source/scss/bootstrap';
+@import 'source/scss/main';

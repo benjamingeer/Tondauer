@@ -27,7 +27,7 @@ $(PERFORMANCE_PRINT_EDITION): book.tex performance-print-score.pdf
 	$(LATEX_CMD) -jobname=$(basename $(PERFORMANCE_PRINT_EDITION)) '\def\performance{}\input{book}'
 
 install: $(CRITICAL_PRINT_EDITION) $(PERFORMANCE_PRINT_EDITION)
-	cp $(CRITICAL_PRINT_EDITION) $(PERFORMANCE_PRINT_EDITION) ../../../docs/editions/Mendelssohn_MWV_U_123/print/
+	cp $(CRITICAL_PRINT_EDITION) $(PERFORMANCE_PRINT_EDITION) ../../../hugo/static/editions/
 
 clean:
 	rm -f *.pdf *.log *.out *.aux *.bcf *.bbl *.run.xml *.blg *.svg *.inp *~
