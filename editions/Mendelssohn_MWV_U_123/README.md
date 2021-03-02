@@ -1,4 +1,4 @@
-# Print editions
+# Felix Mendelssohn, Prelude Op. 104a, No. 2 (MWV U 123)
 
 The source code in this directory uses
 [LilyPond](https://lilypond.org) and
@@ -7,11 +7,10 @@ different print editions from the same score:
 
 - A critical edition
 - A performance edition
-- A performance edition with a variant reading
 
 ## Requirements
 
-I have only got this working on Ubuntu Linux.
+The following works with Ubuntu 20.10.
 
 ### LilyPond
 
