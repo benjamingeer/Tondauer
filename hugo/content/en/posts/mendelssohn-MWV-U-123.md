@@ -7,7 +7,7 @@ slug: mendelssohn-prelude-MWV-U-123
 categories:
   - Editions
 tags:
-  - Mendelssohn
+  - Mendelssohn, Felix
 ---
 
 ## Editions
