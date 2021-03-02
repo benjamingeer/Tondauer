@@ -47,7 +47,7 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="nav blog-nav">
-          <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL | absLangURL }}">{{ i18n "home" }}</a>
+          <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL }}">{{ i18n "home" }}</a>
           {{- $currentPage := . -}}
           {{ range .Site.Menus.navbar }}
           <a class="nav-link{{ if eq .ConfiguredURL $currentPage.RelPermalink }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a>
