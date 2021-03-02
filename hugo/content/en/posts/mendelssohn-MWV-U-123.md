@@ -15,7 +15,7 @@ tags:
 - [Critical edition](/editions/Mendelssohn_MWV_U_123_Critical_Edition.pdf) (PDF)
 - [Performance edition](/editions/Mendelssohn_MWV_U_123_Performance_Edition.pdf) (PDF)
 
-## Facsimiles of sources:
+## Facsimiles of Sources
 
 - [**A1** (Staatsbibliothek zu
   Berlin)](/facsimiles/Mendelssohn-MWV-U-123-A1-SBB.pdf). Shelfmark
@@ -42,3 +42,7 @@ tags:
 - [**EB**
   (IMSLP)](/facsimiles/Mendelssohn-MWV-U-123-Breitkopf-IMSLP.pdf). This
   reproduction is in the public domain.
+
+## Source Code
+
+[Source code on GitHub](https://github.com/benjamingeer/Tondauer/tree/master/editions/Mendelssohn_MWV_U_123/print)
