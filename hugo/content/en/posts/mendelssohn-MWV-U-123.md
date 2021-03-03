@@ -42,7 +42,7 @@ Licence](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
   Libraries, University of Oxford. This reproduction is licensed under
   a Creative Commons [Attribution-NonCommercial-ShareAlike 4.0
   International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
-  license].
+  license.
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-S2-SBB.pdf"
   target="_blank">**E<sub>S2</sub>** (Staatsbibliothek zu
   Berlin</a>. Shelfmark N.Mus. 5419-1. Copyright © 2020
