@@ -42,3 +42,8 @@ languages:
           
 params:
   date_format: "2006-01-02"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
