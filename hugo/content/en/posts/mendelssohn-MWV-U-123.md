@@ -27,28 +27,28 @@ Licence](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
   F. 28. Copyright © 2020 Staatsbibliothek zu Berlin. This
   reproduction is licensed under a Creative Commons
   [Attribution-NonCommercial-ShareAlike 4.0
-  International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+  International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
   license.
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-S1-SBB.pdf"
   target="_blank">**E<sub>S1</sub>** (Staatsbibliothek zu
   Berlin)</a>. Shelfmark N.Mus. 5420-1. Copyright © 2020
   Staatsbibliothek zu Berlin. This reproduction is licensed under a
   Creative Commons [Attribution-NonCommercial-ShareAlike 4.0
-  International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+  International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
   license.
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-N-Oxford.pdf"
   target="_blank">**E<sub>N</sub>** (Bodleian Libraries, University of
   Oxford</a>. Shelfmark Deneke 256 (15). Copyright © 2020 Bodleian
   Libraries, University of Oxford. This reproduction is licensed under
   a Creative Commons [Attribution-NonCommercial-ShareAlike 4.0
-  International(http://creativecommons.org/licenses/by-nc-sa/4.0/)
+  International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
   license].
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-S2-SBB.pdf"
   target="_blank">**E<sub>S2</sub>** (Staatsbibliothek zu
   Berlin</a>. Shelfmark N.Mus. 5419-1. Copyright © 2020
   Staatsbibliothek zu Berlin. This reproduction is licensed under a
   Creative Commons [Attribution-NonCommercial-ShareAlike 4.0
-  International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+  International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
   license.
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-Breitkopf-IMSLP.pdf"
   target="_blank">**E<sub>B</sub>** (IMSLP)</a>. This reproduction is
