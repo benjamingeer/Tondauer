@@ -26,29 +26,29 @@ International (CC BY-SA
   target="_blank">**A<sub>1</sub>** (Staatsbibliothek zu
   Berlin)</a>. Cote Mus.ms.autogr. Mendelssohn Bartholdy,
   F. 28. Copyright © 2020 Staatsbibliothek zu Berlin. Cette
-  reproduction est diffusée sous une [Licence Creative Commons
-  Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes
-  Conditions 4.0
+  reproduction est diffusée sous une licence Creative Commons
+  [Attribution - Pas d’Utilisation Commerciale - Partage dans les
+  Mêmes Conditions 4.0
   International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-S1-SBB.pdf"
   target="_blank">**E<sub>S1</sub>** (Staatsbibliothek zu
   Berlin)</a>. Cote N.Mus. 5420-1. Copyright © 2020 Staatsbibliothek
-  zu Berlin. Cette reproduction est diffusée sous une [Licence
-  Creative Commons Attribution - Pas d’Utilisation Commerciale -
-  Partage dans les Mêmes Conditions 4.0
+  zu Berlin. Cette reproduction est diffusée sous une licence Creative
+  Commons [Attribution - Pas d’Utilisation Commerciale - Partage dans
+  les Mêmes Conditions 4.0
   International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-N-Oxford.pdf"
   target="_blank">**E<sub>N</sub>** (Bodleian Libraries, University of
   Oxford)</a>. Cote Deneke 256 (15). Copyright © 2020 Bodleian
   Libraries, University of Oxford. Cette reproduction est diffusée
-  sous une [Licence Creative Commons Attribution - Pas d’Utilisation
+  sous une licence Creative Commons [Attribution - Pas d’Utilisation
   Commerciale - Partage dans les Mêmes Conditions 4.0
   International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-S2-SBB.pdf"
   target="_blank">**E<sub>S2</sub>** (Staatsbibliothek zu
   Berlin)</a>. Cote N.Mus. 5419-1. Copyright © 2020 Staatsbibliothek
-  zu Berlin.  Cette reproduction est diffusée sous une [Licence
-  Creative Commons Attribution - Pas d’Utilisation Commerciale -
+  zu Berlin.  Cette reproduction est diffusée sous une licence
+  Creative Commons [Attribution - Pas d’Utilisation Commerciale -
   Partage dans les Mêmes Conditions 4.0
   International](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr).
 - <a href="/facsimiles/Mendelssohn-MWV-U-123-Breitkopf-IMSLP.pdf"
