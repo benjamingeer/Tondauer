@@ -12,8 +12,8 @@ tags:
 
 ## Éditions
 
-Préparées par Benjamin Geer. Diffusées sous une [Licence Creative
-Commons Attribution - Partage dans les Mêmes Conditions 4.0
+Préparées par Benjamin Geer. Diffusées sous une licence Creative
+Commons [Attribution - Partage dans les Mêmes Conditions 4.0
 International (CC BY-SA
 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
 
