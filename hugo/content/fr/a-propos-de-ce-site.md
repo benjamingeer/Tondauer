@@ -8,7 +8,9 @@ translationKey: about-this-site
 ---
 
 Ce projet offre des éditions musicales diffusées sous licence
-Creative Commons. Pour chaque pièce il y a :
+[Creative
+Commons](https://creativecommons.org/licenses/?lang=fr). Pour chaque
+pièce il y a :
 
 - Une édition critique comprenant des fac-similés des sources.
 - Une édition pratique basée sur l'édition critique.

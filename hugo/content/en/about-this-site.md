@@ -7,7 +7,8 @@ slug: about-this-site
 translationKey: about-this-site
 ---
 
-This is a project to provide Creative Commons licensed musical
+This is a project to provide [Creative
+Commons](https://creativecommons.org/licenses/) licensed musical
 editions. For each piece, there is:
 
 - A critical edition, including facsimiles of sources.
