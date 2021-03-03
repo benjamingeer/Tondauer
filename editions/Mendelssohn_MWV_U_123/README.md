@@ -3,7 +3,7 @@
 The source code in this directory uses
 [LilyPond](https://lilypond.org) and
 [LaTeX](https://www.latex-project.org/) to render
-different print editions from the same score:
+different editions from the same score:
 
 - A critical edition
 - A performance edition
