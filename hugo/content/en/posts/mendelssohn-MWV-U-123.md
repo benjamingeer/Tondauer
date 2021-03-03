@@ -12,6 +12,10 @@ tags:
 
 ## Editions
 
+Edited by Benjamin Geer. Distributed under a [Creative Commons
+Attribution-ShareAlike 4.0 International
+Licence](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+
 - <a href="/editions/Mendelssohn_MWV_U_123_Critical_Edition.pdf" target="_blank">Critical edition</a> (PDF)
 - <a href="/editions/Mendelssohn_MWV_U_123_Performance_Edition.pdf" target="_blank">Performance edition</a> (PDF)
 
