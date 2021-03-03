@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://tondauer.art/about-this-site/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
@@ -15,9 +14,7 @@
                 hreflang="en"
                 href="https://tondauer.art/about-this-site/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/categories/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -30,14 +27,10 @@
                 hreflang="en"
                 href="https://tondauer.art/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/categories/editions/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/2021/03/mendelssohn-prelude-mwv-u-123/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -50,9 +43,7 @@
                 hreflang="en"
                 href="https://tondauer.art/2021/03/mendelssohn-prelude-mwv-u-123/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/tags/mendelssohn-felix/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -65,9 +56,7 @@
                 hreflang="en"
                 href="https://tondauer.art/tags/mendelssohn-felix/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/posts/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -80,9 +69,7 @@
                 hreflang="en"
                 href="https://tondauer.art/posts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/tags/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -95,9 +82,7 @@
                 hreflang="en"
                 href="https://tondauer.art/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://tondauer.art/</loc>
     <lastmod>2021-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -111,5 +96,4 @@
                 href="https://tondauer.art/"
                 />
   </url>
-  
 </urlset>
