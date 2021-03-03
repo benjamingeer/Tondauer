@@ -14,8 +14,7 @@ tags:
 
 Préparées par Benjamin Geer. Diffusées sous une licence Creative
 Commons [Attribution - Partage dans les Mêmes Conditions 4.0
-International (CC BY-SA
-4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+International](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
 
 - <a href="/editions/Mendelssohn_MWV_U_123_Critical_Edition.pdf" target="_blank">Édition critique</a> (PDF)
 - <a href="/editions/Mendelssohn_MWV_U_123_Performance_Edition.pdf" target="_blank">Édition pratique</a> (PDF)
