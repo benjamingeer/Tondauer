@@ -17,4 +17,4 @@ pièce il y a :
 - [Le code source de ces éditions](https://github.com/benjamingeer/Tondauer/), pour que des
   éditions dérivées puissent être réalisées.
 
-Contact: Benjamin Geer, [ben@benjamingeer.name](mailto:ben@benjamingeer.name)
+Contact: [Benjamin Geer](https://benjamingeer.name)

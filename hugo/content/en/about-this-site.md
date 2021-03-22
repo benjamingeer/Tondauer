@@ -16,4 +16,4 @@ editions. For each piece, there is:
 - [The source code of these editions](https://github.com/benjamingeer/Tondauer/),
   so that derived editions can be made.
 
-Contact: Benjamin Geer, [ben@benjamingeer.name](mailto:ben@benjamingeer.name)
+Contact: [Benjamin Geer](https://benjamingeer.name)
