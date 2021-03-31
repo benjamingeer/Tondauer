@@ -41,8 +41,8 @@ parti de son travail en suivant des démarches adifférentes :
 En même temps, les musiciens ont aussi besoin d'éditions pratiques
 destinées à l'interprétation plutôt qu'à la recherche.
 
-Ce projet offre des éditions musicales diffusées sous licence
-[Creative
+Tondauer est un projet qui propose des éditions musicales diffusées
+sous licence [Creative
 Commons](https://creativecommons.org/licenses/?lang=fr). Pour chaque
 pièce il y a :
 
