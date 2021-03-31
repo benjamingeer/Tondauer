@@ -7,14 +7,64 @@ slug: a-propos-de-ce-site
 translationKey: about-this-site
 ---
 
+> « Beaucoup de musiciens ... ne sont pas conscients de l'importance
+> du choix d'une édition et ne savent ni comment faire un bon choix,
+> ni sur quels critères l'éditeur a pu baser ses décisions. »[^Rink]
+
+> « Par contre, beaucoup de musiciens ... voulait connaître les
+> alternatives, les versions ... ils voulaient façonner leur propre
+> texte musical et en être responsables. »[^Urchueguía]
+
+Les musiciens ont donc besoin d'éditions *transparentes* leur
+permettant de vérifier les choix de l'éditeur et d'identifer les cas
+où d'autres choix sont possibles. L'idéal de la transparence a été
+développé pour des éditions littéraires dans les
+années 1970. L'édition de Francfort des œuvres de Hölderlin a présenté
+en 1975 :
+
+> « un texte génétique synoptique et un texte de lecture avec des
+> fac-similés des manuscrits accompagnées de transcriptions ayant la
+> même mise en page... Les fac-similés et les transcriptions sont un
+> outil permettant au lecteur de vérifier, dans une certaine mesure,
+> le travail de l'éditeur. »[^Nutt-Kofoth]
+
+En fournissant tout ce qu'il faut pour reproduire chaque étape de la
+préparation de l'édition, l'éditeur peut permettre à d'autres de tirer
+parti de son travail en suivant des démarches adifférentes :
+
+> « Dans une édition critique libre, on ne présente pas simplement un
+> travail achevé. On diffuse aussi les données de base, la tradition
+> savante et le processus de prise de décisions, ainsi que les outils
+> et les applications qui ont été utilisés pour arriver aux
+> conclusions. »[^Bodard]
+
+En même temps, les musiciens ont aussi besoin d'éditions pratiques
+destinées à l'interprétation plutôt qu'à la recherche.
+
 Ce projet offre des éditions musicales diffusées sous licence
 [Creative
 Commons](https://creativecommons.org/licenses/?lang=fr). Pour chaque
 pièce il y a :
 
 - Une édition critique comprenant des fac-similés des sources.
-- Une édition pratique basée sur l'édition critique.
-- [Le code source de ces éditions](https://github.com/benjamingeer/Tondauer/), pour que des
+- Une édition pratique basée sur l'édition critique, comprenant des
+  notes qui renvoient à l'édition critique là où il y a des choix
+  éditoriaux qui sont particulièrement susceptibles d'intéresser le
+  musicien.
+- [Le code source de ces
+  éditions](https://github.com/benjamingeer/Tondauer/), pour que des
   éditions dérivées puissent être réalisées.
 
 Contact: [Benjamin Geer](https://benjamingeer.name)
+
+[^Rink]: John Rink, [Digital Editions and the Creative Work of the
+    Performer](https://doi.org/10.1017/S1479409819000673)
+[^Urchueguía]: Cristina Urchueguía, [Critical Editing of Music and
+    Interpretation: Critical Editions for Critical
+    Musicians?](https://www.jstor.org/stable/30227962)
+[^Nutt-Kofoth]: Rüdiger Nutt-Kofoth, [Variations in Understanding
+    Variants: (Hidden) Concepts of Text in German Critical
+    Editions](https://doi.org/10.4000/variants.343)
+[^Bodard]: Gabriel Bodard and Juan Garcés, [Open Source Critical
+    editions: A
+    Rationale](https://blog.stoa.org/files/2010/09/Bodard-Garces_2009_Open-source-digital-editions.pdf)
