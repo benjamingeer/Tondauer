@@ -63,8 +63,8 @@
     
     <d''-\tag #'finger -5 d'>4
     
-    <cis''-\tag #'finger -4 cis'>8[
-    <ais'-\tag #'finger -3 ais>8
+    <cis''-\tag #'finger ^4-\tag #'finger ^5 cis'>8[
+    <ais'-\tag #'finger ^3-\tag #'finger ^4 ais>8
 
     <b'-\tag #'finger -5 b>8]
 
@@ -121,7 +121,7 @@
     bis''-\tag #'finger -5 a''-\tag #'finger -4 fis''-\tag #'finger -3 dis''-\tag #'finger -2
 
     b''-\tag #'finger -5 gis''-\tag #'finger -3 eis''-\tag #'finger -2 d''-\tag #'finger -1
-    ais''-\tag #'finger -4 g''-\tag #'finger -3 e''-\tag #'finger -1 cis''-\tag #'finger -2
+    ais''-\tag #'finger ^4 g''-\tag #'finger -3 e''-\tag #'finger -2 cis''-\tag #'finger -1
 
     a''-\tag #'finger -5 fis''-\tag #'finger -3 dis''-\tag #'finger -2 bis'-\tag #'finger -1
     gis''-\tag #'finger -4 eis''-\tag #'finger -3 d''-\tag #'finger -2 b'-\tag #'finger -1
@@ -131,7 +131,7 @@
 
     | % Up M10
 
-    dis''32-\tag #'finger -4 bis'-\tag #'finger -3 a'-\tag #'finger -1 fis'-\tag #'finger -2
+    dis''32-\tag #'finger -4 bis'-\tag #'finger -3 a'-\tag #'finger -2 fis'-\tag #'finger -1
     bis'-\tag #'finger -5 a'-\tag #'finger -4 fis'-\tag #'finger -3
 
     \tag #'crit \footnote #'(1 . -2.5) \markup {
@@ -175,11 +175,11 @@
       }
       \\
       {
-	cis'32-\tag #'finger ^4 a-\tag #'finger ^1 gis-\tag #'finger ^3 fis-\tag #'finger ^2
+	cis'32-\tag #'finger ^5 a-\tag #'finger ^3 gis-\tag #'finger ^2 fis-\tag #'finger ^1
         gis fis gis fis
 	
-        cis'-\tag #'finger ^4 a-\tag #'finger ^1 gis-\tag #'finger ^3 fis-\tag #'finger ^2
-        fis'-\tag #'finger ^5 cis'-\tag #'finger ^3 b-\tag #'finger ^2 a-\tag #'finger ^1
+        cis' a gis fis
+        fis' cis' b a
       }
     >>
     
@@ -282,7 +282,7 @@
 
         d'-\tag #'finger -2 b-\tag #'finger -1
 
-        cis''-\tag #'finger -4 a'-\tag #'finger -1 gis'-\tag #'finger -3 fis'-\tag #'finger -2
+        cis''-\tag #'finger -5 a'-\tag #'finger -3 gis'-\tag #'finger -2 fis'-\tag #'finger -1
         cis'' a' gis' fis'
       }
     >>
@@ -301,8 +301,8 @@
       }
       \\
       {
-        bis'32-\tag #'finger -5( fis'-\tag #'finger -2 e'-\tag #'finger -1 dis'-\tag #'finger -2
-        fis''-\tag #'finger -4
+        bis'32-\tag #'finger -5( fis'-\tag #'finger -3 e'-\tag #'finger -2 dis'-\tag #'finger -1
+        fis''-\tag #'finger -5
 
 	\tag #'crit \footnote #'(-1.5 . -1.5)
 	\markup {
@@ -472,16 +472,16 @@
       }
       \\
       {
-        gis'32-\tag #'finger -4( d'-\tag #'finger -1 cis'-\tag #'finger -2 b-\tag #'finger -1
+        gis'32-\tag #'finger -4( d'-\tag #'finger -3 cis'-\tag #'finger -2 b-\tag #'finger -1
         d''-\tag #'finger -5 b'-\tag #'finger -4 a'-\tag #'finger -3 gis'-\tag #'finger -2
 
-        cis''-\tag #'finger -4 a'-\tag #'finger -1 gis'-\tag #'finger -3 fis'-\tag #'finger -2
-        bis'-\tag #'finger -5 a'-\tag #'finger -1 gis'-\tag #'finger -3 fis'-\tag #'finger -2)
+        cis''-\tag #'finger -5 a'-\tag #'finger -3 gis'-\tag #'finger -2 fis'-\tag #'finger -1
+        bis'-\tag #'finger -5 a' gis' fis')
 
-        cis''-\tag #'finger -4 a'-\tag #'finger -1 gis'-\tag #'finger -3 fis'-\tag #'finger -2
-        gis'-\tag #'finger -3 fis'-\tag #'finger -2 gis'-\tag #'finger -3 a'-\tag #'finger -1
+        cis''-\tag #'finger -5 a' gis' fis'
+        gis' fis' gis' a'-\tag #'finger -1
 
-        cis''-\tag #'finger -5 gis'-\tag #'finger -3 fis'-\tag #'finger -2 eis'-\tag #'finger -1
+        cis'' gis' fis' eis'
       }
     >>
 
@@ -854,7 +854,7 @@
     cis'-\tag #'finger -2 e'-\tag #'finger -4 cis'-\tag #'finger -2 b-\tag #'finger -1
     \voiceOne
     \change Staff = "down"
-    ais-\tag #'finger -2 cis'-\tag #'finger -4 ais-\tag #'finger -3 g-\tag #'finger -1
+    ais-\tag #'finger -2 cis'-\tag #'finger -5-\tag #'finger -4 ais-\tag #'finger -3 g-\tag #'finger -1
 
     fis8-\tag #'finger -2
     \oneVoice
@@ -1036,13 +1036,13 @@
     fis-\tag #'finger _3\! g-\tag #'finger _2\> fis e\!
     
     d-\tag #'finger _5 e-\tag #'finger _1 d cis
-    b,-\tag #'finger _4 cis-\tag #'finger _3 b,-\tag #'finger _1 a,
+    b,-\tag #'finger _4 cis-\tag #'finger _2 b, a,
 
-    g,-\tag #'finger _3 a,\< b, cis-\tag #'finger _3\!
-    d-\tag #'finger _2\> cis-\tag #'finger _3 b,-\tag #'finger _1\! a,
+    g,-\tag #'finger _5 a,\< b, cis\!
+    d\> cis b,\! a,
 
-    g,-\tag #'finger _3 a, b, a,
-    g, a,-\tag #'finger _2 g, fis,)
+    g,-\tag #'finger _5 a,-\tag #'finger _4 b,-\tag #'finger _1 a,
+    g, a, g, fis,)
     
     | % Down M02
     
@@ -1306,13 +1306,7 @@
 	  }
 	  cis
 
-	  \tag #'perf \footnote #'(2 . 3)
-	  \markup {
-	    Tie? See the critical edition.
-	    \bigdot
-	    Liaison ? Voir l'édition critique.
-	  }
-	  cis
+	  \tag #'perf cis
 
 	  cis,
 	>1~
@@ -1368,9 +1362,9 @@
     <cis cis,>4.
 
     \stemDown
-    cis'32-\tag #'finger _4
+    cis'32-\tag #'finger _5
     \change Staff = "up"
-    eis'-\tag #'finger _1 fis'-\tag #'finger _3 gis'-\tag #'finger _2
+    eis'-\tag #'finger _3 fis'-\tag #'finger _2 gis'-\tag #'finger _1
     \stemNeutral
     \change Staff = "down"
     
@@ -1439,16 +1433,16 @@
 	
         item = Accidental
       } {
-        e'-\tag #'finger _1
+        e'-\tag #'finger _2
       }
       \editorialMarkup reading \with {
 	source = "\\source{E}{B}"
       } { eis' }
     }
 
-    fis'-\tag #'finger ^1
+    fis'-\tag #'finger _1
 
-    fis-\tag #'finger _4 a-\tag #'finger _2 bis-\tag #'finger _1 dis'-\tag #'finger _2
+    fis-\tag #'finger _5 a-\tag #'finger _3 bis-\tag #'finger _2 dis'-\tag #'finger _1
 
     eis-\tag #'finger _5 gis-\tag #'finger _3 b-\tag #'finger _2 d'-\tag #'finger _1
     b-\tag #'finger _5 d'-\tag #'finger _3 e'-\tag #'finger _2 f'-\tag #'finger _1
@@ -1656,8 +1650,8 @@
     b, e fis g
     b, e fis g
 
-    e-\tag #'finger _5 g-\tag #'finger _3 b-\tag #'finger _1 cis'-\tag #'finger _2
-    b-\tag #'finger _3 cis'-\tag #'finger _2 b-\tag #'finger _1 g-\tag #'finger _3
+    e-\tag #'finger _5 g-\tag #'finger _3-\tag #'finger _4 b-\tag #'finger _1-\tag #'finger _2 cis'-\tag #'finger _2-\tag #'finger _1
+    b-\tag #'finger _3-\tag #'finger _2 cis'-\tag #'finger _2-\tag #'finger _1 b-\tag #'finger _1-\tag #'finger _2 g-\tag #'finger _3-\tag #'finger _4
 
     e g b cis'
     b cis' b g
@@ -1784,7 +1778,7 @@
     d' cis' b a
 
     g a b a
-    g-\tag #'finger _3 a-\tag #'finger _1 g fis
+    g a g fis
 
     | % Down M29
 
@@ -1793,9 +1787,9 @@
 
     cis e-\tag #'finger _1 cis-\tag #'finger _2 b,
     \voiceTwo
-    ais, cis-\tag #'finger _2 ais,-\tag #'finger _3 g,-\tag #'finger _1
+    ais, cis-\tag #'finger _1 ais,-\tag #'finger _2 g,-\tag #'finger _4
 
-    fis,8-\tag #'finger _2
+    fis,8-\tag #'finger _5
     \oneVoice
     r8
 

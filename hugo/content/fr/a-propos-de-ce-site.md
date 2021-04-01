@@ -66,5 +66,5 @@ Contact: [Benjamin Geer](https://benjamingeer.name)
     Variants: (Hidden) Concepts of Text in German Critical
     Editions](https://doi.org/10.4000/variants.343)
 [^Bodard]: Gabriel Bodard and Juan Garcés, [Open Source Critical
-    editions: A
+    Editions: A
     Rationale](https://blog.stoa.org/files/2010/09/Bodard-Garces_2009_Open-source-digital-editions.pdf)
