@@ -199,7 +199,7 @@
 	fis'32-\tag #'finger -5 d'-\tag #'finger -3 b-\tag #'finger -2 gis-\tag #'finger -1
 	b gis b d'
 	
-	eis'-\tag #'finger -5 d'-\tag #'finger -3 b-\tag #'finger -2 gis-\tag #'finger -1
+	eis'-\tag #'finger -4 d'-\tag #'finger -3 b-\tag #'finger -2 gis-\tag #'finger -1
 	eis'-\tag #'finger -5 cis'-\tag #'finger -3 b-\tag #'finger -2 gis-\tag #'finger -1
 	
 	fis'32-\tag #'finger -5 cis'-\tag #'finger -3 b-\tag #'finger -2 a-\tag #'finger -1
@@ -476,10 +476,10 @@
         d''-\tag #'finger -5 b'-\tag #'finger -4 a'-\tag #'finger -3 gis'-\tag #'finger -2
 
         cis''-\tag #'finger -5 a'-\tag #'finger -3 gis'-\tag #'finger -2 fis'-\tag #'finger -1
-        bis'-\tag #'finger -5 a' gis' fis')
+        bis' a' gis' fis')
 
         cis''-\tag #'finger -5 a' gis' fis'
-        gis' fis' gis' a'-\tag #'finger -1
+        gis' fis' gis' a'
 
         cis'' gis' fis' eis'
       }
@@ -854,7 +854,7 @@
     cis'-\tag #'finger -2 e'-\tag #'finger -4 cis'-\tag #'finger -2 b-\tag #'finger -1
     \voiceOne
     \change Staff = "down"
-    ais-\tag #'finger -2 cis'-\tag #'finger -5-\tag #'finger -4 ais-\tag #'finger -3 g-\tag #'finger -1
+    ais-\tag #'finger -2 cis'-\tag #'finger -5 ais-\tag #'finger -3 g-\tag #'finger -1
 
     fis8-\tag #'finger -2
     \oneVoice

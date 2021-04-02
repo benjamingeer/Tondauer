@@ -14,6 +14,9 @@
 \usepackage{anyfontsize}
 \usepackage{musicography}
 
+% Footnotes
+\usepackage{scrextend}
+
 % CC licence
 \usepackage[
     type={CC},
@@ -97,7 +100,7 @@
   \vspace{0.5 cm}
   {\Large Edited by \textbullet\ préparée par Benjamin Geer} \\
   \vspace{4.6 cm}
-  {\footnotesize Version 0.6, 2021-04-02} \\
+  {\footnotesize Version 0.7, 2021-04-02} \\
   \vspace{0.1 cm}
   {\footnotesize Copyright \copyright\ 2021 Benjamin Geer} \\
   \vspace{0.25 cm}
@@ -113,24 +116,21 @@
 
 \chapter*{Preface \bigdot\ Préface}
 
-\ifdef{\critical}
-  {% Text for the critical edition
+\ifdef{\critical}{% Text for the critical edition
     This critical edition is Creative Commons
     licensed\footnote{\url{\doclicenseURL}} and the source code is
-    available,\footnote{See
-      \url{https://github.com/benjamingeer/Tondauer}.} to allow
-    derived editions to be made.
+    available,\footnote{\url{https://github.com/benjamingeer/Tondauer}\label{source-code}}
+    to allow derived editions to be made.
 
     A performance edition based on this edition can be found on
     the project web site, \url{https://tondauer.art}.
 
     \centerbigdot
 
-    Cette édition critique est diffusée sous licence
-    Creative Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
-    et le code source est disponible,\footnote{Voir
-      \url{https://github.com/benjamingeer/Tondauer}.} pour
-    que des éditions dérivées puissent être réalisées.
+    Cette édition critique est diffusée sous licence Creative
+    Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
+    et le code source est disponible,\footref{source-code} pour que
+    des éditions dérivées puissent être réalisées.
 
     Une édition pratique basée sur cette édition se trouve
     sur le site Internet du projet, \url{https://tondauer.art}.
@@ -142,14 +142,13 @@
     \url{https://tondauer.art}.
 
     I would like to thank Penelope
-    Roskell\footnote{\url{https://peneloperoskell.co.uk}} for her
+    Roskell\footnote{\url{https://peneloperoskell.co.uk}\label{roskell}} for her
     advice on the suggested fingerings.
 
     This performance edition is Creative Commons
     licensed\footnote{\url{\doclicenseURL}} and the source code is
-    available,\footnote{See
-      \url{https://github.com/benjamingeer/Tondauer}.} to allow
-    derived editions to be made.
+    available,\footnote{\url{https://github.com/benjamingeer/Tondauer}\label{source-code}}
+    to allow derived editions to be made.
 
     \centerbigdot
 
@@ -160,17 +159,13 @@
     disponible sur le site Internet du projet,
     \url{https://tondauer.art}.
 
-    Je remercie Penelope
-    Roskell\footnote{\url{https://peneloperoskell.co.uk}} pour ses
-    conseils sur les doigtés proposés.
+    Je remercie Penelope Roskell\footref{roskell} pour ses conseils
+    sur les doigtés proposés.
 
     Cette édition pratique est diffusée sous licence Creative
     Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
-    et le code source est disponible,\footnote{Voir
-      \url{https://github.com/benjamingeer/Tondauer}.} pour que des
-    éditions dérivées puissent être réalisées.
-
-    % TODO: say something about the fingerings.
+    et le code source est disponible,\footref{source-code} pour que
+    des éditions dérivées puissent être réalisées.
   }
 
 \section*{About the Piece \bigdot\ À propos de la pièce}
@@ -178,7 +173,7 @@
 Mendelssohn composed this prelude in 1836, intending at first to
 include it in Op.\ 35, a set of preludes (originally études) and
 fugues. He then chose a different prelude for Op.\ 35, and this one
-was published posthumously in 1868.\autocite[188--198]{todd_2008}
+was published posthumously in 1868.\footnote{\cite[188--198]{todd_2008}\label{todd}}
 
 \centerbigdot
 
@@ -186,7 +181,7 @@ Mendelssohn a composé ce prélude en 1836, dans un premier temps pour
 son op.\ 35, qui est un ensemble de préludes (qu'il a d'abord appelé
 des études) et de fugues. Ensuite il a préféré un autre prélude pour
 l'op.\ 35. Celui qui est présenté ici a été publié en 1868 après la
-mort du compositeur.
+mort du compositeur.\footref{todd}
 
 \ifdef{\critical}
   {% Text for the critical edition
@@ -219,7 +214,7 @@ mort du compositeur.
           zu Berlin\end{otherlanguage}, shelfmark N.Mus. 5419-1.}
       published in about 1875. It is identical to \source{E}{S1}.
     \item[\source{E}{B}] The Breitkopf \& Härtel edition of
-      \source{V}{2},\footnote{\url{https://imslp.org/wiki/Special:ReverseLookup/109142}}
+      \source{V}{2},\footnote{\url{https://imslp.org/wiki/Special:ReverseLookup/109142}\label{imslp}}
       part of a critically revised edition of Mendelssohn's collected
       works, published between 1874 and 1877.
     \end{description}
@@ -285,7 +280,7 @@ mort du compositeur.
       zu Berlin\end{otherlanguage}, \foreignlanguage{french}{cote} N.Mus. 5419-1.}
       publiée en 1875 environ. Elle est identique à \source{E}{S1}.
     \item[\source{E}{B}] L'édition Breitkopf \& Härtel de
-      \source{V}{2},\footnote{\url{https://imslp.org/wiki/Special:ReverseLookup/109142}}
+      \source{V}{2},\footref{imslp}
       qui fait partie d'une édition revue et corrigée des \oe uvres de Mendelssohn,
       publiée entre 1874 et 1877.
     \end{description}
