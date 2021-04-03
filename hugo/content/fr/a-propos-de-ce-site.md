@@ -2,7 +2,7 @@
 title: À propos de ce site
 author: Benjamin Geer
 type: page
-date: 2021-03-02
+date: 2021-04-03
 slug: a-propos-de-ce-site
 translationKey: about-this-site
 ---

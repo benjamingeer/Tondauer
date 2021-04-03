@@ -2,19 +2,19 @@
 title: About This Site
 author: Benjamin Geer
 type: page
-date: 2021-03-02
+date: 2021-04-03
 slug: about-this-site
 translationKey: about-this-site
 ---
 
-> "Many musicians ... have no awareness of the importance of
+> “Many musicians ... have no awareness of the importance of
 > consciously choosing an edition; which criteria to apply; which
 > criteria may have been applied in editing; why and how to make a
-> good choice."[^Rink]
+> good choice.”[^Rink]
 
-> "On the other hand many musicians ... wanted to know about
+> “On the other hand many musicians ... wanted to know about
 > alternatives, about versions ... they wanted to shape their
-> musical text and be responsible for it."[^Urchueguía]
+> musical text and be responsible for it.”[^Urchueguía]
 
 Musicians therefore need *transparent* editions that allow them to
 check the editor's choices and to see where different choices are
@@ -22,21 +22,21 @@ possible. The ideal of transparency was developed for literary
 editions in the 1970s. The Frankfurt Hölderlin edition of 1975
 presented:
 
-> "a synoptic genetic text and a reading text with manuscript
+> “a synoptic genetic text and a reading text with manuscript
 > facsimiles accompanied by spatially oriented
 > transcriptions.... [T]he facsimiles and transcriptions serve as a
 > tool for the reader to check to a certain degree the editor's
-> work."[^Nutt-Kofoth]
+> work.”[^Nutt-Kofoth]
 
 By providing everything needed to reproduce each step of the editing
 process, editors can make it possible for others to build on what they
 have done while taking different approaches:
 
-> "Open Source Critical Editions are more than merely presentations of
+> “Open Source Critical Editions are more than merely presentations of
 > finished work; they involve an essential distribution of the raw
 > data, the scholarly tradition, the decision-making process, and the
 > tools and applications that were used in reaching these
-> conclusions."[^Bodard]
+> conclusions.”[^Bodard]
 
 At the same time, musicians also need practical editions designed for
 performance rather than for research.
