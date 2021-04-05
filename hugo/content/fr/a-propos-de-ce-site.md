@@ -55,7 +55,7 @@ pièce il y a :
   éditions](https://github.com/benjamingeer/Tondauer/), pour que des
   éditions dérivées puissent être réalisées.
 
-Contact: [Benjamin Geer](https://benjamingeer.name)
+Contact: [Benjamin Geer](https://benjamingeer.name/fr/)
 
 [^Rink]: John Rink, [Digital Editions and the Creative Work of the
     Performer](https://doi.org/10.1017/S1479409819000673)
