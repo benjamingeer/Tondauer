@@ -1170,8 +1170,8 @@
     fis,-\tag #'finger _5 b,-\tag #'finger _3 cis d
     cis d cis d
     
-    e,-\tag #'finger _5 g,-\tag #'finger _3 b,-\tag #'finger _1 cis-\tag #'finger _2
-    b,-\tag #'finger _3 cis-\tag #'finger _2 b, cis
+    e,-\tag #'finger _5 g,-\tag #'finger _3-\tag #'finger _4 b,-\tag #'finger _1-\tag #'finger _2 cis-\tag #'finger _2-\tag #'finger _1
+    b,-\tag #'finger _3-\tag #'finger _2 cis-\tag #'finger _2-\tag #'finger _1 b, cis
     
     eis,-\tag #'finger _5 gis,-\tag #'finger _4 cis d
     cis d cis d
