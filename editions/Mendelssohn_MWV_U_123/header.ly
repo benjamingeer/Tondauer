@@ -6,7 +6,7 @@
    (markup #:hspace 1 #:raise 0.75 (#:draw-circle 0.3 0 #t) #:hspace 1)))
 
 \header {
-  title = "Prelude"
+  title = \markup { Prelude \bigdot Prélude }
   opus = "MWV U 123 (Op. 104a, No. 2)"
   composer = "Felix Mendelssohn"
   tagline = ""  % removed

@@ -89,17 +89,17 @@
 \begin{center}
   \fontspec{Quattrocento-Bold.ttf}{\fontsize{40}{50}\selectfont Felix Mendelssohn} \\
   \fontspec{Quattrocento-Regular.ttf}\vspace{2cm}
-  {\fontsize{32}{42}\selectfont Prelude \textbullet\ Prélude} \\
+  {\fontsize{32}{42}\selectfont Prelude \textbullet\ \foreignlanguage{french}{Prélude}} \\
   \vspace{2 cm}
   {\fontsize{24}{34}\selectfont MWV U 123} \\
   \vspace{0.5 cm}
   {\fontsize{24}{34}\selectfont Op. 104a, No. 2} \\
   \vspace{4.6 cm}
-  {\Large \ifdef{\critical}{Critical Edition \textbullet\ Édition critique}{Performance Edition \textbullet\ Édition pratique}} \\
+  {\Large \ifdef{\critical}{Critical Edition \textbullet\ \foreignlanguage{french}{Édition critique}}{Performance Edition \textbullet\ \foreignlanguage{french}{Édition pratique}}} \\
   \vspace{0.5 cm}
-  {\Large Edited by \textbullet\ préparée par Benjamin Geer} \\
+  {\Large Edited by \textbullet\ \foreignlanguage{french}{préparée par} Benjamin Geer} \\
   \vspace{4.6 cm}
-  {\footnotesize Version 0.9, 2021-04-19} \\
+  {\footnotesize Version 0.10, 2021-04-22} \\
   \vspace{0.1 cm}
   {\footnotesize Copyright \copyright\ 2021 Benjamin Geer} \\
   \vspace{0.25 cm}
@@ -113,7 +113,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main document content
 
-\chapter*{Preface \bigdot\ Préface}
+\chapter*{Preface \bigdot\ \foreignlanguage{french}{Préface}}
+
+\section*{About the Piece \bigdot\ \foreignlanguage{french}{À propos de la pièce}}
+
+Mendelssohn composed this prelude in 1836, intending at first to
+include it in Op.\ 35, a set of preludes (originally études) and
+fugues. He then chose a different prelude for Op.\ 35, and this one
+was published posthumously in 1868.\footnote{\cite[188--198]{todd_2008}\label{todd}.}
+
+\centerbigdot
+
+\begin{otherlanguage}{french}
+Mendelssohn a composé ce prélude en 1836, dans un premier temps pour
+son op.\ 35, qui est un ensemble de préludes (qu'il a d'abord appelé
+des études) et de fugues. Ensuite il a préféré un autre prélude pour
+l'op.\ 35. Celui qui est présenté ici a été publié en 1868 après la
+mort du compositeur.\footref{todd}
+\end{otherlanguage}
+
+\section*{About this Edition \bigdot\ \foreignlanguage{french}{À propos de cette édition}}
 
 \ifdef{\critical}{% Text for the critical edition
     This critical edition is Creative Commons
@@ -126,6 +145,7 @@
 
     \centerbigdot
 
+    \begin{otherlanguage}{french}
     Cette édition critique est diffusée sous licence Creative
     Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
     et le code source est disponible,\footref{source-code} pour que
@@ -133,6 +153,7 @@
 
     Une édition pratique basée sur cette édition se trouve
     sur le site Internet du projet, \url{https://tondauer.art}.
+    \end{otherlanguage}
   }{% Text for the performance edition
     Footnotes in the music text point out editorial choices that are
     worth your attention, especially where you may prefer a different
@@ -151,6 +172,7 @@
 
     \centerbigdot
 
+    \begin{otherlanguage}{french}
     Les notes de base de page dans la partition signalent des choix
     éditoriaux qui méritent votre attention, surtout dans des cas où
     vous pourriez préférer une autre option. Vous trouverez des
@@ -165,26 +187,12 @@
     Commons\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.fr}}
     et le code source est disponible,\footref{source-code} pour que
     des éditions dérivées puissent être réalisées.
+    \end{otherlanguage}
   }
-
-\section*{About the Piece \bigdot\ À propos de la pièce}
-
-Mendelssohn composed this prelude in 1836, intending at first to
-include it in Op.\ 35, a set of preludes (originally études) and
-fugues. He then chose a different prelude for Op.\ 35, and this one
-was published posthumously in 1868.\footnote{\cite[188--198]{todd_2008}\label{todd}}
-
-\centerbigdot
-
-Mendelssohn a composé ce prélude en 1836, dans un premier temps pour
-son op.\ 35, qui est un ensemble de préludes (qu'il a d'abord appelé
-des études) et de fugues. Ensuite il a préféré un autre prélude pour
-l'op.\ 35. Celui qui est présenté ici a été publié en 1868 après la
-mort du compositeur.\footref{todd}
 
 \ifdef{\critical}
   {% Text for the critical edition
-    \section*{Methodology \bigdot\ Méthodologie}
+    \section*{Methodology \bigdot\ \foreignlanguage{french}{Méthodologie}}
 
     Mendelssohn wrote two versions of the piece, \source{V}{1} and
     \source{V}{2}. Like most other editions, this one presents
@@ -284,7 +292,7 @@ mort du compositeur.\footref{todd}
       publiée entre 1874 et 1877.
     \end{description}
 
-    Des fac-similés numériques de ces sources se trouve sur le site
+    Des fac-similés numériques de ces sources se trouvent sur le site
     \url{https://tondauer.art}.
 
     Les éditions \source{E}{S1} and \source{E}{N} ont été coordinées
@@ -338,7 +346,7 @@ mort du compositeur.\footref{todd}
 
     \input{critical-score.annotations.inp}
 
-    \section*{Analysis \bigdot\ Analyse}
+    \section*{Analysis \bigdot\ \foreignlanguage{french}{Analyse}}
     \label{sec:analysis}
 
     In the process of transforming \source{V}{1} into \source{V}{2},
@@ -378,6 +386,7 @@ mort du compositeur.\footref{todd}
 
     \centerbigdot
 
+    \begin{otherlanguage}{french}
     En transformant \source{V}{1} en \source{V}{2}, Mendelssohn a
     divisé les durées par deux et supprimé la moitié des barres de
     mesure. Certains problèmes concernant les accidents dans
@@ -416,6 +425,7 @@ mort du compositeur.\footref{todd}
     dans l'op.\ 35 avant de terminer la relecture d'\source{A}{2}, et
     qu'il ait donc laissé le manuscrit inachevé, sans avoir corrigé
     des erreurs que \source{E}{S1} a reproduit par la suite.
+    \end{otherlanguage}
   } {}
 
 \raggedbottom
