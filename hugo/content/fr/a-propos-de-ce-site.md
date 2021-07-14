@@ -7,6 +7,12 @@ slug: a-propos-de-ce-site
 translationKey: about-this-site
 ---
 
+Tondauer (en allemand, la durée d'un son) vise à soutenir la pérennité
+à long terme de compositions qui n'ont pas reçu toute l'attention
+qu'elles méritent. Les éditions du projet sont destinées à permettre
+aux musiciens de faire des choix éclairés en ce qui concerne
+l'interprétation.
+
 > « Beaucoup de musiciens ... ne sont pas conscients de l'importance
 > du choix d'une édition et ne savent ni comment faire un bon choix,
 > ni sur quels critères l'éditeur a pu baser ses décisions. »[^Rink]
