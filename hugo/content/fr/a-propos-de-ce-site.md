@@ -36,7 +36,7 @@ en 1975 :
 
 En fournissant tout ce qu'il faut pour reproduire chaque étape de la
 préparation de l'édition, l'éditeur peut permettre à d'autres de tirer
-parti de son travail en suivant des démarches adifférentes :
+parti de son travail en suivant des démarches différentes :
 
 > « Dans une édition critique libre, on ne présente pas simplement un
 > travail achevé. On diffuse aussi les données de base, la tradition
@@ -44,8 +44,8 @@ parti de son travail en suivant des démarches adifférentes :
 > et les applications qui ont été utilisés pour arriver aux
 > conclusions. »[^Bodard]
 
-En même temps, les musiciens ont aussi besoin d'éditions pratiques
-destinées à l'interprétation plutôt qu'à la recherche.
+En même temps, les musiciens ont besoin d'éditions pratiques destinées
+à l'interprétation plutôt qu'à la recherche.
 
 Tondauer est un projet qui propose des éditions musicales diffusées
 sous licence [Creative

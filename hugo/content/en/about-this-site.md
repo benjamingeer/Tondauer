@@ -43,7 +43,7 @@ have done while taking different approaches:
 > tools and applications that were used in reaching these
 > conclusions.”[^Bodard]
 
-At the same time, musicians also need practical editions designed for
+At the same time, musicians need practical editions designed for
 performance rather than for research.
 
 Tondauer is a project to provide [Creative
