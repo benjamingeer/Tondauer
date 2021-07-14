@@ -9,9 +9,10 @@ translationKey: about-this-site
 
 Tondauer (en allemand, la durée d'un son) vise à soutenir la pérennité
 à long terme de compositions qui n'ont pas reçu toute l'attention
-qu'elles méritent. Les éditions du projet sont destinées à permettre
-aux musiciens de faire des choix éclairés en ce qui concerne
-l'interprétation.
+qu'elles méritent. Les éditions du projet sont diffusées sous licence
+[Creative Commons](https://creativecommons.org/licenses/?lang=fr) et
+destinées à permettre aux musiciens de faire des choix éclairés en ce
+qui concerne l'interprétation.
 
 > « Beaucoup de musiciens ... ne sont pas conscients de l'importance
 > du choix d'une édition et ne savent ni comment faire un bon choix,
@@ -47,10 +48,7 @@ parti de son travail en suivant des démarches différentes :
 En même temps, les musiciens ont besoin d'éditions pratiques destinées
 à l'interprétation plutôt qu'à la recherche.
 
-Tondauer est un projet qui propose des éditions musicales diffusées
-sous licence [Creative
-Commons](https://creativecommons.org/licenses/?lang=fr). Pour chaque
-pièce il y a :
+Pour chaque pièce éditée dans le cadre de ce projet il y a :
 
 - Une édition critique comprenant des fac-similés des sources.
 - Une édition pratique basée sur l'édition critique, comprenant des
