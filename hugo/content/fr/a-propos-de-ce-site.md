@@ -29,7 +29,7 @@ Les musiciens ont donc besoin d'éditions qui leur permettent de
 vérifier les choix de l'éditeur et d'identifer les cas où d'autres
 choix sont possibles. Ce principe de transparence a été développé pour
 des éditions littéraires dans les années 1970. L'édition de Francfort
-des œuvres de Hölderlin a présenté en 1975 :
+des œuvres de Hölderlin a présenté en 1975&nbsp;:
 
 > « un texte génétique synoptique et un texte de lecture avec des
 > fac-similés des manuscrits accompagnées de transcriptions ayant la
