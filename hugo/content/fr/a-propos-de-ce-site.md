@@ -39,7 +39,7 @@ des œuvres de Hölderlin a présenté en 1975&nbsp;:
 
 En fournissant tout ce qu'il faut pour reproduire chaque étape de la
 préparation de l'édition, l'éditeur peut permettre à d'autres de tirer
-parti de son travail en suivant des démarches différentes :
+parti de son travail en suivant des démarches différentes&nbsp;:
 
 > « Dans une édition critique libre, on ne présente pas simplement un
 > travail achevé. On diffuse aussi les données de base, la tradition
@@ -50,7 +50,7 @@ parti de son travail en suivant des démarches différentes :
 En même temps, les musiciens ont besoin d'éditions pratiques destinées
 à l'interprétation plutôt qu'à la recherche.
 
-Pour chaque pièce éditée dans le cadre de ce projet il y a :
+Pour chaque pièce éditée dans le cadre de ce projet il y a&nbsp;:
 
 - Une édition critique comprenant des fac-similés des sources.
 - Une édition pratique basée sur l'édition critique, comprenant des
