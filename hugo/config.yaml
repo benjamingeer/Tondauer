@@ -26,12 +26,15 @@ languages:
         - name: "About This Site"
           url: "/about-this-site/"
           weight: 1
+        - name: "Source Code"
+          url: "https://github.com/benjamingeer/Tondauer"
+          weight: 2
   fr:
     languageCode: fr
     contentDir: content/fr
     languageName: Français
     title: Tondauer
-    weight: 2
+    weight: 1
     params:
       description: éditions musicales libres
     menu:
@@ -39,6 +42,9 @@ languages:
         - name: "À propos de ce site"
           url: "/a-propos-de-ce-site/"
           weight: 1
+        - name: "Code source"
+          url: "https://github.com/benjamingeer/Tondauer"
+          weight: 2
           
 params:
   date_format: "2006-01-02"

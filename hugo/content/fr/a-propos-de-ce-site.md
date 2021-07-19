@@ -7,12 +7,15 @@ slug: a-propos-de-ce-site
 translationKey: about-this-site
 ---
 
-Tondauer (en allemand, la durée d'un son) vise à soutenir la pérennité
-à long terme de compositions qui n'ont pas reçu toute l'attention
-qu'elles méritent. Les éditions du projet sont diffusées sous licence
-[Creative Commons](https://creativecommons.org/licenses/?lang=fr) et
-destinées à permettre aux musiciens de faire des choix éclairés en ce
-qui concerne l'interprétation.
+### Qu'est-ce que Tondauer?
+
+Tondauer (en allemand, la durée d'un son) est un projet qui vise à
+soutenir la pérennité à long terme de compositions qui n'ont pas reçu
+toute l'attention qu'elles méritent. Les éditions Tondauer sont
+diffusées sous licence [Creative
+Commons](https://creativecommons.org/licenses/?lang=fr) et destinées à
+permettre aux musiciens de faire des choix éclairés en ce qui concerne
+l'interprétation.
 
 > « Beaucoup de musiciens ... ne sont pas conscients de l'importance
 > du choix d'une édition et ne savent ni comment faire un bon choix,
@@ -22,12 +25,11 @@ qui concerne l'interprétation.
 > alternatives, les versions ... ils voulaient façonner leur propre
 > texte musical et en être responsables. »[^Urchueguía]
 
-Les musiciens ont donc besoin d'éditions *transparentes* leur
-permettant de vérifier les choix de l'éditeur et d'identifer les cas
-où d'autres choix sont possibles. L'idéal de la transparence a été
-développé pour des éditions littéraires dans les
-années 1970. L'édition de Francfort des œuvres de Hölderlin a présenté
-en 1975 :
+Les musiciens ont donc besoin d'éditions qui leur permettent de
+vérifier les choix de l'éditeur et d'identifer les cas où d'autres
+choix sont possibles. Ce principe de transparence a été développé pour
+des éditions littéraires dans les années 1970. L'édition de Francfort
+des œuvres de Hölderlin a présenté en 1975 :
 
 > « un texte génétique synoptique et un texte de lecture avec des
 > fac-similés des manuscrits accompagnées de transcriptions ayant la
@@ -59,7 +61,17 @@ Pour chaque pièce éditée dans le cadre de ce projet il y a :
   éditions](https://github.com/benjamingeer/Tondauer/), pour que des
   éditions dérivées puissent être réalisées.
 
-Contact: [Benjamin Geer](https://benjamingeer.name/fr/)
+### Technologie
+
+Les éditions Tondauer editions sont réalisées avec
+[LilyPond](https://lilypond.org). Les raisons de ce choix sont
+expliquées dans [LilyPond — Essai sur la gravure musicale
+automatisée](https://lilypond.org/doc/v2.22/Documentation/essay/index.fr.html).
+
+### Contact
+
+Veuillez envoyer vos corrections, suggestions et questions à [Benjamin
+Geer](https://benjamingeer.name/fr/).
 
 [^Rink]: John Rink, [Digital Editions and the Creative Work of the
     Performer](https://doi.org/10.1017/S1479409819000673)
