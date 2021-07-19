@@ -68,7 +68,7 @@ engraving](https://lilypond.org/doc/v2.22/Documentation/essay/index.html).
 
 ### Contact
 
-Please send any corrections, suggestions, and queries to [Benjamin
+Please send any corrections, suggestions, or queries to [Benjamin
 Geer](https://benjamingeer.name).
 
 [^Rink]: John Rink, [Digital Editions and the Creative Work of the
