@@ -73,7 +73,7 @@ automatisée](https://lilypond.org/doc/v2.22/Documentation/essay/index.fr.html).
 Veuillez envoyer vos corrections, suggestions et questions à [Benjamin
 Geer](https://benjamingeer.name/fr/).
 
-On Twitter: [@TondauerMusic](https://twitter.com/TondauerMusic)
+Sur Twitter: [@TondauerMusic](https://twitter.com/TondauerMusic)
 
 [^Rink]: John Rink, [Digital Editions and the Creative Work of the
     Performer](https://doi.org/10.1017/S1479409819000673)
