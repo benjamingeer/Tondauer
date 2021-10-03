@@ -71,6 +71,8 @@ engraving](https://lilypond.org/doc/v2.22/Documentation/essay/index.html).
 Please send any corrections, suggestions, or queries to [Benjamin
 Geer](https://benjamingeer.name).
 
+On Twitter: [@TondauerMusic](https://twitter.com/TondauerMusic)
+
 [^Rink]: John Rink, [Digital Editions and the Creative Work of the
     Performer](https://doi.org/10.1017/S1479409819000673)
 [^Urchueguía]: Cristina Urchueguía, [Critical Editing of Music and
