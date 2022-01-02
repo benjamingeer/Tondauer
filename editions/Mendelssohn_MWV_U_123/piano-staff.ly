@@ -155,7 +155,7 @@
 
         \\begin{otherlanguage}{french}\\textit{Ré}\\sh\\ dans
         \\source{E}{N} et \\source{E}{B}, \\textit{ré}\\na\\ sans
-        accident (sûrement une erreur) dans
+        altération (sûrement une erreur) dans
         \\source{E}{S1}. \\source{A}{1} (mesure 19) a une
         structure différente ici.\\end{otherlanguage}"
 
@@ -249,7 +249,7 @@
 
             \\begin{otherlanguage}{french}\\textit{Si}\\na\\ dans
             \\source{A}{1} (mesure 23) et \\source{E}{B},
-            \\textit{si}\\sh\\ sans accident dans \\source{E}{S1} et
+            \\textit{si}\\sh\\ sans altération dans \\source{E}{S1} et
             \\source{E}{N}.\\end{otherlanguage}"
 	    
 	    item = Accidental
@@ -268,7 +268,7 @@
 	\markup {
 	  Redundant accidental.
 	  \bigdot
-	  Accident superflu.
+	  Altération superflue.
 	}
         Stem
 
@@ -301,6 +301,7 @@
       }
       \\
       {
+	\shape #'((0 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
         bis'32-\tag #'finger -5( fis'-\tag #'finger -3 e'-\tag #'finger -2 dis'-\tag #'finger -1
         fis''-\tag #'finger -5
 
@@ -325,7 +326,7 @@
 
             \\begin{otherlanguage}{french}\\textit{Ré}\\sh\\ dans
             \\source{A}{1} (mesure 25), \\source{E}{N} et
-            \\source{E}{B}, \\textit{ré}\\na\\ sans accident dans
+            \\source{E}{B}, \\textit{ré}\\na\\ sans altération dans
             \\source{E}{S1}.\\end{otherlanguage}"
 	    
 	    item = Accidental
@@ -347,15 +348,16 @@
 	    source = ""
 
 	    message = "In \\source{E}{S1}, \\source{E}{N}, and
-            \\source{E}{B}, the accidental is missing on the \\textit{G}\\sh\\
-            in the upper staff. \\source{A}{1} (measure 25) is
-            unclear.
+            \\source{E}{B}, the accidental is missing on the
+            \\textit{G}\\sh\\ in the upper staff. \\source{A}{1}
+            (measure 25) is unclear.
 
             \\centerbigdot
 
-            \\begin{otherlanguage}{french}Dans \\source{E}{S1}, \\source{E}{N} et
-            \\source{E}{B}, il manque l'accident du \\textit{sol}\\sh\\
-            de la portée supérieure. \\source{A}{1} (mesure 25) n'est pas
+            \\begin{otherlanguage}{french}Dans \\source{E}{S1},
+            \\source{E}{N} et \\source{E}{B}, il manque l'altération
+            du \\textit{sol}\\sh\\ de la portée
+            supérieure. \\source{A}{1} (mesure 25) n'est pas
             clair.\\end{otherlanguage}"
 	    
 	    item = Accidental
@@ -364,7 +366,7 @@
 	    \markup {
 	      Missing accidental.
 	      \bigdot
-	      Accident manquant.
+	      Altération manquante.
 	    }
 	    Stem
 	    gis'
@@ -393,14 +395,14 @@
 	    
 	    message = "\\source{E}{B} has \\textit{D}\\na,
             \\source{E}{S1} and \\source{E}{N} have \\textit{D}\\sh\\
-            with no accidental (surely an
-            error). \\source{A}{1} (measure 25) is unclear.
+            with no accidental (surely an error). \\source{A}{1}
+            (measure 25) is unclear.
 
             \\centerbigdot
 
             \\begin{otherlanguage}{french}\\textit{Ré}\\na\\ dans
-            \\source{E}{B}, \\textit{re}\\sh\\ sans accident (sûrement
-            une erreur) dans \\source{E}{S1} et
+            \\source{E}{B}, \\textit{re}\\sh\\ sans altération
+            (sûrement une erreur) dans \\source{E}{S1} et
             \\source{E}{N}. \\source{A}{1} (mesure 25) n'est pas
             clair.\\end{otherlanguage}"
 	    
@@ -411,6 +413,7 @@
 	  } { dis') }
 	}
 
+	\shape #'((0 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
         ais'-\tag #'finger -4( g'-\tag #'finger -3
 
 	\tag #'crit \footnote #'(-1.5 . -3)
@@ -434,10 +437,9 @@
             \\centerbigdot
 
             \\begin{otherlanguage}{french}Deux fois :
-            \\textit{mi}\\na\\ dans
-            \\source{A}{1} (mesure 26, bien qu'elle soit un peu
-            différente) et \\source{E}{B},
-            \\textit{mi}\\sh\\ sans accident dans \\source{E}{S1} et
+            \\textit{mi}\\na\\ dans \\source{A}{1} (mesure 26, bien
+            qu'elle soit un peu différente) et \\source{E}{B},
+            \\textit{mi}\\sh\\ sans altération dans \\source{E}{S1} et
             \\source{E}{N}.\\end{otherlanguage}"
 	    
 	    item = Accidental
@@ -472,6 +474,7 @@
       }
       \\
       {
+	\shape #'((0 . 1) (0 . -0.5) (0 . 0) (0 . 1)) Slur
         gis'32-\tag #'finger -4( d'-\tag #'finger -3 cis'-\tag #'finger -2 b-\tag #'finger -1
         d''-\tag #'finger -5 b'-\tag #'finger -4 a'-\tag #'finger -3 gis'-\tag #'finger -2
 
@@ -510,10 +513,10 @@
         \\centerbigdot
 
         \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
-        \\source{E}{N}, \\textit{sol}\\na\\ sans accident (sûrement
+        \\source{E}{N}, \\textit{sol}\\na\\ sans altération (sûrement
         une erreur) dans \\source{E}{S1} et
-        \\source{E}{B}. \\source{A}{1} (mesure 31) a une
-        structure différente ici.\\end{otherlanguage}"
+        \\source{E}{B}. \\source{A}{1} (mesure 31) a une structure
+        différente ici.\\end{otherlanguage}"
 
 	item = Accidental
       } { <eis'' b'
@@ -545,6 +548,7 @@
 
     | % Up M17
 
+    \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.4)) Slur
     <fis'' d'' b' fis'>4(
 
     <eis'' eis'>8)
@@ -564,6 +568,7 @@
 
     | % Up M18
 
+    \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.4)) Slur
     <fis'' fis'>4(
 
     <eis'' eis'>8)
@@ -728,7 +733,7 @@
 
         \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
         \\source{E}{N} et \\source{E}{B}, \\textit{sol}\\na\\ sans
-        accident (sûrement une erreur) dans \\source{E}{S1}. La
+        altération (sûrement une erreur) dans \\source{E}{S1}. La
         seconde moitié de la mesure 23 et la première moitié de la
         mesure 24 ne se trouvent pas dans
         \\source{A}{1}.\\end{otherlanguage}"
@@ -1027,7 +1032,8 @@
     \clef bass
 
     \partial 16.
-    
+
+    \shape #'((0 . -1) (0 . 1) (0 . 0) (0 . -0.2)) Slur
     fis,32-\tag #'finger _4( gis, ais,
     
     | % Down M01
@@ -1080,7 +1086,7 @@
 
         \\begin{otherlanguage}{french}\\textit{Sol}\\sh\\ dans
         \\source{A}{1} (mesure 3) et \\source{E}{N},
-        \\textit{sol}\\na\\ sans accident dans \\source{E}{S1} et
+        \\textit{sol}\\na\\ sans altération dans \\source{E}{S1} et
         \\source{E}{B}.\\end{otherlanguage}"
 
     	item = Accidental
@@ -1149,8 +1155,8 @@
         \\centerbigdot
 
         \\begin{otherlanguage}{french}\\textit{La}\\na\\ dans
-        \\source{A}{1} (mesure 8, sans accident) et \\source{E}{B},
-        \\textit{la}\\sh\\ sans accident dans \\source{E}{S1} et
+        \\source{A}{1} (mesure 8, sans altération) et \\source{E}{B},
+        \\textit{la}\\sh\\ sans altération dans \\source{E}{S1} et
         \\source{E}{N}.\\end{otherlanguage}"
 	
     	item = NoteHead
@@ -1411,12 +1417,12 @@
 
         \\centerbigdot
 
-        \\begin{otherlanguage}{french}
-        \\textit{Mi}\\na\\ sans accident dans \\source{E}{S1} et
-        \\source{E}{N}, \\textit{mi}\\sh\\ dans \\source{E}{B}. Le
-        passage correspondant dans \\source{A}{1} (à partir de la
-        mesure 29) n'a ni l'un ni l'autre et présente une structure
-        harmonique quelque peu différente.
+        \\begin{otherlanguage}{french} \\textit{Mi}\\na\\ sans
+        altération dans \\source{E}{S1} et \\source{E}{N},
+        \\textit{mi}\\sh\\ dans \\source{E}{B}. Le passage
+        correspondant dans \\source{A}{1} (à partir de la mesure 29)
+        n'a ni l'un ni l'autre et présente une structure harmonique
+        quelque peu différente.
 
         Cinq accords de septième diminuée descendent de manière
         chromatique dans les mesures 13 et 14, et encore une fois dans
@@ -1470,7 +1476,7 @@
 
         \\begin{otherlanguage}{french}\\textit{Mi}\\na\\ dans
         \\source{A}{1} (mesure 30) et \\source{E}{B},
-        \\textit{mi}\\sh\\ sans accident \\source{E}{S1} et
+        \\textit{mi}\\sh\\ sans altération \\source{E}{S1} et
         \\source{E}{N}.\\end{otherlanguage}"
 	    
 	item = Accidental
@@ -1501,7 +1507,7 @@
 
         \\begin{otherlanguage}{french}\\textit{Sol}\\na\\ dans
         \\source{A}{1} (mesure 30), \\source{E}{N} et \\source{E}{B},
-        \\textit{sol}\\sh\\ sans accident dans
+        \\textit{sol}\\sh\\ sans altération dans
         \\source{E}{S1}.\\end{otherlanguage}"
 	    
 	item = Accidental
@@ -1530,7 +1536,7 @@
       \markup {
 	Redundant accidental.
 	\bigdot
-	Accident superflu.
+	Altération superflue.
       }
       NoteHead
 
@@ -1563,7 +1569,7 @@
       \markup {
 	Redundant accidental.
 	\bigdot
-	Accident superflu.
+	Altération superflue.
       }
       NoteHead
 
@@ -1596,7 +1602,7 @@
       \markup {
 	Redundant accidental.
 	\bigdot
-	Accident superflu.
+	Altération superflue.
       }
       NoteHead
 
@@ -1688,7 +1694,7 @@
       \markup {
 	Redundant accidental.
 	\bigdot
-	Accident superflu.
+	Altération superflue.
       }
       NoteHead
 
