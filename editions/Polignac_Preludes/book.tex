@@ -1,0 +1,547 @@
+\documentclass[a4paper, 12pt]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+
+% Languages
+\usepackage[ngerman,british,french]{babel}
+\usepackage[autostyle,english=british]{csquotes}
+\usepackage[super]{nth}
+
+% Fonts
+\usepackage{microtype}
+\usepackage{fontspec}
+\usepackage{libertine}
+\usepackage{anyfontsize}
+\usepackage{musicography}
+
+% Footnotes
+\usepackage{scrextend}
+
+% CC licence
+\usepackage[
+    type={CC},
+    modifier={by-sa},
+    version={4.0}
+]{doclicense}
+
+% Include PDF and EPS files
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+
+% Links
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{relsize}
+\usepackage{bookmark}
+
+% Bibliography
+\usepackage{hanging}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Parsing of annotations extracted by scholarLY
+
+\usepackage{pgfkeys}
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\usepackage{listofitems}
+\setsepchar{,}
+
+\pgfkeys{
+  /ann/.is family,
+  /ann,
+  message/.store in=\annMessage,
+  measure-no/.store in=\annMeasureNo,
+  measure-pos/.store in=\annMeasurePos,
+  beat-string/.store in=\annBeatString,
+  beat-fraction/.store in=\annBeatFraction,
+  beat-part/.store in=\annBeatPart,
+  our-beat/.store in=\annOurBeat,
+  rhythmic-location/.store in=\annRhythmicLocation,
+  meter/.store in=\annMeter,
+  source/.code={\pgfkeyssetvalue{source}{#1}\pgfkeysgetvalue{source}{\annSource}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting commands
+
+% The name of a source
+\newcommand{\source}[2]{\textbf{#1\textsubscript{#2}}}
+
+% The \criticalRemark command used in annotations extracted by scholarLY
+\newcommand{\criticalRemark}[1][]{%
+  \pgfkeys{/ann,#1}% Parse the arguments
+  \paragraph{\annMeasureNo, \annOurBeat}\pgfkeysifdefined{source}{\ifthenelse{\equal{\annSource}{}}{}{\readlist\annSourceList{\annSource}\annSource}}{}
+  \par \annMessage
+}
+
+\newcommand{\bigdot}[0]{{\Large \textbullet}}
+
+\newcommand{\centerbigdot}[0]{\begin{center}\bigdot\end{center}}
+
+\begin{document}
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+
+\begin{titlepage}
+\begin{center}
+  \fontspec{Quattrocento-Bold.ttf}{\fontsize{36}{46}\selectfont Armande de Polignac} \\
+  \fontspec{Quattrocento-Regular.ttf}\vspace{3.25 cm}
+  {\fontsize{30}{40}\selectfont Préludes pour piano} \\
+  \vspace{0.5 cm}
+  {\fontsize{30}{40}\selectfont \textbullet} \\
+  \vspace{0.35 cm}
+  {\fontsize{30}{40}\selectfont Preludes for Piano} \\
+  \vspace{3.25 cm}
+  {\Large Édition critique \textbullet\ Critical Edition} \\
+  \vspace{3.25 cm}
+  {\Large Préparée par \textbullet\ \foreignlanguage{english}{edited by}} \\
+  \vspace{0.25 cm}
+  {\Large Benjamin Geer \& Florence Launay} \\
+  \vspace{3.25 cm}
+  {\footnotesize Version 1.0, 2022-10-29} \\
+  \vspace{0.25 cm}
+  \begin{minipage}{\textwidth}
+  \centering
+  $\vcenter{\hbox{\doclicenseImage[imagewidth=2cm]}}$
+  \end{minipage}
+  \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main document content
+
+\chapter*{Préface \bigdot\ \foreignlanguage{english}{Preface}}
+
+Les \emph{Préludes} font partie des premières œuvres publiées par
+Armande de Polignac, vers 1900. Aux côtés de ses premières mélodies,
+éditées en 1898, de son premier quatuor à cordes, joué en concert en
+1899, et de son \emph{Ouverture de Lear} pour orchestre, créée en 1902 à
+Montreux, ils marquent les débuts d'une production musicale qui comprend
+plus de cent soixante-dix œuvres, dans tous les genres musicaux alors
+pratiqués, avec une préférence marquée pour les ballets. Sa production
+la place parmi les compositrices importantes du début du
+XX\textsuperscript{e}~siècle, cette époque qui voit une floraison
+inédite de la composition par les femmes dans le monde entier, sous
+l'influence des mouvements d'émancipation qui ont fait évoluer les
+mentalités déniant aux femmes des capacités créatrices et qui ont
+notamment favorisé leur accès à des études de composition dans les
+conservatoires.
+
+Armande de Polignac naît à Paris le 8 janvier 1876 dans une famille
+importante de l'aristocratie française. Elle ne connaîtra pas sa mère,
+Marie Langenberger, d'origine allemande, décédée une semaine après sa
+naissance, dont on sait qu'elle était une violoniste amatrice de haut
+niveau. Son père, Camille de Polignac, se remarie en 1883 avec une jeune
+Anglaise, Margaret Knight de Wolwerley, et c'est à Londres que l'enfant
+reçoit sa première formation musicale. Un de ses propres curriculums vitae
+évoque ces années~: «~Armande de Polignac montra dès l'enfance une
+passion pour la musique. À deux ans, elle s'asseyait aux pieds de son
+oncle, le prince Edmond de Polignac (qui épousa Winnaretta Singer) pour
+l'écouter improviser au piano. À quatre ans, elle cherchait des mélodies
+sur le piano~; vers neuf ou dix ans, elle avait pour Bach une telle
+passion qu'elle cherchait à convertir les domestiques à cette adoration.
+À onze ans, étudiant depuis longtemps le piano et le violon, elle
+commença les études d'harmonie à Londres avec des maîtres allemands~;
+elle composait depuis l'enfance. À dix-sept ans, elle eut la révélation
+de la musique russe et vint travailler à Paris, d'abord avec Gigout
+(organiste à Saint-Augustin) pour le contrepoint et la fugue, puis avec
+Fauré, enfin à la Schola de d'Indy, où elle tenait en outre dans
+l'orchestre la partie d'alto, et où elle travailla la composition,
+l'orchestration, la direction d'orchestre~». Ce travail de la direction
+avec Vincent d'Indy lui permet de diriger certaines de ses œuvres, comme
+son opéra \emph{La Petite Sirène} en 1907 à l'Opéra de Nice et son
+ballet \emph{Les Mille et une Nuits} en 1914 au Théâtre du Châtelet, et
+de rejoindre ainsi la poignée de femmes qui ont pu accéder à la
+direction d'orchestre à cette époque, notamment d'autres compositrices
+comme Nadia Boulanger, Cécile Chaminade, Juliette Folville, Louise
+Héritte-Viardot et Augusta Holmès. De ses propres dires, Armande de
+Polignac avait «~voué sa vie à la musique~», précisant~: «~Je ne reçois
+jamais, je ne vais jamais dans le monde, à moins d'y être appelée
+professionnellement. Car je ne suis pas une mondaine qui compose de la
+musique à ses moments perdus et pour se distraire. Je suis une femme qui
+a appris un métier, après avoir fait l'apprentissage nécessaire~». Elle
+épouse en 1895 le comte Alfred de Chabannes La Palice~; ils ont une
+fille unique, Hedwige. Le mariage ne freine pas ses activités. Elle peut
+compter sur le soutien de son époux, très mélomane, qui partage son
+désir de se faire connaître sous son nom de jeune fille. Armande de
+Polignac réussit à s'imposer comme compositrice professionnelle malgré
+les préjugés, doubles dans son cas~: à la fois femme et aristocrate,
+elle se retrouve classée parmi les dilettantes.
+
+Sa production pour le piano comprendrait une cinquantaine de pièces dont
+une dizaine seulement ont été publiées. L'imprécision découle du fait
+qu'un catalogue des œuvres
+d'Armande de Polignac n'a pas encore été réalisé. Certaines de ses
+pièces sont apparentées au genre de la musique légère, comme les
+\emph{Danses mièvres} (1902) et la \emph{Danse persane} (1922). D'autres
+présentent une écriture de piano ambitieuse qui témoigne de son niveau
+pianistique élevé (elle interprétait parfois ses propres pièces en
+concert), comme ses \emph{Échappées} qui ont été publiées en 1909 et
+qu'elle a dédiées au célèbre pianiste Ricardo Viñes, ses \emph{Prancing
+Goddesses} et ses \emph{Féeries nocturnes} (deux œuvres non datées et
+restées manuscrites). Les \emph{Préludes} révèlent quant à eux un
+parti-pris d'anti-virtuosité, tout en témoignant d'une recherche très
+personnelle bien éloignée de l'esprit de la «~musique de salon~» si
+présente dans la vie musicale de cette époque. Armande de Polignac est à
+cette époque sous l'influence de ses études à la Schola Cantorum, où
+l'emphase est mise sur la redécouverte du patrimoine musical des siècles
+précédents~: à l'écriture dépouillée, presque ascétique, empreints de
+nostalgie, ils se présentent comme des harmonisations hardies de thèmes
+rappelant parfois les claviéristes français du passé. On remarque
+l'éventuelle influence d'Erik Satie dans l'accompagnement syncopé à la
+main gauche qui parcourt le \emph{Prélude} II~; et de Gabriel Fauré dans
+l'exposition des thèmes des \emph{Préludes} IV et VI, où l'harmonie est
+révélée par des arpèges à la main gauche toujours précédés d'un
+demi-soupir. Les \emph{Préludes} I et II ont été utilisés par la
+compositrice comme soutien à des poèmes, sous forme de
+mélodrame/adaptation, un genre populaire au tournant des
+XX\textsuperscript{e}~et XX\textsuperscript{e}~siècles~: son exemplaire
+de la partition porte les titres respectifs de \emph{Printemps mort} et
+\emph{Berceuse} ainsi que quelques répliques, clairement de sa main.
+
+Le pianiste Laurent Martin, qui est la première personne à avoir rejoué
+les \emph{Préludes} au XXI\textsuperscript{e}~siècle, a témoigné dans le
+livret accompagnant son enregistrement paru en 2019~: «~Elle a assimilé
+la musique du passé au cours de ses études, mais, dans ses créations,
+elle va exprimer sa forte personnalité, d'abord plus discrète dans ses
+\emph{Six préludes} du début du XX\textsuperscript{e}~siècle qui sont
+des miniatures concentrées et disent tout en une ou deux minutes,
+élégance, fantaisie, sensibilité, nostalgie, originalité~».
+
+\section*{Bibliographie}
+
+\subsection*{En français}
+
+\begin{hangparas}{.5cm}{1}
+
+  Florence Launay, \emph{Les Compositrices en France au
+  XIX\textsuperscript{e}~siècle}, Paris, Fayard, 2006.
+  
+  Florence Launay, «~Armande de Polignac~», \emph{Compositrices
+  françaises au XX\textsuperscript{e}~siècle}, Paris, Delatour, 2007,
+  p.~177-189.
+
+  Trotier, Rémy-Michel, «~La tendre et tumultueuse musique
+  d'Armande de Polignac pour les ballets de Loïe Fuller~», \emph{Euterpe},
+  n°~38, mai 2022, p.~4-13.
+  
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\subsection*{En anglais}
+
+\begin{hangparas}{.5cm}{1}
+  
+  Laura Hamer, «~Armande de Polignac: An Aristocratic
+  \emph{Compositrice} in \emph{Fin-de-siècle} Paris~», dans
+  \emph{Women in the arts in the Belle Epoque: Essays on influential
+  artists, writers and performers}, Jefferson, McFarland \& Company,
+  2012, p.~165-185.
+  
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\section*{Discographie}
+
+\begin{hangparas}{.5cm}{1}
+  
+  \emph{Préludes}, dans \emph{Compositrices d'exception}, Laurent
+  Martin, piano, Ligia Digital, 2019.
+
+  \emph{Préludes pour piano}, dans \emph{Armande de Polignac : Mélodies, Préludes pour piano},
+  Stéphanie Humeau, piano, Maguelone, 2022.
+
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\centerbigdot
+
+\begin{otherlanguage}{english}
+
+The \emph{Preludes} date from about 1900, and are among the first
+works that Armande de Polignac published. Along with her first songs
+(published in 1898), her first string quartet (performed in 1899), and
+her \emph{Ouverture de Lear [Overture to Lear]} for orchestra (first
+performed in 1902 in Montreux), they represent the early period in a
+body of work that includes more than a hundred and seventy pieces in all
+the musical genres that were then in use, with a marked preference for
+ballets. This output places her among the more important female
+composers of the early \nth{20} century, a time that witnessed the
+appearance of an unprecedented number of female composers the world
+over, under the influence of women's liberation movements, which were
+successfully challenging attitudes that denied women's creativity. In
+particular, women's movements had made it easier for women to enrol in
+composition courses at conservatories.
+
+Armande de Polignac was born on 8 January 1876 in a prominent French
+aristocratic family. She did not know her mother, Marie Langenberger,
+who was of German orgin, is known to have been a skilled amateur
+violinist, and died a week after her birth. In 1883, Armande's father,
+Camille de Polignac, married a young Englishwoman, Margaret Knight of
+Wolwerley, and Armande received her first musical training in
+London. According to one of her autobiographical essays, `Armande de
+Polignac's enthusiasm for music was evident in early childhood. At the
+age of two, she sat at the feet of her uncle, Prince Edmond de
+Polignac (who married Winaretta Singer) to listen to him improvise at
+the piano. When she was four, she picked out melodies at the piano. At
+nine or ten, she had such a passion for Bach that she tried to instil
+it in the servants. At eleven, after years of piano and violin
+lessons, she began to study harmony with German teachers in London. By
+this time she already composed music. At seventeen, she took an avid
+interest in Russian music, and went to study in Paris, first with
+Gigout (organist at the Saint Augustin Church) for counterpoint and
+fugue, then with Fauré, and finally at d'Indy's Schola Cantorum, where
+she played viola in the orchestra and studied composition,
+orchestration, and conducting.' The conducting experience she gained
+with Vincent d'Indy enabled her to conduct some of her own works, such
+as her opera \emph{La Petite Sirène [The Little Mermaid]} in 1907 at
+the Nice Opera, and her ballet \emph{Les Mille et une Nuits [The
+  Thousand and One Nights]} in 1914 at the Théâtre du Châtelet. Thus
+she joined the handful of women who had the opportunity to conduct an
+orchestra during that period, most of whom were other female
+composers, such as Nadia Boulanger, Cécile Chaminade, Juliette
+Folville, Louise Héritte-Viardot, and Augusta Holmès. Armande de
+Polignac had, as she put it, `devoted her life to music', adding: `I
+never have guests at home, and I don't go to social gatherings, unless
+it's in a professional capacity. I'm not a socialite who composes
+music in her free time, to entertain herself. I'm a woman who has
+learned a trade, having received the necessary training.' In 1895 she
+married Count Alfred de Chabannes La Palice. They had one child,
+Hedwige. Marriage did not slow down her musical activity. She could
+rely on the support of her husband, an ardent music lover, who
+approved of her wish to gain recognition under her maiden
+name. Armande de Polignac succeeded in making her mark as a
+professional composer despite the double prejudice she faced: as a
+woman and an aristocrat, she was labelled a dilettante.
+
+She seems to have written some fifty pieces for the piano, only about
+ten of which have been published.
+These numbers are imprecise because no catalogue of her works
+has yet been produced. Some of her compositions can be considered light
+music, such as \emph{Danses mièvres [Sentimental Dances]} (1902) and
+\emph{Danse persane [Persian Dance]} (1922). Others display ambitious
+piano writing, testifying to her high level of musicianship (she
+sometimes performed her own pieces in concerts), such as
+\emph{Échappées [Escapes]}, published in 1909 and dedicated to the
+famous pianist Ricardo Viñes, \emph{Prancing Goddesses}, and
+\emph{Féeries nocturnes [Nocturnal enchantments]} (the last two of
+which are undated and exist only in manuscript form).
+
+As for the \emph{Preludes}, they reflect a desire to avoid virtuosity,
+while following an artistic path far removed from the spirit of the
+`salon music' of the time. Armande de Polignac was then under the
+influence of her training at the Schola Cantorum, which emphasised the
+rediscovery of the musical heritage of previous centuries. The style
+of the \emph{Preludes} is uncluttered, almost ascetic, and tinged with
+nostalgia; they strike the listener as daring harmonisations of themes
+that sometimes recall the French \emph{claviéristes} of the past. The
+possible influence of Erik Satie can be detected in the left-hand
+accompaniment of \emph{Prelude} II, and that of Gabriel Fauré in the
+exposition of the themes in \emph{Preludes} IV and VI, in which the
+harmony is revealed by arpeggios in the left hand, always preceded by
+a quaver rest. The composer used \emph{Preludes} I and II to accompany
+poems, in the form of melodramas/adaptations, a popular genre at the
+turn of the \nth{19} and \nth{20} centuries: on her own copy of the
+sheet music, the titles \emph{Printemps mort [Dead Spring]} and
+\emph{Berceuse [Lullaby]}, respectively, along with a few lines of
+text, are written in what is clearly her handwriting.
+
+The pianist Laurent Martin, who was the first to play the
+\emph{Preludes} in the \nth{21}~century, observed in the liner notes
+of his recording, which appeared in 2019: `She absorbed the music of
+the past in the course of her studies, but in her creations, she
+expressed her own strong personality, at first in a subdued manner in
+her \emph{Six Preludes} at the beginning of the \nth{20} century; they
+are concentrated miniatures that say a great deal in one or two
+minutes, with elegance, imagination, sensitivity, nostalgia, and
+originality'.
+
+\section*{Bibliography}
+
+\subsection*{In English}
+
+\begin{hangparas}{.5cm}{1}
+
+  Hamer, Laura. `Armande de Polignac: An Aristocratic
+  \emph{Compositrice} in \emph{Fin-de-siècle} Paris'. In \emph{Women
+  in the arts in the Belle Epoque: Essays on influential artists,
+  writers and performers}, edited by Paul Freyer, 165-185. Jefferson:
+  McFarland \& Company, 2012.
+
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\subsection*{In French}
+
+\begin{hangparas}{.5cm}{1}
+
+  Launay, Florence. \emph{Les Compositrices en France au
+  XIX\textsuperscript{e}~siècle}. Paris: Fayard, 2006.
+  
+  \pagebreak
+  
+  Launay, Florence. `Armande de Polignac'. In \emph{Compositrices
+  françaises au XX\textsuperscript{e}~siècle}, 177-189. Paris:
+  Delatour, 2007.
+
+  Trotier, Rémy-Michel. `La tendre et tumultueuse musique d'Armande de Polignac
+  pour les ballets de Loïe Fuller'. \emph{Euterpe}, no. 38 (May 2022): 4-13.
+    
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\section*{Discography}
+
+\begin{hangparas}{.5cm}{1}
+  
+  \emph{Préludes}. In \emph{Compositrices d'exception}. Laurent
+  Martin, piano. Ligia Digital, 2019.
+
+  \emph{Préludes pour piano}. In \emph{Armande de Polignac: Mélodies, Préludes pour Piano}.
+  Stéphanie Humeau, piano. Maguelone, 2022.
+
+\end{hangparas}
+
+\vspace{\baselineskip}
+
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+  Florence Launay \\
+  {\small \url{http://www.compositrices19.net}}
+\end{minipage}
+
+\end{otherlanguage}
+
+\chapter*{À propos de cette édition
+  \bigdot\ \foreignlanguage{english}{About this Edition}}
+
+Cette édition fait partie du projet
+Tondauer.\footnote{\url{https://tondauer.art}\label{project}} Elle est
+diffusée sous licence Creative Commons\footnote{\url{\doclicenseURL}}
+et le code source est
+disponible.\footnote{\url{https://github.com/benjamingeer/Tondauer}\label{source-code}}
+
+Nous sommes reconnaissants à feu Mme la comtesse Desvernay et à sa famille,
+qui ont donné leur autorisation à la réalisation cette édition et qui nous ont permis
+de consulter leurs archives.
+
+\centerbigdot
+
+\begin{otherlanguage}{english}
+  This edition is part of the Tondauer project.\footref{project} It is
+  Creative Commons
+  licensed\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/deed.en}}
+  and the source code is available.\footref{source-code}
+
+  We are grateful to the late Countess Desvernay and to her family, who gave us
+  permission to produce this edition and allowed us to consult their archives.
+\end{otherlanguage}
+    
+\section*{Sources}
+  Il ne semble pas subsister de manuscrit des \emph{Préludes}. Une édition du
+  premier \emph{Prélude}, publiée par E.\ Baudoux et Cie.\ à Paris en 1901,
+  est conservée à la Bibliothèque nationale de France
+  (\source{E}{B}).\footnote{\url{https://catalogue.bnf.fr/ark:/12148/cb43209797j}\label{BnF}}
+  L'édition des six \emph{Préludes} publiée par Bellon, Ponscarme et Cie. à
+  Paris entre 1903 et 1906 (\source{E}{P}) ne semble se trouver dans
+  aucune archive publique, mais les descendants d'Armande de Polignac
+  en possèdent un exemplaire. Des fac-similés numériques de ces
+  sources sont disponibles sur le site Internet du
+  projet.\footref{project}
+  
+  Nous avons corrigé des erreurs apparentes (voir
+  \nameref{sec:comments}) et suivi la pratique courante en ce qui
+  concerne les altérations de précaution.
+  
+  \centerbigdot
+  
+  \begin{otherlanguage}{english}
+    No manuscript of the \emph{Preludes} seems to have survived. An edition
+    of the first \emph{Prelude}, published by E.\ Baudoux et Cie.\ in 1901,
+    is preserved at the Bibliothèque nationale de France
+    (\source{E}{B}).\footref{BnF} The edition of the six \emph{Preludes}
+    published by Bellon, Ponscarme et Cie.\ in Paris between 1903 and
+    1906 (\source{E}{P}) does not seem to be in any public archive,
+    but the descendants of Armande de Polignac possess a copy of
+    it. Digital facsimiles of these sources can be found on the
+    project web site.\footref{project}
+
+    We have corrected apparent errors (see \nameref{sec:comments}), and
+    followed common practice in the use of cautionary accidentals.
+  \end{otherlanguage}
+  
+  \section*{Remarques \bigdot\ \foreignlanguage{english}{Comments}}
+  \label{sec:comments}
+
+    Chaque remarque correspond à une note de bas de page dans la
+    partition. Les numéros précédant une remarque identifient la
+    mesure et le temps auxquels elle se réfère. Ceux-ci sont suivis,
+    le cas échéant, par l'identifiant de la source dans laquelle se
+    trouve la version préférée. \source{E}{P} est la seule source pour
+    tous les \emph{Préludes} sauf le premier.
+
+    \centerbigdot
+
+    \begin{otherlanguage}{english}
+      Each comment corresponds to a footnote in the music text. The
+      numbers preceding a comment identify the measure and beat that
+      it refers to. These are followed by the identifier of the
+      source, if any, that contains the preferred
+      reading. \source{E}{P} is the only source for all the \emph{Preludes}
+      except the first.
+    \end{otherlanguage}
+    
+    \subsection*{Prélude I}
+    
+    \input{prelude-1-critical-score.annotations.inp}
+
+    \subsection*{Prélude II}
+
+    \input{prelude-2-critical-score.annotations.inp}
+    
+    \subsection*{Prélude III}
+
+    \input{prelude-3-critical-score.annotations.inp}
+
+    %\subsection*{Prélude IV}
+
+    %\input{prelude-4-critical-score.annotations.inp}
+
+    \subsection*{Prélude V}
+
+    \input{prelude-5-critical-score.annotations.inp}
+
+    \subsection*{Prélude VI}
+
+    \input{prelude-6-critical-score.annotations.inp}
+
+\raggedbottom
+
+\vspace{\baselineskip}
+
+\hfill
+\begin{minipage}[t]{0.55\textwidth}
+  Benjamin Geer \\
+  \url{https://benjamingeer.name}
+\end{minipage}
+
+\pagebreak
+\cleardoublepage
+\mainmatter
+
+% The PDF score rendered by LilyPond
+\includepdf[pages=-]{prelude-1-critical-score.pdf}
+        \includepdf[pages=-]{prelude-2-critical-score.pdf}
+        \includepdf[pages=-]{prelude-3-critical-score.pdf}
+        \includepdf[pages=-]{prelude-4-critical-score.pdf}
+        \includepdf[pages=-]{prelude-5-critical-score.pdf}
+        \includepdf[pages=-]{prelude-6-critical-score.pdf}
+\end{document}

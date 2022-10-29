@@ -53,7 +53,7 @@ En même temps, les musiciens ont besoin d'éditions pratiques destinées
 Pour chaque pièce éditée dans le cadre de ce projet il y a&nbsp;:
 
 - Une édition critique comprenant des fac-similés des sources.
-- Une édition pratique basée sur l'édition critique, comprenant des
+- Dans certains cas, une édition pratique séparée, basée sur l'édition critique, comprenant des
   notes qui renvoient à l'édition critique là où il y a des choix
   éditoriaux qui sont particulièrement susceptibles d'intéresser le
   musicien.

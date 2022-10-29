@@ -52,7 +52,7 @@ performance rather than for research.
 For each piece published as part of this project, there is:
 
 - A critical edition, including facsimiles of sources.
-- A performance edition based on the critical edition, with notes
+- In some cases, a separate performance edition based on the critical edition, with notes
   referring to the critical edition where there are editorial choices
   that musicians may be especially interested in.
 - [The source code of these

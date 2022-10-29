@@ -2,6 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tondauer.art/fr/2022/10/polignac-preludes/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/2022/10/polignac-preludes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/2022/10/polignac-preludes/"
+                />
+  </url><url>
+    <loc>https://tondauer.art/fr/categories/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/categories/"
+                />
+  </url><url>
+    <loc>https://tondauer.art/fr/categories/%C3%A9ditions/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tondauer.art/fr/tags/polignac-armande-de/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/tags/polignac-armande-de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/tags/polignac-armande-de/"
+                />
+  </url><url>
+    <loc>https://tondauer.art/fr/posts/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/posts/"
+                />
+  </url><url>
+    <loc>https://tondauer.art/fr/tags/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/tags/"
+                />
+  </url><url>
+    <loc>https://tondauer.art/fr/</loc>
+    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tondauer.art/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://tondauer.art/fr/"
+                />
+  </url><url>
     <loc>https://tondauer.art/fr/a-propos-de-ce-site/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -13,19 +94,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://tondauer.art/fr/a-propos-de-ce-site/"
-                />
-  </url><url>
-    <loc>https://tondauer.art/fr/categories/</loc>
-    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tondauer.art/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://tondauer.art/fr/categories/"
                 />
   </url><url>
     <loc>https://tondauer.art/fr/2021/03/mendelssohn-prelude-mwv-u-123/</loc>
@@ -53,47 +121,5 @@
                 hreflang="fr"
                 href="https://tondauer.art/fr/tags/mendelssohn-felix/"
                 />
-  </url><url>
-    <loc>https://tondauer.art/fr/posts/</loc>
-    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tondauer.art/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://tondauer.art/fr/posts/"
-                />
-  </url><url>
-    <loc>https://tondauer.art/fr/tags/</loc>
-    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tondauer.art/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://tondauer.art/fr/tags/"
-                />
-  </url><url>
-    <loc>https://tondauer.art/fr/</loc>
-    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tondauer.art/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://tondauer.art/fr/"
-                />
-  </url><url>
-    <loc>https://tondauer.art/fr/categories/%C3%A9ditions/</loc>
-    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
   </url>
 </urlset>

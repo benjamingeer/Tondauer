@@ -20,7 +20,7 @@ languages:
     title: Tondauer
     weight: 1
     params:
-      description: open musical editions
+      description: open music editions
     menu:
       navbar:
         - name: "About This Site"
