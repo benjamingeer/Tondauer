@@ -2,7 +2,7 @@
 
 These editions use [LilyPond](https://lilypond.org) and
 [LaTeX](https://www.latex-project.org/) to render a critical edition
-and a performance edition from each score.
+and (in some cases) a separate performance edition from each score.
 
 ## Requirements
 
