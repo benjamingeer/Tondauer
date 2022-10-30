@@ -1,6 +1,6 @@
 ---
 title: Armande de Polignac, Préludes pour piano
-author: Benjamin Geer
+author: Benjamin Geer et Florence Launay
 type: post
 date: 2022-10-29
 slug: polignac-preludes
