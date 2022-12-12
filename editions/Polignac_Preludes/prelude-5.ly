@@ -105,8 +105,10 @@
 
     | % Up M21 (source P13)
 
+    \break
+
     \tuplet 3/2 4 {
-      \shape #'((0 . -0.8) (0 . 0) (0 . 1.25) (0 . -0.75)) Slur
+      \shape #'((0 . -1.2) (0 . 0) (0 . 1.25) (0 . -0.75)) Slur
       bes''8( f''' aes''')
     }
 
@@ -128,7 +130,7 @@
     | % Up M25
 
     \tuplet 3/2 4 {
-      \shape #'((0 . -0.8) (0 . 0) (0 . 1.25) (0 . -0.75)) Slur
+      \shape #'((0 . -1.2) (0 . 0) (0 . 1.25) (0 . -0.75)) Slur
       aes''8( ees''' ges''')
     }
     r4
@@ -463,6 +465,7 @@
 
     | % Dynamics M21 (source P13)
 
+    \break
     \tuplet 3/2 4 { s4\> s8\! } s4
     
     | % Dynamics M22
@@ -723,7 +726,7 @@
         \change Staff = "down"
         \omit TupletNumber
         \tuplet 3/2 4 {
-	  \shape #'((0 . 0) (0 . 0.7) (0 . 0) (0 . 0)) Slur
+	  \shape #'((0 . 0) (0 . 1.5) (0 . 0) (0 . 0)) Slur
  	  des'8^( e' f' bes c' des')
 	}
       }
@@ -743,7 +746,7 @@
     | % Down M16
 
     \tuplet 3/2 4 {
-      \shape #'((0 . -0.7) (0 . 0.6) (0 . 0) (0 . -0.4)) Slur
+      \shape #'((0 . -1) (0 . 0.6) (0 . 0) (0 . -0.4)) Slur
       des8( f ges des f ges)
     }
 
@@ -798,12 +801,13 @@
 
     | % Down M21 (source P13)
 
+    \break
     R1*2/4
 
     | % Down M22
 
     \tuplet 3/2 4 {
-      \shape #'((0 . -1.2) (0 . 0) (0 . 0.8) (0 . -0.8)) Slur
+      \shape #'((0 . -1.2) (0 . 0) (0 . 1.5) (0 . -0.4)) Slur
       ees,8( bes, bes ees g des')
     }
 
@@ -972,7 +976,7 @@
 
     \shape #'((0 . -2.2) (0 . 0) (0 . 1.5) (0 . -1.6)) Slur
     bes,16( f d' f)
-    \shape #'((0 . -2.8) (-1.2 . 1.4) (0.2 . 1) (0 . -1.6)) Slur
+    \shape #'((0 . -2.2) (-1.2 . 1.4) (0.2 . 1) (0 . -1.6)) Slur
     d( bes f' bes)
 
     | % Down M49
@@ -998,7 +1002,7 @@
 
     | % Down M52
 
-    \shape #'((0 . -1.7) (0 . 0) (0 . 1.7) (0 . -1.8)) Slur
+    \shape #'((0 . -2.2) (0 . 0) (0 . 1.7) (0 . -1.8)) Slur
     bes,16( f d' f)
     \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.3)) Slur
     f( g bes g)
@@ -1019,7 +1023,7 @@
 
     | % Down M55
 
-    \shape #'((0 . -2.7) (-1 . 2.2) (0 . 0.5) (0 . -0.8)) Slur
+    \shape #'((0 . -3.2) (-1 . 2.2) (0 . 0.5) (0 . -0.8)) Slur
     bes,16( aes d' aes)
     ees,( bes, g bes,)
 
