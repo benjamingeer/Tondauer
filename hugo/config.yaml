@@ -29,6 +29,7 @@ languages:
         - name: "Source Code"
           url: "https://github.com/benjamingeer/Tondauer"
           weight: 2
+    sharingicons: false
   fr:
     languageCode: fr
     contentDir: content/fr
@@ -45,6 +46,7 @@ languages:
         - name: "Code source"
           url: "https://github.com/benjamingeer/Tondauer"
           weight: 2
+    sharingicons: false
           
 params:
   date_format: "2006-01-02"
@@ -53,3 +55,4 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
