@@ -1,4 +1,5 @@
-LILY_PDF_CMD = lilypond -I ${LILYPOND_INCLUDE} --pdf
+export PATH := $(HOME)/bin/lilypond-2.22.2:$(PATH)
+LILY_PDF_CMD = lilypond -I $(LILYPOND_INCLUDE) --pdf
 LATEX_CMD = lualatex
 
 CRITICAL_EDITION=Polignac_Preludes_Critical_Edition.pdf
