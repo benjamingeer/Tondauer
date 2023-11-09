@@ -16,7 +16,7 @@ Préparée par Benjamin Geer et Florence Launay. Diffusée sous une licence Crea
 Commons [Attribution - Partage dans les Mêmes Conditions 4.0
 International](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
 
-- <a href="/editions/Polignac_Preludes_Critical_Edition.pdf" target="_blank">Édition critique</a> (PDF)
+- <a href="/editions/Polignac_Preludes_Critical_Edition.pdf" target="_blank">Édition critique (PDF)</a>, ISBN 979-0-707186-03-9
 
 ## Fac-similés des sources
 

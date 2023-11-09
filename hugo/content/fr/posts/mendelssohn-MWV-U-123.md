@@ -16,8 +16,8 @@ Préparées par Benjamin Geer. Diffusées sous une licence Creative
 Commons [Attribution - Partage dans les Mêmes Conditions 4.0
 International](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
 
-- <a href="/editions/Mendelssohn_MWV_U_123_Critical_Edition.pdf" target="_blank">Édition critique</a> (PDF)
-- <a href="/editions/Mendelssohn_MWV_U_123_Performance_Edition.pdf" target="_blank">Édition pratique</a> (PDF)
+- <a href="/editions/Mendelssohn_MWV_U_123_Critical_Edition.pdf" target="_blank">Édition critique (PDF)</a>, ISMN 979-0-707186-01-5
+- <a href="/editions/Mendelssohn_MWV_U_123_Performance_Edition.pdf" target="_blank">Édition pratique (PDF)</a>, ISMN 979-0-707186-02-2
 
 ## Fac-similés des sources
 

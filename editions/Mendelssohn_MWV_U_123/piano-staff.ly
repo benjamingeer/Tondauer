@@ -301,7 +301,7 @@
       }
       \\
       {
-	\shape #'((0 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
+      	\shape #'((0 . 0.5) (0 . 0) (0 . 0) (0 . 0)) Slur
         bis'32-\tag #'finger -5( fis'-\tag #'finger -3 e'-\tag #'finger -2 dis'-\tag #'finger -1
         fis''-\tag #'finger -5
 
@@ -1033,7 +1033,7 @@
 
     \partial 16.
 
-    \shape #'((0 . -1) (0 . 1) (0 . 0) (0 . -0.2)) Slur
+    \shape #'((0 . -0.5) (0 . 1) (0 . 0) (0 . 0)) Slur
     fis,32-\tag #'finger _4( gis, ais,
     
     | % Down M01
