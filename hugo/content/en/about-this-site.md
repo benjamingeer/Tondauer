@@ -9,7 +9,7 @@ translationKey: about-this-site
 
 ### What is Tondauer?
 
-Tondauer (in German, the duration of a sound) is a project that aims
+Tondauer ('sound duration' in German) is a project that aims
 to support the longevity of compositions that deserve more attention
 than they have received. Tondauer editions are [Creative
 Commons](https://creativecommons.org/licenses/) licensed, and are
