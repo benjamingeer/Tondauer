@@ -21,6 +21,7 @@ languages:
     weight: 1
     params:
       description: open music editions
+      sharingicons: false
     menu:
       navbar:
         - name: "About This Site"
@@ -29,7 +30,6 @@ languages:
         - name: "Source Code"
           url: "https://github.com/benjamingeer/Tondauer"
           weight: 2
-    sharingicons: false
   fr:
     languageCode: fr
     contentDir: content/fr
@@ -38,6 +38,7 @@ languages:
     weight: 1
     params:
       description: éditions musicales libres
+      sharingicons: false
     menu:
       navbar:
         - name: "À propos de ce site"
@@ -46,7 +47,6 @@ languages:
         - name: "Code source"
           url: "https://github.com/benjamingeer/Tondauer"
           weight: 2
-    sharingicons: false
           
 params:
   date_format: "2006-01-02"
