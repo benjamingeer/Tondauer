@@ -24,8 +24,8 @@ languages:
       sharingicons: false
     menu:
       navbar:
-        - name: "About This Site"
-          url: "/about-this-site/"
+        - name: "About This Project"
+          url: "/about-this-project/"
           weight: 1
         - name: "Source Code"
           url: "https://github.com/benjamingeer/Tondauer"
@@ -41,8 +41,8 @@ languages:
       sharingicons: false
     menu:
       navbar:
-        - name: "À propos de ce site"
-          url: "/a-propos-de-ce-site/"
+        - name: "À propos de ce projet"
+          url: "/a-propos-de-ce-projet/"
           weight: 1
         - name: "Code source"
           url: "https://github.com/benjamingeer/Tondauer"

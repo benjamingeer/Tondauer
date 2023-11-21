@@ -1,13 +1,15 @@
 ---
-title: About This Site
+title: About This Project
 author: Benjamin Geer
 type: page
 date: 2021-07-19
-slug: about-this-site
-translationKey: about-this-site
+slug: about-this-project
+translationKey: about-this-project
+aliases:
+  - about-this-site
 ---
 
-### What is Tondauer?
+### Objectives
 
 Tondauer ('sound duration' in German) is a project that aims
 to support the longevity of compositions that deserve more attention

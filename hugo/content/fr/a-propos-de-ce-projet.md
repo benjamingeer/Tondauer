@@ -1,13 +1,15 @@
 ---
-title: À propos de ce site
+title: À propos de ce projet
 author: Benjamin Geer
 type: page
 date: 2021-07-19
-slug: a-propos-de-ce-site
-translationKey: about-this-site
+slug: a-propos-de-ce-projet
+translationKey: about-this-project
+aliases:
+  - a-propos-de-ce-site
 ---
 
-### Qu'est-ce que Tondauer?
+### Les objectifs
 
 Tondauer (« durée du son » en allemand) est un projet qui vise à
 soutenir la pérennité à long terme de compositions qui n'ont pas reçu
@@ -61,7 +63,7 @@ Pour chaque pièce éditée dans le cadre de ce projet il y a&nbsp;:
   éditions](https://github.com/benjamingeer/Tondauer/), pour que des
   éditions dérivées puissent être réalisées.
 
-### Technologie
+### La technologie
 
 Les éditions Tondauer editions sont réalisées avec
 [LilyPond](https://lilypond.org). Les raisons de ce choix sont
