@@ -10,6 +10,16 @@ tags:
   - Polignac, Armande de
 ---
 
+## Overview
+
+Armande de Polignac (1876-1962) composed pieces in a wide variety of genres; most
+remain unpublished. Some of her manuscripts can be found in archives, along with
+a few editions published during her lifetime. Her <em>Preludes for piano</em>, which she published
+in about 1900, have survived only in a very rare edition preserved by her descendants.
+In the critical edition presented here, Florence Launay's detailed preface situates these
+preludes, whose style is 'uncluttered, almost ascetic, and tinged with nostalgia',
+in the context of the composer's career.
+
 ## Edition
 
 Edited by Benjamin Geer and Florence Launay. Distributed under a Creative Commons

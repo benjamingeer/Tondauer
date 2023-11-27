@@ -10,6 +10,15 @@ tags:
   - Mendelssohn, Felix
 ---
 
+## Overview
+
+The manuscript of this prelude has been lost, and the surviving sources
+(an earlier draft manuscript and the first several editions, all posthumous) raise questions
+that cannot be answered with certainty, because it is not known which
+19th-century editors had access to the lost manuscript. The critical edition presented here
+attempts to deal with these problems in a consistent way, as well as to enable the performer
+to evaluate the merits of other solutions. The performance edition suggests fingerings.
+
 ## Editions
 
 Edited by Benjamin Geer. Distributed under a Creative Commons

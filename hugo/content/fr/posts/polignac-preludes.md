@@ -10,6 +10,15 @@ tags:
   - Polignac, Armande de
 ---
 
+## Aperçu
+
+Armande de Polignac (1876-1962) a composé des œuvres dans des genres très variés, dont la plupart
+sont restées inédites. Quelques-uns de ses manuscrits se trouvent dans des archives, ainsi que
+quelques éditions publiées de son vivant. Ses <em>Préludes pour piano</em>, qu'elle a publiés vers 1900,
+n'ont survécu que dans une édition très rare, conservée par ses descendants. Dans l'édition critique présentée
+ici, la préface détaillée de Florence Launay situe ces préludes, «&nbsp;à l'écriture dépouillée, presque ascétique,
+empreints de nostalgie&nbsp;», dans le contexte de la carrière de la compositrice.
+
 ## Édition
 
 Préparée par Benjamin Geer et Florence Launay. Diffusée sous une licence Creative
