@@ -12,8 +12,8 @@ tags:
 
 ## Aperçu
 
-Le manuscrit de ce prélude a été perdu et les sources qui
-ont survécu (un premier brouillon manuscrit et les premières éditions, toutes posthumes) soulèvent des questions
+Le manuscrit de ce prélude a été perdu et les sources qui ont été conservées (un premier brouillon
+manuscrit et les premières éditions, toutes posthumes) soulèvent des questions
 auxquelles il est impossible de répondre avec certitude, car on ne sait pas quels éditeurs du XIXème siècle
 ont eu accès au manuscrit perdu. L'édition critique présentée ici tente de traiter ces problèmes de manière
 cohérente et de permettre à l'interprète d'évaluer les mérites d'autres solutions.
