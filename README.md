@@ -1,3 +1,3 @@
 # Tondauer
 
-Open digital editions of music. See https://tondauer.art for copyright and licence information.
+This repository has been moved to https://framagit.org/benjamingeer/Tondauer.
